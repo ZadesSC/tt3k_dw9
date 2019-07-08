@@ -3,19 +3,23 @@ import csv
 import sys
 import operator
 import yaml
+import os
 from ruamel.yaml import YAML
 
 file_prefix="tt3k_dw9_"
-input_file="events_def_incidents_spawn.yaml"
+
+input_files_location="events_def/"
+output_files_location="output/"
+#text_loc="../../text/db/"
+textloca="output/text/db/"
+#input_file="events_def_incidents_spawn.yaml"
 #input_file="events_def_incidents_move.yaml"
 #input_file="events_def_incidents_marriage.yaml"
-
 
 id_inc_mod=1
 payload_id_start=1540000000
 junction_id_start=1550000000
 
-text_loc="../../text/db/"
 
 data = {'events':[]}
 
@@ -114,122 +118,132 @@ def main():
 		dilemma_payloads_data_pc=[]
 		dilemma_text_data_pc=[]
 
-		with open(input_file, 'r') as yaml_input_file:
-			events_data = yaml.safe_load(yaml_input_file)
-			events_list = events_data.get('events')
+		for events_def_file in os.listdir(input_files_location):
+			filename, extension =  os.path.split(events_def_file)
+			if extension != ".yaml" and extension != ".yml"
+				continue
+			if "events_def" not in events_def_file:
+				continue
 
-			for event in events_list:
-				if not ('enabled' not in event or event.get('enabled') is True):
-					print("Skipping " + event.get('event_name') + " since it is disabled")
-					continue
+			events_def_file_location = input_files_location + events_def_file
+			print("Reading file: " + events_def_file)
 
-				#Load default values for event information
-				if 'event_type' not in event:
-					event.update({'event_type': 'incident'})
-				if 'title' not in event:
-					event.update({'title': ''})
-				if 'description' not in event:
-					event.update({'description': ''})
-				if 'ui_image' not in event:
-					event.update({'ui_image': '3k_event_ready_for_duty'})
-				if 'generate' not in event:
-					event.update({'generate': False})
-				if 'prioritized' not in event:
-					event.update({'prioritized': False})
-				if 'event_category' not in event:
-					event.update({'event_category': 'historical'})
-				if 'sound_popup_override' not in event:
-					event.update({'sound_popup_override': ''})
-				if 'sound_click_override' not in event:
-					event.update({'sound_click_override': ''})
+			with open(events_def_file_location, 'r') as yaml_input_file:
+				events_data = yaml.safe_load(yaml_input_file)
+				events_list = events_data.get('events')
 
-				#build type agnoistic data for writing
-				event_base_data_pc=[]
-				event_option_junctions_data_pc=[]
-				event_payload_data_pc=[]
-				text_data_pc=[]
+				for event in events_list:
+					if not ('enabled' not in event or event.get('enabled') is True):
+						print("Skipping " + event.get('event_name') + " since it is disabled")
+						continue
 
-				event_base_data_npc=[]
-				event_option_junctions_table_data_npc=[]
-				event_payload_data_npc=[]
-				text_data_npc=[]
+					#Load default values for event information
+					if 'event_type' not in event:
+						event.update({'event_type': 'incident'})
+					if 'title' not in event:
+						event.update({'title': ''})
+					if 'description' not in event:
+						event.update({'description': ''})
+					if 'ui_image' not in event:
+						event.update({'ui_image': '3k_event_ready_for_duty'})
+					if 'generate' not in event:
+						event.update({'generate': False})
+					if 'prioritized' not in event:
+						event.update({'prioritized': False})
+					if 'event_category' not in event:
+						event.update({'event_category': 'historical'})
+					if 'sound_popup_override' not in event:
+						event.update({'sound_popup_override': ''})
+					if 'sound_click_override' not in event:
+						event.update({'sound_click_override': ''})
 
-				is_dilemma=False
-				if event.get('event_type') == 'dilemma':
-					is_dilemma=True
+					#build type agnoistic data for writing
+					event_base_data_pc=[]
+					event_option_junctions_data_pc=[]
+					event_payload_data_pc=[]
+					text_data_pc=[]
 
-				#write to base table(dilemma/incident table)
-				#we assume dilemma and incident are the only valid options
-				event_name_pc=""
-				event_name_npc=""
-				if is_dilemma:
-					event_name_pc = resolve_event_name(event.get('event_name')) + "_dilemma_pc"
-					base_row=[event.get('generate'), event_name_pc, event.get('title'), event.get('description'), event.get('ui_image'), event.get('prioritized'), event.get('event_category'), event.get('sound_popup_override'), event.get('sound_click_override')]
-					event_base_data_pc.append(base_row)
-				else:
-					event_name_pc = resolve_event_name(event.get('event_name')) + "_incident_pc"
-					base_row=[event.get('generate'), event_name_pc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
-					event_base_data_pc.append(base_row)
+					event_base_data_npc=[]
+					event_option_junctions_table_data_npc=[]
+					event_payload_data_npc=[]
+					text_data_npc=[]
 
-					event_name_npc = resolve_event_name(event.get('event_name')) + "_incident_npc"
-					base_row=[event.get('generate'), event_name_npc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
-					event_base_data_npc.append(base_row)
+					is_dilemma=False
+					if event.get('event_type') == 'dilemma':
+						is_dilemma=True
 
-					text_data_pc.append(["incidents_localised_title_" + event_name_pc, event.get('title'), True])
-					text_data_pc.append(["incidents_localised_description_" + event_name_pc, event.get('description'), True])
-
-				#write to option_junctions, the schema for the table should be the same for both
-				for target in event.get('target'):
-					target_name = next(iter(target))
-					target_data = target.get(target_name)
-					option_junctions_dict = target_data[0].get('option_junctions')
-
-					#setup default for option_junctions
-					if 'CND_FIRST_ROUND' not in option_junctions_dict and target_name == 'default':
-						option_junctions_dict.update({'CND_FIRST_ROUND': 0})
-					#if 'CND_LAST_ROUND' not in option_junctions_dict and target_name == 'default':
-					#	option_junctions_dict.update({'CND_LAST_ROUND': 999})
-					if 'VAR_CHANCE' not in option_junctions_dict and target_name == 'default':
-						option_junctions_dict.update({'VAR_CHANCE': 50000})
-					if 'CND_CATEGORY_ROUNDS_TILL_NEXT' not in option_junctions_dict and target_name == 'default':
-						option_junctions_dict.update({'CND_CATEGORY_ROUNDS_TILL_NEXT': 0})
-
-					#get option_junctions data
+					#write to base table(dilemma/incident table)
+					#we assume dilemma and incident are the only valid options
+					event_name_pc=""
+					event_name_npc=""
 					if is_dilemma:
-						for key, value in option_junctions_dict.items():
-							resolved_value = resolve_option_junctions_value(key, value)
-							event_option_junctions_data_pc.append([event_name_pc, get_junctions_id(), 0, key, resolved_value, target_name])
+						event_name_pc = resolve_event_name(event.get('event_name')) + "_dilemma_pc"
+						base_row=[event.get('generate'), event_name_pc, event.get('title'), event.get('description'), event.get('ui_image'), event.get('prioritized'), event.get('event_category'), event.get('sound_popup_override'), event.get('sound_click_override')]
+						event_base_data_pc.append(base_row)
 					else:
-						for key, value in option_junctions_dict.items():
-							resolved_value = resolve_option_junctions_value(key, value)
-							event_option_junctions_data_pc.append([get_junctions_id(), 0, event_name_pc, key, resolved_value, target_name])
+						event_name_pc = resolve_event_name(event.get('event_name')) + "_incident_pc"
+						base_row=[event.get('generate'), event_name_pc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
+						event_base_data_pc.append(base_row)
 
-					#make sure payloads exists
-					if len(target_data) > 1 and 'payloads' in target_data[1]:
-						payloads_dict = target_data[1].get('payloads')
+						event_name_npc = resolve_event_name(event.get('event_name')) + "_incident_npc"
+						base_row=[event.get('generate'), event_name_npc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
+						event_base_data_npc.append(base_row)
 
-						#get payloads data, dilemmas function differently with choice keys
-						#choice_key	dilemma_key	id	-	payload_key	value	target
+						text_data_pc.append(["incidents_localised_title_" + event_name_pc, event.get('title'), True])
+						text_data_pc.append(["incidents_localised_description_" + event_name_pc, event.get('description'), True])
+
+					#write to option_junctions, the schema for the table should be the same for both
+					for target in event.get('target'):
+						target_name = next(iter(target))
+						target_data = target.get(target_name)
+						option_junctions_dict = target_data[0].get('option_junctions')
+
+						#setup default for option_junctions
+						if 'CND_FIRST_ROUND' not in option_junctions_dict and target_name == 'default':
+							option_junctions_dict.update({'CND_FIRST_ROUND': 0})
+						#if 'CND_LAST_ROUND' not in option_junctions_dict and target_name == 'default':
+						#	option_junctions_dict.update({'CND_LAST_ROUND': 999})
+						if 'VAR_CHANCE' not in option_junctions_dict and target_name == 'default':
+							option_junctions_dict.update({'VAR_CHANCE': 50000})
+						if 'CND_CATEGORY_ROUNDS_TILL_NEXT' not in option_junctions_dict and target_name == 'default':
+							option_junctions_dict.update({'CND_CATEGORY_ROUNDS_TILL_NEXT': 0})
+
+						#get option_junctions data
 						if is_dilemma:
-							for choice, choice_values in payloads_dict.items():
-								for key, value in choice_values.items():
-									resolved_value = resolve_payloads_value(key, value)
-									event_payload_data_pc.append([choice, event_name_pc, get_payloads_id(), 0, key, resolved_value, target_name])
+							for key, value in option_junctions_dict.items():
+								resolved_value = resolve_option_junctions_value(key, value)
+								event_option_junctions_data_pc.append([event_name_pc, get_junctions_id(), 0, key, resolved_value, target_name])
 						else:
-							for key, value in payloads_dict.items():
-								resolved_value = resolve_payloads_value(key, value)
-								event_payload_data_pc.append([get_payloads_id(), 0, event_name_pc, key, resolved_value, target_name])
+							for key, value in option_junctions_dict.items():
+								resolved_value = resolve_option_junctions_value(key, value)
+								event_option_junctions_data_pc.append([get_junctions_id(), 0, event_name_pc, key, resolved_value, target_name])
 
-				if is_dilemma:
-					dilemma_base_data_pc.extend(event_base_data_pc)
-					dilemma_option_junctions_data_pc.extend(event_option_junctions_data_pc)
-					dilemma_payloads_data_pc.extend(event_payload_data_pc)
-					dilemma_text_data_pc.extend(text_data_pc)
-				else:
-					incident_base_data_pc.extend(event_base_data_pc)
-					incident_option_junctions_data_pc.extend(event_option_junctions_data_pc)
-					incident_payloads_data_pc.extend(event_payload_data_pc)
-					incident_text_data_pc.extend(text_data_pc)
+						#make sure payloads exists
+						if len(target_data) > 1 and 'payloads' in target_data[1]:
+							payloads_dict = target_data[1].get('payloads')
+
+							#get payloads data, dilemmas function differently with choice keys
+							#choice_key	dilemma_key	id	-	payload_key	value	target
+							if is_dilemma:
+								for choice, choice_values in payloads_dict.items():
+									for key, value in choice_values.items():
+										resolved_value = resolve_payloads_value(key, value)
+										event_payload_data_pc.append([choice, event_name_pc, get_payloads_id(), 0, key, resolved_value, target_name])
+							else:
+								for key, value in payloads_dict.items():
+									resolved_value = resolve_payloads_value(key, value)
+									event_payload_data_pc.append([get_payloads_id(), 0, event_name_pc, key, resolved_value, target_name])
+
+					if is_dilemma:
+						dilemma_base_data_pc.extend(event_base_data_pc)
+						dilemma_option_junctions_data_pc.extend(event_option_junctions_data_pc)
+						dilemma_payloads_data_pc.extend(event_payload_data_pc)
+						dilemma_text_data_pc.extend(text_data_pc)
+					else:
+						incident_base_data_pc.extend(event_base_data_pc)
+						incident_option_junctions_data_pc.extend(event_option_junctions_data_pc)
+						incident_payloads_data_pc.extend(event_payload_data_pc)
+						incident_text_data_pc.extend(text_data_pc)
 
 		#generate files for incidents for players
 		for row in incident_base_data_pc:

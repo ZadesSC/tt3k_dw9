@@ -1,0 +1,120 @@
+enabled: false
+events:
+- event_name: zhuge_liang_huang_yueying_marriage
+  event_type: dilemma
+  title: The Dragon's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: Your strategist, Zhuge Liang, has found a worthy bride and wishes to marry.  He seeks your blessings.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 90
+          CND_UNIQUE: ''
+          GEN_TARGET_CHARACTER: ''
+          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+          GEN_CND_OWNS: ''
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+         GEN_TARGET_CHARACTER: ''
+         GEN_CND_OWNS: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_huang_yueying_hero_wood
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+- event_name: cao_ren_test_marriage
+  event_type: dilemma
+  title: Test Turn 1 Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: By the forces that move CA, please make this work
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 0
+          CND_UNIQUE: ''
+          GEN_TARGET_NONE: ''
+          CND_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: xiahou_dun_hero_wood
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_wang_yi_hero_fire
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+- event_name: deub_dilemma
+  event_type: dilemma
+  title: Debug
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: By the forces that move CA, please make this work
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 0
+          GEN_TARGET_NONE: ''
+      - payloads:
+          FIRST:
+            TEXT_DISPLAY: LOOKUP[dummy_factual_choice]
+          SECOND:
+            TREASURY: AMOUNT[10]
+          THIRD:
+            TREASURY: AMOUNT[10]
+          FOURTH:
+            TREASURY: AMOUNT[10]
+    - target_character_1:
+      - option_junctions:
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FOURTH:
+            LOCATED: CHARACTER
+    - target_faction_1:
+      - option_junctions:
+         GEN_TARGET_FACTION: ''
+      - payloads:
+          SECOND:
+            LOCATED: FACTION
+    - target_region_1:
+      - option_junctions:
+         GEN_TARGET_REGION: ''
+      - payloads:
+          THIRD:
+            LOCATED: REGION
+    - target_settlement_1:
+      - option_junctions:
+         GEN_TARGET_SETTLEMENT: ''
+      - payloads:
+          FIRST:
+            LOCATED: SETTLEMENT
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.

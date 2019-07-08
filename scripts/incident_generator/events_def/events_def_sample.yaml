@@ -1,0 +1,38 @@
+enabled: false
+events:
+  - event_name: zhuge_liang_huang_yueying_marriage_pc                           #if the keyword historical is missing, the string 3k_main_historical will be appended in the front by default
+    event_type: dilemma                                                         #Default value is incident, currently only works for dilemmas and incidents
+    enabled: true                                                               #Default value is true, if this is set to false, the script will not process this and will not generate this event in the .pack file
+    title: "Test Event"                                                         #default value is ""
+    description: "Test Description"                                             #default value is ""
+    ui_image: 3k_event_wedding                                                  #default value is 3k_event_ready_for_duty
+    generate: true                                                              #default value is false
+    prioritized: true                                                           #default value is false
+    event_category: historical                                                  #default value is historical
+    sound_popup_override: UI_CAM_EVENT_Dilemma                                  #default value is ''
+    sound_click_override: ''                                                    #default value is ''
+    target:
+      - default:
+        - option_junctions:
+            GEN_FIRST_ROUND: 90                                                 #default value is 0
+            GEN_LAST_ROUND: 999                                                 #default value is 999
+            VAR_CHANCE: 50000                                                    #default value is 50000
+            CND_CATEGORY_ROUNDS_TILL_NEXT: 0                                    #default value is 0
+            CND_UNIQUE: ''
+            GEN_TARGET_CHARACTER: ''
+            GEN_CND_OWNS: ''
+            GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water                  # if 3k_main_template_historical_ is missing, it will be added
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_huang_yueying_hero_wood                              #certain key will auto-expand its value
+    choice:
+      FIRST:
+        choice_label: "Give them your blessing"
+        choice_title: "You see nothing wrong with the arragement so you gave them your blessings."
+        display_dilemma_choice_if_ceo_active: false                             #default value is false
+        required_ceos: ''                                                       #default value is ''
+      SECOND:
+        choice_label: "Deny the marriage"
+        choice_title: "We have must more important matters to attend to."
+        display_dilemma_choice_if_ceo_active: false                             #default value is false
+        required_ceos: ''                                                       #default value is ''

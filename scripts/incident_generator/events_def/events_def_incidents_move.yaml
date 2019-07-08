@@ -1,0 +1,294 @@
+enabled:true
+events:
+- event_name: guo_jia_move
+  title: Guo Jia
+  generate: True
+  prioritized: True
+  description: With a very soft demeanor and a smile on his face, Guo Jia possessed superior foresight and intelligence. His skills earned him victory in many battles, Cao Cao's praise, and a position as one of Cao Cao's most favored military strategists.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: guo_jia_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition must have been defeated in battle
+- event_name: jia_xu_move
+  title: Jia Xu
+  generate: True
+  prioritized: True
+  description: Jia Xu, an excellent strategist, was known for his carefully calculated and highly accurate plans. Although he originally travelled the land to avoid the turmoil, his skills were recognized by Cao Cao when he devised a plan that drove Cao Cao into a corner while in service to Zhang Xiu. With his superior knowledge, Cao Cao took him in as a strategist in his army.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jia_xu_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition shu and wei must be at war and jiang wei must have been defeated in battle
+#TODO: change to dilemma
+- event_name: jiang_wei_move
+  title: Jiang Wei
+  generate: True
+  prioritized: True
+  description: Left behind by his country, the younger officer Jian Wei defects from Wei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 190
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jiang_wei_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: pang_de_move
+  title: Pang De
+  generate: True
+  prioritized: True
+  description: A reputable warrior who had originally served Ma Teng and Ma Chao of Western Liang, he went on to become a general of Wei after an encounter with Cao Cao in Hanzhong. He generally had a calm demeanor and a steel-like tenacity in fulfilling his goals.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 125
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: pang_de_hero_wood
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition, shu and wei are at war
+- event_name: xiahou_ba_move
+  title: An officer defects from Wei
+  generate: True
+  prioritized: True
+  description: Fearing the events in Wei, Xiahou Ba defects to Shu.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 295
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: xun_you_move
+  title: Xun You
+  generate: True
+  prioritized: True
+  description: A tactician who served Cao Cao and guided Cao Cao's army to victory in many battles. A relative to Xun Yu, Xun Yu's grandfather and Xun You's great grandfather were brothers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_you_hero_earth
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: xun_yu_move
+  title: Xun Yu
+  generate: True
+  prioritized: True
+  description: A strategist who helped Cao Cao pursue his path of ambition, he was known as the "King's Gifted Adviser due to the brilliant strategies and advice he provided on a regular basis.  In addition, his keen insight and wide network of acquaintances made him a skilled evaluator of people and he discovered many capable officers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_yu_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: yu_jin_move
+  title: Yu Jin
+  generate: True
+  prioritized: True
+  description: After being promoted by Cao Cao, he made a name for himself through various battles across the land. He placed a strong emphasis on military discipline and his unyielding personality caused friend and foe alike to cower in fear.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: yue_jin_move
+  title: Yue Jin
+  generate: True
+  prioritized: True
+  description: Previously a court official, Yue Jin joined Cao Cao's army from its formation and served as its general wherein he spearheaded many battles. Despite his small build and quiet personality, his superior physical ability shone once in battle.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: zhang_he_move
+  title: Zhang He
+  generate: True
+  prioritized: True
+  description: As one of the Five Generals of Wei, he was a well-rounded character with skills in the military arts, literature, and music. In addition to his well-mannered behavior, these skills gave him a fascinating charm not commonly seen among his peers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 5
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: 3k_main_faction_yuan_shao
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition, yuan shao is at war with cao cao and zhang he is defeated in battle
+- event_name: zhang_he_2_move
+  title: An officer defects from Yuan Shao
+  generate: True
+  prioritized: True
+  description: Zhang He wishes to defect to your side.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 50
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: change to move to cao_pi_hero_earth instead of wei
+- event_name: zhong_hui_move
+  title: Zhong Hui
+  generate: True
+  prioritized: True
+  description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 70
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: zhou_tai_move
+  title: Zhou Tai
+  generate: True
+  prioritized: True
+  description: Originally a pirate, Zhou Tai viewed all with a critical and stern perspective. He was a composed man who could calmly assess any situation and respond accordingly. A quiet man with a large stature, he eventually came to serve Sun Ce wherein he became known for using his body as a shield to guide Sun Quan to safety during the battle of Hefei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhou_tai_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
