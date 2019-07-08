@@ -11,7 +11,7 @@ file_prefix="tt3k_dw9_"
 input_files_location="events_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
-textloca="output/text/db/"
+text_loc="output/text/db/"
 #input_file="events_def_incidents_spawn.yaml"
 #input_file="events_def_incidents_move.yaml"
 #input_file="events_def_incidents_marriage.yaml"
@@ -25,18 +25,20 @@ data = {'events':[]}
 
 def main():
 	#write the incident table tsvs
-	with open(file_prefix + "incident_spawn_pc.tsv", "w") as incident_pc_output, open(file_prefix + "incident_spawn_npc.tsv", "w") as incident_npc_output, \
-	open(file_prefix + "incident_option_junctions_spawn_pc.tsv", "w") as incident_option_junctions_pc_output, \
-	open(file_prefix + "incident_option_junctions_spawn_npc.tsv", "w") as incident_option_junctions_npc_output, \
-	open(file_prefix + "incident_payloads_spawn_pc.tsv", "w") as incident_payloads_pc_output, \
-	open(file_prefix + "incident_payloads_spawn_npc.tsv", "w") as incident_payloads_npc_output, \
+	with open(output_files_location + file_prefix + "incident_spawn_pc.tsv", "w") as incident_pc_output, \
+	open(output_files_location + file_prefix + "incident_spawn_npc.tsv", "w") as incident_npc_output, \
+	open(output_files_location + file_prefix + "incident_option_junctions_spawn_pc.tsv", "w") as incident_option_junctions_pc_output, \
+	open(output_files_location + file_prefix + "incident_option_junctions_spawn_npc.tsv", "w") as incident_option_junctions_npc_output, \
+	open(output_files_location + file_prefix + "incident_payloads_spawn_pc.tsv", "w") as incident_payloads_pc_output, \
+	open(output_files_location + file_prefix + "incident_payloads_spawn_npc.tsv", "w") as incident_payloads_npc_output, \
 	open(text_loc + file_prefix + "incident_loc_pc.loc.tsv", "w") as incident_loc_pc_output, \
 	\
-	open(file_prefix + "dilemma_spawn_pc.tsv", "w") as dilemma_pc_output, open(file_prefix + "dilemma_spawn_npc.tsv", "w") as dilemma_npc_output, \
-	open(file_prefix + "dilemma_option_junctions_spawn_pc.tsv", "w") as dilemma_option_junctions_pc_output, \
-	open(file_prefix + "dilemma_option_junctions_spawn_npc.tsv", "w") as dilemma_option_junctions_npc_output, \
-	open(file_prefix + "dilemma_payloads_spawn_pc.tsv", "w") as dilemma_payloads_pc_output, \
-	open(file_prefix + "dilemma_payloads_spawn_npc.tsv", "w") as dilemma_payloads_npc_output, \
+	open(output_files_location + file_prefix + "dilemma_spawn_pc.tsv", "w") as dilemma_pc_output, \
+	open(output_files_location + file_prefix + "dilemma_spawn_npc.tsv", "w") as dilemma_npc_output, \
+	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn_pc.tsv", "w") as dilemma_option_junctions_pc_output, \
+	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn_npc.tsv", "w") as dilemma_option_junctions_npc_output, \
+	open(output_files_location + file_prefix + "dilemma_payloads_spawn_pc.tsv", "w") as dilemma_payloads_pc_output, \
+	open(output_files_location + file_prefix + "dilemma_payloads_spawn_npc.tsv", "w") as dilemma_payloads_npc_output, \
 	open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as dilemma_loc_pc_output:
 
 		#writer init for incidents
@@ -119,8 +121,8 @@ def main():
 		dilemma_text_data_pc=[]
 
 		for events_def_file in os.listdir(input_files_location):
-			filename, extension =  os.path.split(events_def_file)
-			if extension != ".yaml" and extension != ".yml"
+			filename, extension =  os.path.splitext(events_def_file)
+			if extension != ".yaml" and extension != ".yml":
 				continue
 			if "events_def" not in events_def_file:
 				continue
@@ -131,6 +133,10 @@ def main():
 			with open(events_def_file_location, 'r') as yaml_input_file:
 				events_data = yaml.safe_load(yaml_input_file)
 				events_list = events_data.get('events')
+
+				if not events_data.get('enabled'):
+					print("File " + events_def_file + " is disabled, skipping...")
+					continue
 
 				for event in events_list:
 					if not ('enabled' not in event or event.get('enabled') is True):

@@ -1,4 +1,4 @@
-enabled: false
+enabled: False
 events:
 - event_name: zhuge_liang_huang_yueying_marriage
   event_type: dilemma

@@ -1,4 +1,4 @@
-enabled:true
+enabled: True
 events:
 - event_name: guo_jia_move
   title: Guo Jia
