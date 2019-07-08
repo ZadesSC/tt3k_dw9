@@ -150,6 +150,7 @@ events:
         SPAWN_AGENT_OFF_MAP: guo_huai_hero_earth
         LOCATED: FACTION
 - event_name: han_dang_spawn
+  enabled: False
   title: Han Dang
   generate: True
   prioritized: True
@@ -168,6 +169,7 @@ events:
         SPAWN_AGENT_OFF_MAP: han_dang_hero_fire
         LOCATED: FACTION
 - event_name: hua_xiong_spawn
+  enabled: false
   title: Hua Xiong
   generate: True
   prioritized: True
@@ -484,6 +486,7 @@ events:
         SPAWN_AGENT_OFF_MAP: ma_dai_hero_fire
         LOCATED: FACTION
 - event_name: man_chong_spawn
+  enabled: False
   title: Man Chong
   generate: True
   prioritized: True
@@ -647,6 +650,7 @@ events:
     - payloads:
         SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
 - event_name: zhou_cang_spawn
+  enabled: False
   title: Zhou Cang
   generate: True
   prioritized: True

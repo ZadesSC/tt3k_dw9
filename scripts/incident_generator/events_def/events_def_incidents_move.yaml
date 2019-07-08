@@ -181,6 +181,7 @@ events:
     - payloads:
         CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
 - event_name: yue_jin_move
+  enabled: False
   title: Yue Jin
   generate: True
   prioritized: True
@@ -271,6 +272,7 @@ events:
     - payloads:
         CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
 - event_name: zhou_tai_move
+  Enabled: False
   title: Zhou Tai
   generate: True
   prioritized: True
