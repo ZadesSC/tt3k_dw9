@@ -1,0 +1,66 @@
+#TODO: for now use spawning to generate characters that should join through marriage
+events:
+- event_name: lady_bao_sanniang_spawn
+  title: Bao Sanniang
+  generate: True
+  prioritized: True
+  description: Born as the third daughter of the Bao family, she went on to follow Guan Suo after the two met on the battlefield wherein she became interested in him. She had a fearless personality and was often seen beaming with cheer and positivity.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 140
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_bao_sanniang_hero_wood
+        LOCATED: FACTION
+- event_name: lady_huang_yueying_spawn
+  title: Huang Yueying
+  generate: True
+  prioritized: True
+  description: Wife of Zhuge Liang, daughter of Huang Chengyan. She chose to fight as a way to support her husband and execute his strategies. Not only was she an able fighter, but she was also well versed in astronomy, geography, strategy, and other fields of learning and continually aided Zhuge Liang from the shadows. Her natural grace gave her a commanding presence on the field of battle.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_huang_yueying_hero_wood
+        LOCATED: FACTION
+- event_name: lady_wang_yuanji_spawn
+  title: Wang Yuanji
+  generate: True
+  prioritized: True
+  description: As the daughter of the Wei minister, Wang Su, she showed both intelligence and courage from a young age. Although extremely polite and kind to those weaker than her, she openly spoke her mind to those she considered family.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 235
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yuanji_hero_earth
+        LOCATED: FACTION
+- event_name: lady_zhang_chunhua_spawn
+  title: Zhang Chunhua
+  generate: True
+  prioritized: True
+  description: Zhang Chunhua was well-known for her intelligence, a caring mother to two talented sons, Sima Shi and Sima Zhao, and a loving wife to Sima Yi. Although her face was never without a smile, she was feared by those in her family.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yuanji_hero_earth
+        LOCATED: FACTION

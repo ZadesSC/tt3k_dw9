@@ -1,0 +1,1060 @@
+events:
+- event_name: cao_xiu_spawn
+  title: Cao Xiu
+  generate: True
+  prioritized: True
+  description: Cao Cao's nephew. When Cao Cao first raised his flag, he traveled from
+    the far-off Wu District to join him. For this, Cao Cao praised him, saying "He
+    is my clan's 1000-Ii (league) Horse." After losing his father at a young age,
+    Cao Cao took him in as a new son.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: cao_xiu_hero_fire
+        LOCATED: FACTION
+- event_name: deng_ai_spawn
+  title: Deng Ai
+  generate: True
+  prioritized: True
+  description: Although he was originally a minister, he became a general with a long
+    history with Wei after his talents as a commander was discovered by Sima Yi who
+    then granted him troops. As he often enjoyed looking at maps, he became skilled
+    in using the terrain to his advantage often making use of these in the battles
+    with Shu.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 125
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: deng_ai_hero_metal
+        LOCATED: FACTION
+- event_name: ding_feng_spawn
+  title: Ding Feng
+  generate: True
+  prioritized: True
+  description: An officer of Wu who fought in many battles, serving Wu over a long
+    period of time. His frightening appearance and overly thick arms may have scared
+    many, but at heart he was a poet who loved beautiful scenery.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ding_feng_hero_metal
+        LOCATED: FACTION
+- event_name: fa_zheng_spawn
+  title: Fa Zheng
+  generate: True
+  prioritized: True
+  description: A key figure in Liu Bei's efforts to take the land of Shu and formerly
+    served Liu Zhang. He was a brilliant tactician, and pacified Yi Province with
+    his strategies, as well as participated in the invasion of Hanzhong. He strongly
+    believed in repaying his debts, whether it was for good or ill.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 20
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: fa_zheng_hero_water
+        LOCATED: FACTION
+- event_name: guan_ping_spawn
+  title: Guan Ping
+  generate: True
+  prioritized: True
+  description: Originally the second son of Guan Ding of Hebei, he became the adopted
+    son of Guan Yu after his father became impressed with Guan Yu in a fateful encounter.
+    Earnest and true, he joined Liu Bei as a sign of respect to his adopted father
+    wherein he became proficient in martial arts.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 50
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_ping_hero_fire
+- event_name: guan_suo_spawn
+  title: Guan Suo
+  generate: True
+  prioritized: True
+  description: Growing up as the son of Guan Yu, he became an honest and hard-working
+    warrior who always greeted anyone he met with sincerity. This trait made him very
+    popular with the common people while his earnest innocence gained him popularity
+    among many women.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 60
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_suo_hero_earth
+- event_name: guan_xing_spawn
+  title: Guan Xing
+  generate: True
+  prioritized: True
+  description: As the son of Guan Yu, he often kept to himself but grew to be highly
+    capable at anything he tried. Despite his young age, he experienced many battles
+    as he fought alongside Zhang Bao in the Northern Campaign, and his skills earned
+    him praise from many including Zhuge Liang himself who expressed high hopes for
+    Guan Xing throughout his life.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 105
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_xing_hero_wood
+- event_name: guo_huai_spawn
+  title: Guo Huai
+  generate: True
+  prioritized: True
+  description: Indebted to Xiahou Yuan and Sima Yu, he became an active officer of
+    Wei in the many battles against Shu. Although sickly and frequently coughing,
+    he proved his unquestionable loyalty and value on the battlefield.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 75
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guo_huai_hero_earth
+        LOCATED: FACTION
+- event_name: han_dang_spawn
+  title: Han Dang
+  generate: True
+  prioritized: True
+  description: Han Dang, originally a footman from Liaoxi Province, was discovered
+    by Sun Jian wherein he went on to serve Wu as a naval leader. He became a veteran
+    general under Wu wherein he served the Sun family for three generations.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: han_dang_hero_fire
+        LOCATED: FACTION
+- event_name: hua_xiong_spawn
+  title: Hua Xiong
+  generate: True
+  prioritized: True
+  description: A ferocious retainer of Dong Zhuo, he used his colossal and dominant
+    stature to strike at Sun Jian and Yuan Shao of the Anti-Dong Zhuo coalition at
+    Shisui Gate.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: hua_xiong_hero_fire
+        LOCATED: FACTION
+- event_name: jia_chong_spawn
+  title: Jia Chong
+  generate: True
+  prioritized: True
+  description: As the son of Jia Kui of Wei, he grew to be a notable officer and a
+    powerful politician. Seeing his skills, Sima Yi placed him on his side as a confidant
+    along with Sima Shi and Sima Zhao.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 225
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: jia_chong_hero_water
+        LOCATED: FACTION
+- event_name: jiang_wei_spawn
+  title: Jiang Wei
+  generate: True
+  prioritized: True
+  description: "A young officer often referred to as the Prodigy of Tianshui. Successor to Zhuge Liang, he was entrusted with all of his strategies and led numerous campaigns against Wei after the Battle of Wuzhang Plains. He supported Shu until the very end with his steadfastness and strong sense of responsibility."
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 220
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: jiang_wei_hero_fire
+        LOCATED: FACTION
+- event_name: lady_bu_lianshi_spawn
+  title: Bu Lianshi
+  generate: True
+  prioritized: True
+  description: An attendant of Sun Shangxiang who was Bu Zhi's daughter and a member
+    of a once prominent family that had fallen from grace. She was hired for her skills
+    in battle to act as a bodyguard for Sun Shangxiang.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_bu_lianshi_hero_wood
+        LOCATED: FACTION
+- event_name: lady_cai_yan_spawn
+  title: Cai Yan
+  generate: True
+  prioritized: True
+  description: As the daughter of Cai Yong of the Later Han, she was once abducted
+    by the Xiongnu tribe during one of their raids but was later saved by Cao Cao.
+    Praised for her beauty and skills in music, it was often said that she hid great
+    wisdom and strength behind her quiet and weary demeanor.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 25
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_cai_yan_hero_water
+        LOCATED: FACTION
+- event_name: lady_dong_bai_spawn
+  title: Dong Bai
+  generate: True
+  prioritized: True
+  description: Granddaughter of Dong Zhuo, she was doted on by her grandfather and
+    was often given land and fortune even at a young age. Although willful and cruel,
+    she took on a charming persona whenever Dong Zhuo was about.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 40
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_dong_bai_hero_fire
+        LOCATED: FACTION
+- event_name: lady_guan_yinping_spawn
+  title: Guan Yingping
+  generate: True
+  prioritized: True
+  description: The daughter of Guan Yu and sister to Guan Ping, Guan Xing, and Guan
+    Suo, Guan Yinping showed great talent on the battlefield after originally learning
+    martial arts for self-defense. Although she possessed enviable strength, she herself
+    was oblivious to the fact
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 160
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_guan_yinping_hero_wood
+- event_name: lady_lu_lingqi_spawn
+  enabled: false
+  title: Lu Lingqi
+  generate: True
+  prioritized: True
+  description: The daughter of Lu Bu, she possessed an extraordinary fighting ability
+    much like her father, and has the courage to stand on the front lines of any battle.
+    With her strong spirit, she overcame many hardships despite struggling with a
+    fear of loneliness caused by her past.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 40
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: lu_bu_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_lu_lingqi_hero_fire
+- event_name: lady_wang_yi_spawn
+  title: Wang Yi
+  generate: True
+  prioritized: True
+  description: As a daughter of the Wang family of Hanzhong, she vowed revenge on
+    Ma Chao after her entire family was slaughtered in Western Liang. Although she
+    served as a leader of the Wei forces, she was typically distant from others and
+    only engaged people when her goals required it.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yi_hero_fire
+        LOCATED: FACTION
+- event_name: lady_xin_xianying_spawn
+  title: Xin Xianying
+  generate: True
+  prioritized: True
+  description: The daughter of Xin Pi of Wei, older sister to Xin Chang, and aunt
+    to Yang Hu, her clever and observant nature saved her family from threats numerous
+    times.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 95
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_xin_xianying_hero_water
+        LOCATED: FACTION
+- event_name: lady_zhang_xingcai_spawn
+  title: Zhang Xingcai
+  generate: True
+  prioritized: True
+  description: As the daughter of Zhang Fei, she was born in chaotic times and grew
+    up surrounded by the mighty warriors that followed Liu Bei. After her decision
+    to stand on the battlefield, she made it her calling to protect Liu Bei's son,
+    Liu Shan, from any that would harm him. Unlike her father, she was a calm warrior
+    who never let her emotions run rampant.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 170
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_zhang_xingcai_hero_metal
+- event_name: lady_zhen_ji_spawn
+  title: Zhenji
+  generate: True
+  prioritized: True
+  description: A true Femme Fatale, Zhenji was known to have skin as smooth as a gem
+    and a face as lovely as a flower. Although she had a passion for music and song,
+    she was often difficult to approach due to her cold, distant personality and her
+    majestic and dignified mannerism. After Cao Cao's subjugation of the Ji Province,
+    his son, Cao Pi, took in Zhenji as his wife.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 55
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: 3k_main_faction_yuan_shao
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_zhen_ji_hero_earth
+        LOCATED: FACTION
+- event_name: li_dian_spawn
+  title: Li Dian
+  generate: True
+  prioritized: True
+  description: A warrior who joined Cao Cao's army from its birth, Li Dian had an
+    easygoing personality and a clever mind. He was skilled in predicting the locations
+    of enemy ambushes and traps, yet, due to his laid-back personality, he sometimes
+    caused confusion among his peers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: li_dian_hero_metal
+        LOCATED: FACTION
+- event_name: ling_tong_spawn
+  title: Ling Tong
+  generate: True
+  prioritized: True
+  description: A servant of Wu, he continued to serve even after his father Ling Cao
+    was killed in a battle with Gan Ning, and despised him ever since. Often viewed
+    as sarcastic, his deep loyalty to his friends and family drove him in battle putting
+    his name among the greatest warriors of Wu.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ling_tong_hero_wood
+        LOCATED: FACTION
+- event_name: lu_meng_spawn
+  title: Lu Meng
+  generate: True
+  prioritized: True
+  description: Viewed by many as a hard worker who often took matters too seriously,
+    Lu Meng had a straightforward personality that earned him the trust of his peers.
+    Originally a warrior of brute strength, he grew into an excellent general with
+    strength and strategic knowledge. His exceptional skills even caught the eye of
+    his senior, Lu Su, who was greatly impressed with his growth.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 25
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lu_meng_hero_metal
+        LOCATED: FACTION
+- event_name: lu_xun_spawn
+  title: Lu Xun
+  generate: True
+  prioritized: True
+  description: A self-effacing young officer, who always conducted himself with sincerity
+    and encapsulated both the liveliness of youth and the wisdom of resourcefulness.
+    He aided Lu Meng in defeating Guan Yu, and succeeded in taking Jing.  He served
+    as the Grand Commander at Yiling and was able to destroy Liu Bei's huge army.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 55
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lu_xun_hero_water
+        LOCATED: FACTION
+- event_name: ma_dai_spawn
+  title: Ma Dai
+  generate: True
+  prioritized: True
+  description: Along with his cousin, Ma Chao, he went on to serve Shu after losing
+    his home to Cao Cao's conquest. However, despite his experiences, he always had
+    a cheerful demeanor and was quick to earn Zhuge Liang's trust who gave him vital
+    responsibilities in the battles with Wei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ma_dai_hero_fire
+        LOCATED: FACTION
+- event_name: man_chong_spawn
+  title: Man Chong
+  generate: True
+  prioritized: True
+  description: A brilliant general of Wei. Skillful in debates but also excelled as a strategist and tactician during many defensive battles. A close friend to Xu Huang, he recommended that he give his service to Cao Cao.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: man_chong_hero_fire
+        LOCATED: FACTION
+- event_name: sima_shi_spawn
+  title: Sima Shi
+  generate: True
+  prioritized: True
+  description: As the eldest son of Sima Yi, his refined appearance and extraordinary
+    talents earned him very high expectations from those around him. However, his
+    self-righteous personality caused many to view him with a mixture of fear and
+    respect.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 180
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: sima_shi_hero_earth
+- event_name: sima_zhao_spawn
+  title: Sima Zhao
+  generate: True
+  prioritized: True
+  description: As the second son of Sima Yi, he was often viewed as lacking when compared
+    to his perfect brother, Sima Shi, due to his playful and happy-go-lucky personality.
+    Despite this, he always remained focused on what was important during vital situations.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 195
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: sima_zhao_hero_earth
+- event_name: wei_yan_spawn
+  title: Wei Yan
+  generate: True
+  prioritized: True
+  description: A fiery berserker whose strength, appearance, and actions struck fear
+    into the hearts of both friend and foe alike. Despite Zhuge Liang's objections
+    and concerns that Wei Yan would defect, Liu Bei took Wei Yan into his service
+    after the death of Liu Biao, Wei Yan's former lord.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 100
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: wei_yan_hero_fire
+        LOCATED: FACTION
+- event_name: wen_yang_spawn
+  title: Wen Yang
+  generate: True
+  prioritized: True
+  description: Son of the Wei officer, Wen Qin. He had unprecedented courage and valor
+    in battle, and his accomplishments on the battlefield were reminiscent of those
+    of the great Zhao Yun.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 330
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: wen_yang_hero_wood
+        LOCATED: FACTION
+- event_name: xiahou_ba_spawn
+  title: Xiahou Ba
+  generate: True
+  prioritized: True
+  description: As the son of Xiahou Yuan and a member of the Xiahou family, much was
+    expected of him until his position grew unsteady as the political situation in
+    Wei changed. Frequently garbed in armor and a helmet, he had an enigmatic, young
+    look and a personality much like his father.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 165
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xiahou_ba_hero_fire
+        LOCATED: FACTION
+- event_name: xu_sheng_spawn
+  title: Xu Sheng
+  generate: True
+  prioritized: True
+  description: Serving as a military general of Sun Quan, he played a key role in
+    the battles at Chibi, Hefei, and the in the invasion of Jing. He was known for
+    his "fake towers" ruse which caused Cao Pi to retreat believing Sun Quan knew
+    of his attack and had the city heavily fortified beforehand.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 170
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xu_sheng_hero_fire
+- event_name: xu_shu_spawn
+  title: Xu Shu
+  generate: True
+  prioritized: True
+  description: Originally a disciple of Sima Hui, Xu Shu was a skilled military strategist
+    and an expert swordsman. After being involved in a crime for a friend, he was
+    soon arrested wherein he then vowed to dedicate his life to scholarly pursuits
+    rather than swordplay. Xu Shu went on to serve Liu Bei as his military advisor,
+    however...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xu_shu_hero_water
+        LOCATED: FACTION
+- event_name: zhang_bao_spawn
+  title: Zhang Bao
+  generate: True
+  prioritized: True
+  description: As the son of Zhang Fei, he grew to be as skilled in battle as his
+    father. Along with his brother-in-law, Guan Xing, his skills were proven to be
+    a valuable asset in the many battles in the Northern Campaign. With a strong sense
+    of responsibility, he often enjoyed taking care of others.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 140
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
+- event_name: zhou_cang_spawn
+  title: Zhou Cang
+  generate: True
+  prioritized: True
+  generate: True
+  prioritized: True
+  description: 'Follower of Zhang Bao, former leader of the Yellow Turbans. While operating as a bandit at Mt. Woniu he encounters Guan Yu, whom he admired,
+    and swore his loyalty to Guan Yu. An agile officer, it was often said that not only was he a gifted swimmer, he
+    could run a thousand leagues in a day, a feat comparable to Red Hare.'
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhou_cang_hero_wood
+- event_name: zhu_ran_spawn
+  title: Zhu Ran
+  generate: True
+  prioritized: True
+  description: An officer who was a classmate of Sun Quan's, he was promoted within
+    the Wu ranks. Although young, he distinguished himself in the suppression of a
+    group of mountain bandits and during the Battle of Ruxukou. An officer entrusted
+    with the future of Wu, those around him had high expectations for his potential.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhu_ran_hero_fire
+        LOCATED: FACTION
+- event_name: zhuge_dan_spawn
+  title: Zhuge Dan
+  generate: True
+  prioritized: True
+  description: While Zhuge Liang was "the Dragon" and Zhuge Jin was "the Tiger," this young officer was jokingly called "the Dog." Through hard work, he gained a high reputation for his service to Wei. \nHe was extremely serious and had a strong sense of right and wrong, but he had trouble considering the big picture as his focus was very narrow.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 130
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhuge_dan_hero_fire
+        LOCATED: FACTION
+#TODO: This section is for temp marriages, set them here since I can't get a fucking marriage event to fire
+- event_name: lady_bao_sanniang_spawn
+  title: Bao Sanniang
+  generate: True
+  prioritized: True
+  description: Born as the third daughter of the Bao family, she went on to follow Guan Suo after the two met on the battlefield wherein she became interested in him. She had a fearless personality and was often seen beaming with cheer and positivity.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 140
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_bao_sanniang_hero_wood
+        LOCATED: FACTION
+- event_name: lady_huang_yueying_spawn
+  title: Huang Yueying
+  generate: True
+  prioritized: True
+  description: Wife of Zhuge Liang, daughter of Huang Chengyan. She chose to fight as a way to support her husband and execute his strategies. Not only was she an able fighter, but she was also well versed in astronomy, geography, strategy, and other fields of learning and continually aided Zhuge Liang from the shadows. Her natural grace gave her a commanding presence on the field of battle.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_huang_yueying_hero_wood
+        LOCATED: FACTION
+- event_name: lady_wang_yuanji_spawn
+  title: Wang Yuanji
+  generate: True
+  prioritized: True
+  description: As the daughter of the Wei minister, Wang Su, she showed both intelligence and courage from a young age. Although extremely polite and kind to those weaker than her, she openly spoke her mind to those she considered family.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 235
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yuanji_hero_earth
+        LOCATED: FACTION
+- event_name: lady_zhang_chunhua_spawn
+  title: Zhang Chunhua
+  generate: True
+  prioritized: True
+  description: Zhang Chunhua was well-known for her intelligence, a caring mother to two talented sons, Sima Shi and Sima Zhao, and a loving wife to Sima Yi. Although her face was never without a smile, she was feared by those in her family.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yuanji_hero_earth
+        LOCATED: FACTION
+#TODO: this section is for moving characters:
+events:
+- event_name: guo_jia_move
+  title: Guo Jia
+  generate: True
+  prioritized: True
+  description: With a very soft demeanor and a smile on his face, Guo Jia possessed superior foresight and intelligence. His skills earned him victory in many battles, Cao Cao's praise, and a position as one of Cao Cao's most favored military strategists.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: guo_jia_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition must have been defeated in battle
+- event_name: jia_xu_move
+  title: Jia Xu
+  generate: True
+  prioritized: True
+  description: Jia Xu, an excellent strategist, was known for his carefully calculated and highly accurate plans. Although he originally travelled the land to avoid the turmoil, his skills were recognized by Cao Cao when he devised a plan that drove Cao Cao into a corner while in service to Zhang Xiu. With his superior knowledge, Cao Cao took him in as a strategist in his army.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jia_xu_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition shu and wei must be at war and jiang wei must have been defeated in battle
+#TODO: change to dilemma
+- event_name: jiang_wei_move
+  title: Jiang Wei
+  generate: True
+  prioritized: True
+  description: Left behind by his country, the younger officer Jian Wei defects from Wei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 190
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jiang_wei_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: pang_de_move
+  title: Pang De
+  generate: True
+  prioritized: True
+  description: A reputable warrior who had originally served Ma Teng and Ma Chao of Western Liang, he went on to become a general of Wei after an encounter with Cao Cao in Hanzhong. He generally had a calm demeanor and a steel-like tenacity in fulfilling his goals.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 125
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: pang_de_hero_wood
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition, shu and wei are at war
+- event_name: xiahou_ba_move
+  title: An officer defects from Wei
+  generate: True
+  prioritized: True
+  description: Fearing the events in Wei, Xiahou Ba defects to Shu.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 295
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: xun_you_move
+  title: Xun You
+  generate: True
+  prioritized: True
+  description: A tactician who served Cao Cao and guided Cao Cao's army to victory in many battles. A relative to Xun Yu, Xun Yu's grandfather and Xun You's great grandfather were brothers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_you_hero_earth
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: xun_yu_move
+  title: Xun Yu
+  generate: True
+  prioritized: True
+  description: A strategist who helped Cao Cao pursue his path of ambition, he was known as the "King's Gifted Adviser due to the brilliant strategies and advice he provided on a regular basis.  In addition, his keen insight and wide network of acquaintances made him a skilled evaluator of people and he discovered many capable officers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_yu_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: yu_jin_move
+  title: Yu Jin
+  generate: True
+  prioritized: True
+  description: After being promoted by Cao Cao, he made a name for himself through various battles across the land. He placed a strong emphasis on military discipline and his unyielding personality caused friend and foe alike to cower in fear.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: yue_jin_move
+  title: Yue Jin
+  generate: True
+  prioritized: True
+  description: Previously a court official, Yue Jin joined Cao Cao's army from its formation and served as its general wherein he spearheaded many battles. Despite his small build and quiet personality, his superior physical ability shone once in battle.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: zhang_he_move
+  title: Zhang He
+  generate: True
+  prioritized: True
+  description: As one of the Five Generals of Wei, he was a well-rounded character with skills in the military arts, literature, and music. In addition to his well-mannered behavior, these skills gave him a fascinating charm not commonly seen among his peers.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 5
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: 3k_main_faction_yuan_shao
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: add condition, yuan shao is at war with cao cao and zhang he is defeated in battle
+- event_name: zhang_he_2_move
+  title: An officer defects from Yuan Shao
+  generate: True
+  prioritized: True
+  description: Zhang He wishes to defect to your side.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 50
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+#TODO: change to move to cao_pi_hero_earth instead of wei
+- event_name: zhong_hui_move
+  title: Zhong Hui
+  generate: True
+  prioritized: True
+  description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 70
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: zhou_tai_move
+  title: Zhou Tai
+  generate: True
+  prioritized: True
+  description: Originally a pirate, Zhou Tai viewed all with a critical and stern perspective. He was a composed man who could calmly assess any situation and respond accordingly. A quiet man with a large stature, he eventually came to serve Sun Ce wherein he became known for using his body as a shield to guide Sun Quan to safety during the battle of Hefei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhou_tai_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
