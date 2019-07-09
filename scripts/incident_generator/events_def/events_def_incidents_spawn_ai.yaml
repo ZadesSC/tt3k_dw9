@@ -1,0 +1,521 @@
+enabled: true
+events:
+- event_name: cao_xiu_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumorsat a remarkable warrior named Cao Xiu joining Cao Cao's forces has reached your ears.  Maybe you can recuit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: cao_xiu_hero_fire
+        LOCATED: FACTION
+- event_name: deng_ai_npc_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumorsat a remarkable warrior named Deng Ai joining Wei has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 125
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: deng_ai_hero_metal
+        LOCATED: FACTION
+- event_name: ding_feng_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Ding Feng joining Wu has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ding_feng_hero_metal
+        LOCATED: FACTION
+- event_name: fa_zheng_npc_spawn
+  title: Rumors of a Remarkable Strategist
+  generate: True
+  prioritized: True
+  description: Rumors of a remarkable strategist named Fa Zheng joining Liu Bei's forces has reached your ears.  Maybe you can coerce him to your side somehow...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 20
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: fa_zheng_hero_water
+        LOCATED: FACTION
+- event_name: guan_ping_npc_spawn
+  title: The Adopted Son of the God of War
+  generate: True
+  prioritized: True
+  description: You hear that Guan Yu has adopted a son named Guan Ping
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 50
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_ping_hero_fire
+- event_name: guan_suo_npc_spawn
+  title: The Son of the God of War
+  generate: True
+  prioritized: True
+  description: You hear that Guan Yu has a son named Guan Suo
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 60
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_suo_hero_earth
+- event_name: guan_xing_npc_spawn
+  title: The Son of the God of War
+  generate: True
+  prioritized: True
+  description: You hear that Guan Yu has a son named Guan Xing
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 105
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guan_xing_hero_wood
+- event_name: guo_huai_npc_spawn
+  title: Rumors of a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Guo Huai joining Wei has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 75
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: guo_huai_hero_earth
+        LOCATED: FACTION
+- event_name: jia_chong_npc_spawn
+  title: Rumors of a Remarkable Strategist
+  generate: True
+  prioritized: True
+  description: Rumors of a remarkable strategist named Jia Chong joining Wei has reached your ears.  Maybe you can coerce him to your side somehow...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 225
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: jia_chong_hero_water
+        LOCATED: FACTION
+- event_name: jiang_wei_npc_spawn
+  title: Rumors a Brilliant and Young Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a brilliant and young warrior named Jiang Wei Wei joining Wei has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 220
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: jiang_wei_hero_fire
+        LOCATED: FACTION
+- event_name: lady_bu_lianshi_npc_spawn
+  title: Rumors of a Remarkable Beauty
+  generate: True
+  prioritized: True
+  description: Rumors of a remarkable beauty named Bu Lianshi joining Wu has reached your ears.  Maybe you can offer them something in return for marriage...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_bu_lianshi_hero_wood
+        LOCATED: FACTION
+- event_name: lady_cai_yan_npc_spawn
+  title: Rumors of an Amazing Poetess
+  generate: True
+  prioritized: True
+  description: Rumors of an amazing poetess named Cai Yan joining Wei has reached your ears.  Maybe you can offer them something to join your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 25
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_cai_yan_hero_water
+        LOCATED: FACTION
+- event_name: lady_dong_bai_npc_spawn
+  title: Granddaughter of the Tyrant
+  generate: True
+  prioritized: True
+  description: The pampered granddaughter of Dong Zhuo has shown up.  What will become of this world.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 40
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_dong_bai_hero_fire
+        LOCATED: FACTION
+- event_name: lady_guan_yinping_npc_spawn
+  title: Daught of the God of War
+  generate: True
+  prioritized: True
+  description: You hear that Guan Yu's daughter has appeared, and what's more, it appears that she yields inhuman levels of strength!
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 160
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_guan_yinping_hero_wood
+- event_name: lady_wang_yi_npc_spawn
+  title: Rumors a Vengeful Warrior
+  generate: True
+  prioritized: True
+  description: Your intelligence officers tell you that a stunning and vengeful female general has appeared in Wei.  She goes by the name Wang Yi.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_wang_yi_hero_fire
+        LOCATED: FACTION
+- event_name: lady_xin_xianying_npc_spawn
+  title: Rumors Of an Intelligent Advisor
+  generate: True
+  prioritized: True
+  description: You hear that daughter of Xin Pi, Xin Xianying, has been giving extremely accurate and fruitful advise to Wei.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 95
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_xin_xianying_hero_water
+        LOCATED: FACTION
+- event_name: lady_zhang_xingcai_npc_spawn
+  title: Daught of Zhang Fei
+  generate: True
+  prioritized: True
+  description: It appears that Zhang Fei's daught, Zhang Xingcai has appeared.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 170
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_zhang_xingcai_hero_metal
+- event_name: lady_zhen_ji_npc_spawn
+  title: Rumors of a Remarkable Beauty
+  generate: True
+  prioritized: True
+  description: Rumors say that Yuan Shao had found a beautiful bride named Zhenji for his son.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 55
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: 3k_main_faction_yuan_shao
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lady_zhen_ji_hero_earth
+        LOCATED: FACTION
+- event_name: li_dian_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Li Dian joining Cao Cao's forces has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: li_dian_hero_metal
+        LOCATED: FACTION
+- event_name: ling_tong_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Ling Tong joining Wu has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ling_tong_hero_wood
+        LOCATED: FACTION
+- event_name: lu_meng_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Lu Meng has joined Wu has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 25
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lu_meng_hero_metal
+        LOCATED: FACTION
+- event_name: lu_xun_npc_spawn
+  title: Rumors of a Remarkable Strategist
+  generate: True
+  prioritized: True
+  description: Rumors of a remarkable strategist named Lu Xun joining Wu has reached your ears.  Maybe you can coerce him to your side somehow...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 55
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: lu_xun_hero_water
+        LOCATED: FACTION
+- event_name: ma_dai_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Ma Dai joining Shu has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: ma_dai_hero_fire
+        LOCATED: FACTION
+- event_name: sima_shi_npc_spawn
+  title: Son of Sima Yi
+  generate: True
+  prioritized: True
+  description: Sima Shi, the son of Sima Yi, has appeared.  Wonder if he's as cunning as his father.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 180
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: sima_shi_hero_earth
+- event_name: sima_zhao_npc_spawn
+  title: Second Son of Sima Yi
+  generate: True
+  prioritized: True
+  description: The second son of Sima Yi, Sima Zhao has appeared.  You hear that he is quite lazy though.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 195
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: sima_zhao_hero_earth
+- event_name: wei_yan_npc_spawn
+  title: Rumors a Terrifying Berserker
+  generate: True
+  prioritized: True
+  description: Your soldiers has sighted a terrifying warrior that fought like a berserker in the Shu army.  Perhaps you can entice him to work for you instead.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 100
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: wei_yan_hero_fire
+        LOCATED: FACTION
+- event_name: wen_yang_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Wen Yang joining Cao Cao's forces has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 330
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: wen_yang_hero_wood
+        LOCATED: FACTION
+- event_name: xiahou_ba_npc_spawn
+  title: Son of Xiahou Yuan
+  generate: True
+  prioritized: True
+  description: Looks like the son of Xiahou Yuan has appeared.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 165
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xiahou_ba_hero_fire
+        LOCATED: FACTION
+- event_name: xu_sheng_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Xu Sheng joining Wei has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 170
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xu_sheng_hero_fire
+- event_name: xu_shu_npc_spawn
+  title: Rumors of a Remarkable Strategist
+  generate: True
+  prioritized: True
+  description: Rumors of a remarkable strategist named Xu Shu joining Shu has reached your ears.  Maybe you can coerce him to your side somehow...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: xu_shu_hero_water
+        LOCATED: FACTION
+- event_name: zhang_bao_npc_spawn
+  title: Son of Zhang Fei
+  generate: True
+  prioritized: True
+  description: Zhang Bao, the son of Zhang Fei, as appeared.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 140
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
+- event_name: zhu_ran_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Zhu Ran joining Wu has reached your ears.  Maybe you can recruit him to your side...
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhu_ran_hero_fire
+        LOCATED: FACTION
+- event_name: zhuge_dan_npc_spawn
+  title: Rumors of a Dog?
+  generate: True
+  prioritized: True
+  description: You hear of an amusing rumor that one of Zhuge Liang's brother is called a Dog.  Though not as gifted as his siblings, it appears he is quite hardworking.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 130
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhuge_dan_hero_fire
+        LOCATED: FACTION
