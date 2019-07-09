@@ -8,11 +8,13 @@ from ruamel.yaml import YAML
 
 file_prefix="tt3k_dw9_"
 
-input_files_location="events_def/"
+#input_files_location="events_def/"
 input_files_location="test_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
 text_loc="output/text/db/"
+lua_loc="output/script/campaign/mod/"
+lua_base_indent=""
 
 id_inc_mod=1
 payload_id_start=1540000000
@@ -37,7 +39,9 @@ def main():
 	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn_npc.tsv", "w") as dilemma_option_junctions_npc_output, \
 	open(output_files_location + file_prefix + "dilemma_payloads_spawn_pc.tsv", "w") as dilemma_payloads_pc_output, \
 	open(output_files_location + file_prefix + "dilemma_payloads_spawn_npc.tsv", "w") as dilemma_payloads_npc_output, \
-	open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as dilemma_loc_pc_output:
+	open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as dilemma_loc_pc_output:#, \
+	#\
+	#open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as lua_output:
 
 		#writer init for incidents
 		incident_pc_writer = csv.writer(incident_pc_output, delimiter='\t', lineterminator='\n')
@@ -63,6 +67,19 @@ def main():
 
 		dilemma_loc_pc_writer = csv.writer(dilemma_loc_pc_output, delimiter='\t', lineterminator='\n')
 
+		# create data arrays for each table
+		incident_base_data_pc = []
+		incident_option_junctions_data_pc = []
+		incident_payloads_data_pc = []
+		incident_text_data_pc = []
+
+		dilemma_base_data_pc = []
+		dilemma_option_junctions_data_pc = []
+		dilemma_payloads_data_pc = []
+		dilemma_text_data_pc = []
+
+		lua_lines = []
+
 		#write incident table header for tsv
 		incident_pc_writer.writerow(["incidents_tables"])
 		incident_pc_writer.writerow(["0"])
@@ -85,6 +102,9 @@ def main():
 		incident_payloads_npc_writer.writerow(["0"])
 		incident_payloads_npc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target"])
 
+		#lua writer
+
+
 		#write dilemma table header for tsv
 		dilemma_pc_writer.writerow(["dilemmas_tables"])
 		dilemma_pc_writer.writerow(["0"])
@@ -106,17 +126,6 @@ def main():
 		dilemma_payloads_npc_writer.writerow(["cdir_events_dilemma_payloads_tables"])
 		dilemma_payloads_npc_writer.writerow(["0"])
 		dilemma_payloads_npc_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target"])
-
-		#create data arrays for each table
-		incident_base_data_pc=[]
-		incident_option_junctions_data_pc=[]
-		incident_payloads_data_pc=[]
-		incident_text_data_pc=[]
-
-		dilemma_base_data_pc=[]
-		dilemma_option_junctions_data_pc=[]
-		dilemma_payloads_data_pc=[]
-		dilemma_text_data_pc=[]
 
 		for events_def_file in os.listdir(input_files_location):
 			filename, extension =  os.path.splitext(events_def_file)
@@ -238,6 +247,41 @@ def main():
 									resolved_value = resolve_payloads_value(key, value)
 									event_payload_data_pc.append([get_payloads_id(), 0, event_name_pc, key, resolved_value, target_name])
 
+					#this is an custom event, generate lua as well
+					#add_lua_lines(lua_lines, event_name_pc, event)
+					if event.get('is_custom'):
+						custom_data = event.get('custom_data')
+
+						# write function start
+						# add comma to end of previous custom event
+						# if len(lua_lines) is not 0:
+						# 	lua_lines[len(lua_lines) - 1].append(",\n")
+						# lua_lines.append("[\"" + event_name_pc + "\"] = {\n")
+						# lua_lines.append("\tfunction()\n")
+						lua_lines.append("\t\tif context:incident() == \"" + event_name_pc + "\" then\n")
+
+						# write each action as a function being called
+						for custom_datum in custom_data:
+							custom_action_type = custom_datum.get('ACTION_TYPE')
+
+							if custom_action_type == 'SPAWN':
+								target_faction = resolve_faction_name(custom_datum.get('TARGET_FACTION'))
+								target_character = resolve_template_name(custom_datum.get('TARGET_TEMPLATE'))
+								target_character_element = resolve_officer_element(target_character)
+
+								# write lua action
+								lua_lines.append(
+									"\t\t\tcdir_events_manager:spawn_character_subtype_template_in_faction(\"" + target_faction + "\", \"" + "3k_general_" + target_character_element + "\", \"" + target_character + "\")\n")
+							else:
+								print("Invalid ACTION_TYPE: " + custom_action_type)
+								exit(1)
+
+						# write lua footer
+						# lua_lines.append("\tend,\n")
+						# lua_lines.append("\tnil\n")
+						# lua_lines.append("}")
+						lua_lines.append("\t\tend;\n")
+
 					if is_dilemma:
 						dilemma_base_data_pc.extend(event_base_data_pc)
 						dilemma_option_junctions_data_pc.extend(event_option_junctions_data_pc)
@@ -269,6 +313,62 @@ def main():
 		for row in dilemma_text_data_pc:
 			dilemma_loc_pc_writer.writerow(row)
 
+	#open lua file at end to avoid stack limit
+	with open(lua_loc + file_prefix + "custom_events.lua", "w") as lua_output:
+		#write lua header
+		# write opening lua
+		lua_output.write("core:add_listener(\n")
+		lua_output.write("\t\"tt3k_dw9_custom_event_listener\",\n")
+		lua_output.write("\t\"IncidentOccuredEvent\",\n")
+		lua_output.write("\tfunction(context)\n")
+		lua_output.write("\t\treturn string.find(context:incident(), \"tt3k_dw9\")\n")
+		lua_output.write("\tend,\n")
+		lua_output.write("\tfunction(context)\n")
+		lua_output.write("\t\tout(\"TT3K_DW9 CUSTOM EVENT FIRED\")\n")
+
+		#write lua
+		for row in lua_lines:
+			#print("LUA: " + row)
+			lua_output.write(lua_base_indent + row)
+
+		#write lua footer
+		lua_output.write("\tend,\n")
+		lua_output.write("\ttrue\n")
+		lua_output.write(")")
+
+#split into own function because we are running into max blocksize zzz
+def add_lua_lines(lua_lines, event_name, event_data):
+	if event_data.get('is_custom'):
+		custom_data = event_data.get('custom_data')
+
+		# write function start
+		# add comma to end of previous custom event
+		if len(lua_lines) is not 0:
+			lua_lines[len(lua_lines) - 1].append(",\n")
+		lua_lines.append("[" + event_name + "] = {\n")
+		lua_lines.append("\tfunction()\n")
+
+		# write each action as a function being called
+		for custom_datum in custom_data:
+			custom_action_type = custom_datum.get('ACTION_TYPE')
+
+			if custom_action_type == 'SPAWN':
+				target_faction = custom_datum.get('TARGET_FACTION')
+				target_character = resolve_template_name(custom_datum.get('TARGET_TEMPLATE'))
+				target_character_element = resolve_officer_element(target_character)
+
+				# write lua action
+				lua_lines.append(
+					"\t\tcdir_events_manager:spawn_character_subtype_template_in_faction(\"" + target_faction + "\", \"" + "3k_general_" + target_character_element + "\", \"" + target_character + "\n);")
+			else:
+				print("Invalid ACTION_TYPE: " + custom_action_type)
+				exit(1)
+
+		# write lua footer
+		lua_lines.append("\tend,")
+		lua_lines.append("\tnil")
+		lua_lines.append("\t}")
+
 def resolve_option_junctions_value(key, value_to_resolve):
 	if key == 'GEN_CND_CHARACTER_TEMPLATE':
 		return resolve_template_name(value_to_resolve)
@@ -293,10 +393,16 @@ def resolve_payloads_value(key, value_to_resolve):
 		return "CHARACTER_TEMPLATE_KEY[" + officer_key + "];AGENT_SUBTYPE[3k_general_" + officer_element + "]"
 	return value_to_resolve
 
+def resolve_officer_element(full_template_name_to_resolve):
+	officer_key = resolve_template_name(full_template_name_to_resolve)
+	officer_element = officer_key.rsplit('_', 1)[1]
+	return officer_element
+
 def resolve_event_name(name_to_resolve):
 	resolved_name = name_to_resolve
 	if 'historical' not in name_to_resolve:
-		resolved_name = "3k_main_historical_" + resolved_name
+		#resolved_name = "3k_main_historical_" + resolved_name
+		resolved_name = "tt3k_dw9_" + resolved_name
 	return resolved_name
 
 #ytr names MUST be passed as a full template name
