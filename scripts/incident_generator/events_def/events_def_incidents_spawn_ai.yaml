@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 events:
 - event_name: cao_xiu_npc_spawn
   title: Rumors a Remarkable Warrior
