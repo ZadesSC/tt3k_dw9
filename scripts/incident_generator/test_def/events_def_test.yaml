@@ -1,0 +1,18 @@
+enabled: true
+events:
+- event_name: test_ai_spawn
+  title: Test AI Spawn
+  generate: True
+  prioritized: True
+  description: Testing the spawning of characters for ai
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: cao_xiu_hero_fire
+        LOCATED: FACTION
