@@ -18,7 +18,7 @@ events:
     - option_junctions:
         CND_FIRST_ROUND: 0
         CND_UNIQUE: ''
-        GEN_CND_SELF: ''
+        CND_NOT_FACTION: ''
         GEN_CND_FACTION: wei
         GEN_TARGET_FACTION: ''
     - payloads:

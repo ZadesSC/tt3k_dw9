@@ -8,8 +8,8 @@ from ruamel.yaml import YAML
 
 file_prefix="tt3k_dw9_"
 
-#input_files_location="events_def/"
-input_files_location="test_def/"
+input_files_location="events_def/"
+#input_files_location="test_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
 text_loc="output/text/db/"
@@ -149,6 +149,7 @@ def main():
 					if not ('enabled' not in event or event.get('enabled') is True):
 						print("Skipping " + event.get('event_name') + " since it is disabled")
 						continue
+					print("Event name: " + event.get('event_name'))
 
 					#Load default values for event information
 					if 'event_type' not in event:
@@ -377,8 +378,6 @@ def resolve_option_junctions_value(key, value_to_resolve):
 	if key == 'GEN_CND_FACTION':
 		return resolve_faction_name(value_to_resolve)
 	if key == 'CND_FACTION':
-		return resolve_faction_name(value_to_resolve)
-	if key == 'CND_NOT_FACTION':
 		return resolve_faction_name(value_to_resolve)
 	return value_to_resolve
 
