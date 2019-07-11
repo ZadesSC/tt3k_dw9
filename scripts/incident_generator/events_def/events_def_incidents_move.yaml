@@ -55,7 +55,7 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 190
+        CND_FIRST_ROUND: 220
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu

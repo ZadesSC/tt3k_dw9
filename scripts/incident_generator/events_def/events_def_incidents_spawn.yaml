@@ -213,7 +213,7 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 220
+        CND_FIRST_ROUND: 190
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
