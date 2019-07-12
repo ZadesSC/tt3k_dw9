@@ -5,6 +5,8 @@ import operator
 import yaml
 import os
 from ruamel.yaml import YAML
+import pathlib
+import subprocess
 
 file_prefix="tt3k_dw9_"
 
@@ -24,12 +26,22 @@ junction_id_start=1550000000
 data = {'events':[]}
 
 def main():
+	#clean out output folder
+	p = subprocess.Popen("rm -rf " + output_files_location + "*", shell=True).wait()
+
+	#make output directories
+	pathlib.Path(output_files_location + "db/incidents_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "db/cdir_events_incident_option_junctions_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "db/cdir_events_incident_payloads_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "text/db/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "script/campaign/mod/").mkdir(parents=True, exist_ok=True)
+
 	#write the incident table tsvs
-	with open(output_files_location + file_prefix + "incident_spawn_pc.tsv", "w") as incident_pc_output, \
+	with open(output_files_location + "db/incidents_tables/" + file_prefix + "incident_spawn_pc.tsv", "w") as incident_pc_output, \
 	open(output_files_location + file_prefix + "incident_spawn_npc.tsv", "w") as incident_npc_output, \
-	open(output_files_location + file_prefix + "incident_option_junctions_spawn_pc.tsv", "w") as incident_option_junctions_pc_output, \
+	open(output_files_location + "db/cdir_events_incident_option_junctions_tables/" + file_prefix + "incident_option_junctions_spawn_pc.tsv", "w") as incident_option_junctions_pc_output, \
 	open(output_files_location + file_prefix + "incident_option_junctions_spawn_npc.tsv", "w") as incident_option_junctions_npc_output, \
-	open(output_files_location + file_prefix + "incident_payloads_spawn_pc.tsv", "w") as incident_payloads_pc_output, \
+	open(output_files_location + "db/cdir_events_incident_payloads_tables/" + file_prefix + "incident_payloads_spawn_pc.tsv", "w") as incident_payloads_pc_output, \
 	open(output_files_location + file_prefix + "incident_payloads_spawn_npc.tsv", "w") as incident_payloads_npc_output, \
 	open(text_loc + file_prefix + "incident_loc_pc.loc.tsv", "w") as incident_loc_pc_output, \
 	\
@@ -97,10 +109,10 @@ def main():
 
 		incident_payloads_pc_writer.writerow(["cdir_events_incident_payloads_tables"])
 		incident_payloads_pc_writer.writerow(["0"])
-		incident_payloads_pc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target"])
+		incident_payloads_pc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
 		incident_payloads_npc_writer.writerow(["cdir_events_incident_payloads_tables"])
 		incident_payloads_npc_writer.writerow(["0"])
-		incident_payloads_npc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target"])
+		incident_payloads_npc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
 
 		#lua writer
 
@@ -115,10 +127,10 @@ def main():
 
 		dilemma_option_junctions_pc_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
 		dilemma_option_junctions_pc_writer.writerow(["0"])
-		dilemma_option_junctions_pc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target"])
+		dilemma_option_junctions_pc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
 		dilemma_option_junctions_npc_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
 		dilemma_option_junctions_npc_writer.writerow(["0"])
-		dilemma_option_junctions_npc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target"])
+		dilemma_option_junctions_npc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
 
 		dilemma_payloads_pc_writer.writerow(["cdir_events_dilemma_payloads_tables"])
 		dilemma_payloads_pc_writer.writerow(["0"])
