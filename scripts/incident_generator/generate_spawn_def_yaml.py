@@ -379,6 +379,8 @@ def resolve_option_junctions_value(key, value_to_resolve):
 		return resolve_faction_name(value_to_resolve)
 	if key == 'CND_FACTION':
 		return resolve_faction_name(value_to_resolve)
+	if key == 'CND_NOT_FACTION':
+		return resolve_faction_name(value_to_resolve)
 	return value_to_resolve
 
 def resolve_payloads_value(key, value_to_resolve):
