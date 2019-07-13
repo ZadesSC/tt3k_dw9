@@ -1,48 +1,78 @@
-enabled: true
+enabled: False
 events:
-- event_name: test_ai_spawn
-  title: Test AI Spawn
-  is_custom: True
-  custom_data:
-    - ACTION_TYPE: SPAWN
-      TARGET_FACTION: wei
-      TARGET_TEMPLATE: sima_yi_hero_water
-    - ACTION_TYPE: SPAWN
-      TARGET_FACTION: shu
-      TARGET_TEMPLATE: zhuge_liang_hero_water
+  #this is for marriage_move
+- event_name: cao_ren_test_marriage
+  event_type: dilemma
+  enabled: False
+  title: Test Turn 1 Marriage
+  ui_image: 3k_event_wedding
   generate: True
   prioritized: True
-  description: Testing the spawning of characters for ai
+  description: By the forces that move CA, please make this work
   target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        CND_NOT_FACTION: ''
-        GEN_CND_FACTION: wei
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        DUMMY: ''
-- event_name: test_ai_2_spawn
-  title: Test AI 2 Spawn
-  is_custom: True
-  custom_data:
-    - ACTION_TYPE: SPAWN
-      TARGET_FACTION: wei
-      TARGET_TEMPLATE: lady_xin_xianying_hero_water
-    - ACTION_TYPE: SPAWN
-      TARGET_FACTION: shu
-      TARGET_TEMPLATE: lady_guan_yinping_hero_wood
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 1
+          CND_UNIQUE: ''
+          GEN_TARGET_FACTION: wei
+          CND_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: lady_xin_xianying_hero_water
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+    - target_character_2:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
+         GEN_CND_FACTION: shu
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            CAMPAING_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_marry];CHARACTER;SOURCE_CHARACTER[target_character_1]
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: First choice
+      choice_title: First choice text
+    SECOND:
+      choice_label: Second choice
+      choice_title: Second choice text
+
+  #this is more marriage_spawn
+- event_name: cao_ren_test_2_marriage
+  event_type: dilemma
+  enabled: True
+  title: Test Turn 1 Marriage
+  ui_image: 3k_event_wedding
   generate: True
   prioritized: True
-  description: Testing the spawning of characters for ai with multiple events
+  description: By the forces that move CA, please make this work
   target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        GEN_CND_FACTION: wei
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        DUMMY: ''
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 0
+          CND_UNIQUE: ''
+          GEN_TARGET_NONE: ''
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: cao_ren_hero_earth
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_wang_yi_hero_fire
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: First choice
+      choice_title: First choice text
+    SECOND:
+      choice_label: Second choice
+      choice_title: Second choice text

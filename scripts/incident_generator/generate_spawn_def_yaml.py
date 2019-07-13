@@ -10,8 +10,8 @@ import subprocess
 
 file_prefix="tt3k_dw9_"
 
-input_files_location="events_def/"
-#input_files_location="test_def/"
+#input_files_location="events_def/"
+input_files_location="test_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
 text_loc="output/text/db/"
@@ -37,107 +37,80 @@ def main():
 	pathlib.Path(output_files_location + "script/campaign/mod/").mkdir(parents=True, exist_ok=True)
 
 	#write the incident table tsvs
-	with open(output_files_location + "db/incidents_tables/" + file_prefix + "incident_spawn_pc.tsv", "w") as incident_pc_output, \
-	open(output_files_location + file_prefix + "incident_spawn_npc.tsv", "w") as incident_npc_output, \
-	open(output_files_location + "db/cdir_events_incident_option_junctions_tables/" + file_prefix + "incident_option_junctions_spawn_pc.tsv", "w") as incident_option_junctions_pc_output, \
-	open(output_files_location + file_prefix + "incident_option_junctions_spawn_npc.tsv", "w") as incident_option_junctions_npc_output, \
-	open(output_files_location + "db/cdir_events_incident_payloads_tables/" + file_prefix + "incident_payloads_spawn_pc.tsv", "w") as incident_payloads_pc_output, \
-	open(output_files_location + file_prefix + "incident_payloads_spawn_npc.tsv", "w") as incident_payloads_npc_output, \
-	open(text_loc + file_prefix + "incident_loc_pc.loc.tsv", "w") as incident_loc_pc_output, \
+	with open(output_files_location + "db/incidents_tables/" + file_prefix + "incident_spawn.tsv", "w") as incident_output, \
+	open(output_files_location + "db/cdir_events_incident_option_junctions_tables/" + file_prefix + "incident_option_junctions_spawn.tsv", "w") as incident_option_junctions_output, \
+	open(output_files_location + "db/cdir_events_incident_payloads_tables/" + file_prefix + "incident_payloads_spawn.tsv", "w") as incident_payloads_output, \
+	open(text_loc + file_prefix + "incidents.loc.tsv", "w") as incident_loc_output, \
 	\
-	open(output_files_location + file_prefix + "dilemma_spawn_pc.tsv", "w") as dilemma_pc_output, \
-	open(output_files_location + file_prefix + "dilemma_spawn_npc.tsv", "w") as dilemma_npc_output, \
-	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn_pc.tsv", "w") as dilemma_option_junctions_pc_output, \
-	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn_npc.tsv", "w") as dilemma_option_junctions_npc_output, \
-	open(output_files_location + file_prefix + "dilemma_payloads_spawn_pc.tsv", "w") as dilemma_payloads_pc_output, \
-	open(output_files_location + file_prefix + "dilemma_payloads_spawn_npc.tsv", "w") as dilemma_payloads_npc_output, \
-	open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as dilemma_loc_pc_output:#, \
+	open(output_files_location + file_prefix + "dilemma_spawn.tsv", "w") as dilemma_output, \
+	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn.tsv", "w") as dilemma_option_junctions_output, \
+	open(output_files_location + file_prefix + "dilemma_payloads_spawn.tsv", "w") as dilemma_payloads_output, \
+	open(output_files_location + file_prefix + "dilemma_choice_details.tsv", "w") as dilemma_choice_details_output, \
+	open(text_loc + file_prefix + "dilemma_choices.loc.tsv", "w") as dilemma_choices_loc_output, \
+	open(text_loc + file_prefix + "dilemmas.loc.tsv", "w") as dilemma_loc_output:#, \
 	#\
 	#open(text_loc + file_prefix + "dilemma_loc_pc.loc.tsv", "w") as lua_output:
 
 		#writer init for incidents
-		incident_pc_writer = csv.writer(incident_pc_output, delimiter='\t', lineterminator='\n')
-		incident_npc_writer = csv.writer(incident_npc_output, delimiter='\t', lineterminator='\n')
-
-		incident_option_junctions_pc_writer = csv.writer(incident_option_junctions_pc_output, delimiter='\t', lineterminator='\n')
-		incident_option_junctions_npc_writer = csv.writer(incident_option_junctions_npc_output, delimiter='\t', lineterminator='\n')
-
-		incident_payloads_pc_writer = csv.writer(incident_payloads_pc_output, delimiter='\t', lineterminator='\n')
-		incident_payloads_npc_writer = csv.writer(incident_payloads_npc_output, delimiter='\t', lineterminator='\n')
-
-		incident_loc_pc_writer = csv.writer(incident_loc_pc_output, delimiter='\t', lineterminator='\n')
+		incident_writer = csv.writer(incident_output, delimiter='\t', lineterminator='\n')
+		incident_option_junctions_writer = csv.writer(incident_option_junctions_output, delimiter='\t', lineterminator='\n')
+		incident_payloads_writer = csv.writer(incident_payloads_output, delimiter='\t', lineterminator='\n')
+		incident_loc_writer = csv.writer(incident_loc_output, delimiter='\t', lineterminator='\n')
 
 		#writer init for dilemma
-		dilemma_pc_writer = csv.writer(dilemma_pc_output, delimiter='\t', lineterminator='\n')
-		dilemma_npc_writer = csv.writer(dilemma_npc_output, delimiter='\t', lineterminator='\n')
-
-		dilemma_option_junctions_pc_writer = csv.writer(dilemma_option_junctions_pc_output, delimiter='\t', lineterminator='\n')
-		dilemma_option_junctions_npc_writer = csv.writer(dilemma_option_junctions_npc_output, delimiter='\t', lineterminator='\n')
-
-		dilemma_payloads_pc_writer = csv.writer(dilemma_payloads_pc_output, delimiter='\t', lineterminator='\n')
-		dilemma_payloads_npc_writer = csv.writer(dilemma_payloads_npc_output, delimiter='\t', lineterminator='\n')
-
-		dilemma_loc_pc_writer = csv.writer(dilemma_loc_pc_output, delimiter='\t', lineterminator='\n')
+		dilemma_writer = csv.writer(dilemma_output, delimiter='\t', lineterminator='\n')
+		dilemma_option_junctions_writer = csv.writer(dilemma_option_junctions_output, delimiter='\t', lineterminator='\n')
+		dilemma_payloads_writer = csv.writer(dilemma_payloads_output, delimiter='\t', lineterminator='\n')
+		dilemma_choice_details_writer = csv.writer(dilemma_choice_details_output, delimiter='\t', lineterminator='\n')
+		dilemma_choices_loc_writer = csv.writer(dilemma_choices_loc_output, delimiter='\t', lineterminator='\n')
+		dilemma_loc_writer = csv.writer(dilemma_loc_output, delimiter='\t', lineterminator='\n')
 
 		# create data arrays for each table
-		incident_base_data_pc = []
-		incident_option_junctions_data_pc = []
-		incident_payloads_data_pc = []
-		incident_text_data_pc = []
+		incident_base_data = []
+		incident_option_junctions_data = []
+		incident_payloads_data = []
+		incident_text_data = []
 
-		dilemma_base_data_pc = []
-		dilemma_option_junctions_data_pc = []
-		dilemma_payloads_data_pc = []
-		dilemma_text_data_pc = []
+		dilemma_base_data = []
+		dilemma_option_junctions_data = []
+		dilemma_payloads_data = []
+		dilemma_choice_details_data = []
+		dilemma_choices_text_data = []
+		dilemma_text_data = []
 
 		lua_lines = []
 
 		#write incident table header for tsv
-		incident_pc_writer.writerow(["incidents_tables"])
-		incident_pc_writer.writerow(["0"])
-		incident_pc_writer.writerow(["generate","key", "ui_image", "prioritised", "event_category"])
-		incident_npc_writer.writerow(["incidents_tables"])
-		incident_npc_writer.writerow(["0"])
-		incident_npc_writer.writerow(["generate","key", "ui_image", "prioritised", "event_category"])
+		incident_writer.writerow(["incidents_tables"])
+		incident_writer.writerow(["0"])
+		incident_writer.writerow(["generate","key", "ui_image", "prioritised", "event_category"])
 
-		incident_option_junctions_pc_writer.writerow(["cdir_events_incident_option_junctions_tables"])
-		incident_option_junctions_pc_writer.writerow(["0"])
-		incident_option_junctions_pc_writer.writerow(["id", "-", "incident_key", "option_key", "value", "target"])
-		incident_option_junctions_npc_writer.writerow(["cdir_events_incident_option_junctions_tables"])
-		incident_option_junctions_npc_writer.writerow(["0"])
-		incident_option_junctions_npc_writer.writerow(["id", "-", "incident_key", "option_key", "value", "target"])
+		incident_option_junctions_writer.writerow(["cdir_events_incident_option_junctions_tables"])
+		incident_option_junctions_writer.writerow(["0"])
+		incident_option_junctions_writer.writerow(["id", "-", "incident_key", "option_key", "value", "target"])
 
-		incident_payloads_pc_writer.writerow(["cdir_events_incident_payloads_tables"])
-		incident_payloads_pc_writer.writerow(["0"])
-		incident_payloads_pc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
-		incident_payloads_npc_writer.writerow(["cdir_events_incident_payloads_tables"])
-		incident_payloads_npc_writer.writerow(["0"])
-		incident_payloads_npc_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
+		incident_payloads_writer.writerow(["cdir_events_incident_payloads_tables"])
+		incident_payloads_writer.writerow(["0"])
+		incident_payloads_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
 
 		#lua writer
 
-
 		#write dilemma table header for tsv
-		dilemma_pc_writer.writerow(["dilemmas_tables"])
-		dilemma_pc_writer.writerow(["0"])
-		dilemma_pc_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritised", "event_category", "sound_popup_override", "sound_click_override"])
-		dilemma_npc_writer.writerow(["dilemmas_tables"])
-		dilemma_npc_writer.writerow(["0"])
-		dilemma_npc_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritised", "event_category", "sound_popup_override", "sound_click_override"])
+		dilemma_writer.writerow(["dilemmas_tables"])
+		dilemma_writer.writerow(["0"])
+		dilemma_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritised", "event_category", "sound_popup_override", "sound_click_override"])
 
-		dilemma_option_junctions_pc_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
-		dilemma_option_junctions_pc_writer.writerow(["0"])
-		dilemma_option_junctions_pc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
-		dilemma_option_junctions_npc_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
-		dilemma_option_junctions_npc_writer.writerow(["0"])
-		dilemma_option_junctions_npc_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
+		dilemma_option_junctions_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
+		dilemma_option_junctions_writer.writerow(["0"])
+		dilemma_option_junctions_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
 
-		dilemma_payloads_pc_writer.writerow(["cdir_events_dilemma_payloads_tables"])
-		dilemma_payloads_pc_writer.writerow(["0"])
-		dilemma_payloads_pc_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target"])
-		dilemma_payloads_npc_writer.writerow(["cdir_events_dilemma_payloads_tables"])
-		dilemma_payloads_npc_writer.writerow(["0"])
-		dilemma_payloads_npc_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target"])
+		dilemma_payloads_writer.writerow(["cdir_events_dilemma_payloads_tables"])
+		dilemma_payloads_writer.writerow(["0"])
+		dilemma_payloads_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target"])
+
+		dilemma_choice_details_writer.writerow(["cdir_events_dilemma_choice_details_tables"])
+		dilemma_choice_details_writer.writerow(["2"])
+		dilemma_choice_details_writer.writerow(["choice_key", "dilemma_key", "display_dilemma_choice_if_ceo_active", "required_ceos"])
 
 		for events_def_file in os.listdir(input_files_location):
 			filename, extension =  os.path.splitext(events_def_file)
@@ -177,22 +150,19 @@ def main():
 					if 'prioritized' not in event:
 						event.update({'prioritized': False})
 					if 'event_category' not in event:
-						event.update({'event_category': 'historical'})
+						event.update({'event_category': 'tt3k_dw9_historical'})
 					if 'sound_popup_override' not in event:
 						event.update({'sound_popup_override': ''})
 					if 'sound_click_override' not in event:
 						event.update({'sound_click_override': ''})
 
 					#build type agnoistic data for writing
-					event_base_data_pc=[]
-					event_option_junctions_data_pc=[]
-					event_payload_data_pc=[]
-					text_data_pc=[]
-
-					event_base_data_npc=[]
-					event_option_junctions_table_data_npc=[]
-					event_payload_data_npc=[]
-					text_data_npc=[]
+					event_base_data=[]
+					event_option_junctions_data=[]
+					event_payload_data=[]
+					event_choice_details_data=[]
+					choices_text_data=[]
+					text_data=[]
 
 					is_dilemma=False
 					if event.get('event_type') == 'dilemma':
@@ -200,23 +170,21 @@ def main():
 
 					#write to base table(dilemma/incident table)
 					#we assume dilemma and incident are the only valid options
-					event_name_pc=""
-					event_name_npc=""
+					event_name=""
 					if is_dilemma:
-						event_name_pc = resolve_event_name(event.get('event_name')) + "_dilemma_pc"
-						base_row=[event.get('generate'), event_name_pc, event.get('title'), event.get('description'), event.get('ui_image'), event.get('prioritized'), event.get('event_category'), event.get('sound_popup_override'), event.get('sound_click_override')]
-						event_base_data_pc.append(base_row)
+						event_name = resolve_event_name(event.get('event_name'))
+						base_row=[event.get('generate'), event_name, event.get('title'), event.get('description'), event.get('ui_image'), event.get('prioritized'), event.get('event_category'), event.get('sound_popup_override'), event.get('sound_click_override')]
+						event_base_data.append(base_row)
+
+						text_data.append(["dilemmas_localised_title_" + event_name, event.get('title'), True])
+						text_data.append(["dilemmas_localised_description_" + event_name, event.get('description'), True])
 					else:
-						event_name_pc = resolve_event_name(event.get('event_name')) + "_incident_pc"
-						base_row=[event.get('generate'), event_name_pc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
-						event_base_data_pc.append(base_row)
+						event_name = resolve_event_name(event.get('event_name'))
+						base_row=[event.get('generate'), event_name, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
+						event_base_data.append(base_row)
 
-						event_name_npc = resolve_event_name(event.get('event_name')) + "_incident_npc"
-						base_row=[event.get('generate'), event_name_npc, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
-						event_base_data_npc.append(base_row)
-
-						text_data_pc.append(["incidents_localised_title_" + event_name_pc, event.get('title'), True])
-						text_data_pc.append(["incidents_localised_description_" + event_name_pc, event.get('description'), True])
+						text_data.append(["incidents_localised_title_" + event_name, event.get('title'), True])
+						text_data.append(["incidents_localised_description_" + event_name, event.get('description'), True])
 
 					#write to option_junctions, the schema for the table should be the same for both
 					for target in event.get('target'):
@@ -238,11 +206,11 @@ def main():
 						if is_dilemma:
 							for key, value in option_junctions_dict.items():
 								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data_pc.append([event_name_pc, get_junctions_id(), 0, key, resolved_value, target_name])
+								event_option_junctions_data.append([event_name, get_junctions_id(), 0, key, resolved_value, target_name])
 						else:
 							for key, value in option_junctions_dict.items():
 								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data_pc.append([get_junctions_id(), 0, event_name_pc, key, resolved_value, target_name])
+								event_option_junctions_data.append([get_junctions_id(), 0, event_name, key, resolved_value, target_name])
 
 						#make sure payloads exists
 						if len(target_data) > 1 and 'payloads' in target_data[1]:
@@ -254,11 +222,37 @@ def main():
 								for choice, choice_values in payloads_dict.items():
 									for key, value in choice_values.items():
 										resolved_value = resolve_payloads_value(key, value)
-										event_payload_data_pc.append([choice, event_name_pc, get_payloads_id(), 0, key, resolved_value, target_name])
+										event_payload_data.append([choice, event_name, get_payloads_id(), 0, key, resolved_value, target_name])
 							else:
 								for key, value in payloads_dict.items():
 									resolved_value = resolve_payloads_value(key, value)
-									event_payload_data_pc.append([get_payloads_id(), 0, event_name_pc, key, resolved_value, target_name])
+									event_payload_data.append([get_payloads_id(), 0, event_name, key, resolved_value, target_name])
+
+					#process dilemma choices
+					if is_dilemma:
+						for choice_key in event.get('choice'):
+							choice_data = event.get('choice').get(choice_key)
+
+							if "display_dilemma_choice_if_ceo_active" in choice_data:
+								ddcica = choice_data.get("display_dilemma_choice_if_ceo_active")
+							else:
+								ddcica = False
+
+							if 'required_ceos' in choice_data:
+								required_ceos = choice_data.get("required_ceos")
+							else:
+								required_ceos = ''
+
+							#write to choice data
+							event_choice_details_data.append([choice_key, event_name, ddcica, required_ceos])
+
+							#write to text
+							choice_title_key = "cdir_events_dilemma_choice_details_localised_choice_title_" + event_name + choice_key
+							choice_label_key = "cdir_events_dilemma_choice_details_localised_choice_label_" + event_name + choice_key
+							choice_title = choice_data.get('choice_title')
+							choice_label = choice_data.get('choice_label')
+							choices_text_data.append([choice_title_key, choice_title, True])
+							choices_text_data.append([choice_label_key, choice_label, True])
 
 					#this is an custom event, generate lua as well
 					#add_lua_lines(lua_lines, event_name_pc, event)
@@ -271,7 +265,7 @@ def main():
 						# 	lua_lines[len(lua_lines) - 1].append(",\n")
 						# lua_lines.append("[\"" + event_name_pc + "\"] = {\n")
 						# lua_lines.append("\tfunction()\n")
-						lua_lines.append("\t\tif context:incident() == \"" + event_name_pc + "\" then\n")
+						lua_lines.append("\t\tif context:incident() == \"" + event_name + "\" then\n")
 
 						# write each action as a function being called
 						for custom_datum in custom_data:
@@ -296,35 +290,41 @@ def main():
 						lua_lines.append("\t\tend;\n")
 
 					if is_dilemma:
-						dilemma_base_data_pc.extend(event_base_data_pc)
-						dilemma_option_junctions_data_pc.extend(event_option_junctions_data_pc)
-						dilemma_payloads_data_pc.extend(event_payload_data_pc)
-						dilemma_text_data_pc.extend(text_data_pc)
+						dilemma_base_data.extend(event_base_data)
+						dilemma_option_junctions_data.extend(event_option_junctions_data)
+						dilemma_payloads_data.extend(event_payload_data)
+						dilemma_choice_details_data.extend(event_choice_details_data)
+						dilemma_choices_text_data.extend(choices_text_data)
+						dilemma_text_data.extend(text_data)
 					else:
-						incident_base_data_pc.extend(event_base_data_pc)
-						incident_option_junctions_data_pc.extend(event_option_junctions_data_pc)
-						incident_payloads_data_pc.extend(event_payload_data_pc)
-						incident_text_data_pc.extend(text_data_pc)
+						incident_base_data.extend(event_base_data)
+						incident_option_junctions_data.extend(event_option_junctions_data)
+						incident_payloads_data.extend(event_payload_data)
+						incident_text_data.extend(text_data)
 
 		#generate files for incidents for players
-		for row in incident_base_data_pc:
-			incident_pc_writer.writerow(row)
-		for row in incident_option_junctions_data_pc:
-			incident_option_junctions_pc_writer.writerow(row)
-		for row in incident_payloads_data_pc:
-			incident_payloads_pc_writer.writerow(row)
-		for row in incident_text_data_pc:
-			incident_loc_pc_writer.writerow(row)
+		for row in incident_base_data:
+			incident_writer.writerow(row)
+		for row in incident_option_junctions_data:
+			incident_option_junctions_writer.writerow(row)
+		for row in incident_payloads_data:
+			incident_payloads_writer.writerow(row)
+		for row in incident_text_data:
+			incident_loc_writer.writerow(row)
 
 		#generate files for dilemmas for players
-		for row in dilemma_base_data_pc:
-			dilemma_pc_writer.writerow(row)
-		for row in dilemma_option_junctions_data_pc:
-			dilemma_option_junctions_pc_writer.writerow(row)
-		for row in dilemma_payloads_data_pc:
-			dilemma_payloads_pc_writer.writerow(row)
-		for row in dilemma_text_data_pc:
-			dilemma_loc_pc_writer.writerow(row)
+		for row in dilemma_base_data:
+			dilemma_writer.writerow(row)
+		for row in dilemma_option_junctions_data:
+			dilemma_option_junctions_writer.writerow(row)
+		for row in dilemma_payloads_data:
+			dilemma_payloads_writer.writerow(row)
+		for row in dilemma_choice_details_data:
+			dilemma_choice_details_writer.writerow(row)
+		for row in dilemma_choices_text_data:
+			dilemma_choices_loc_writer.writerow(row)
+		for row in dilemma_text_data:
+			dilemma_loc_writer.writerow(row)
 
 	#open lua file at end to avoid stack limit
 	with open(lua_loc + file_prefix + "custom_events.lua", "w") as lua_output:
@@ -456,23 +456,3 @@ def get_payloads_id():
 if __name__ == '__main__':
     main()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			##atom, please stop auto trimming my document

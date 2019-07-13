@@ -1,8 +1,190 @@
 enabled: False
 events:
-- event_name: zhuge_liang_huang_yueying_marriage
+- event_name: sima_yi_zhang_chunhua_marriage_spawn
   event_type: dilemma
-  title: The Dragon's Marriage
+  title: The Silver Eminence's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: Your strategist, Sima Yi, has found a worthy bride and wishes to marry.  He seeks your blessings.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 90
+          CND_UNIQUE: ''
+          CND_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+         GEN_CND_OWNS: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_zhang_chunhua_hero_water
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+
+- event_name: sima_yi_zhang_chunhua_marriage_spawn_npc
+  event_type: incident
+  title: The Silver Eminence's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: You heard that Wei's famed strategist Sima Yi has taken Zhang Chunhua as his wife.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 85
+          CND_UNIQUE: ''
+          CND_NOT_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_zhang_chunhua_hero_water
+          SECOND:
+            DUMMY: ''
+
+- event_name: sima_zhao_wang_yuanji_marriage_spawn
+  event_type: dilemma
+  title: Sima Zhao Wishes to Marry
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: Sima Zhao has found a bride.  He seeks your blessings.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 235
+          CND_UNIQUE: ''
+          GEN_TARGET_FACTION: wei
+          CND_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+         GEN_CND_OWNS: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_wang_yuanji_hero_earth
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+
+- event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
+  event_type: incident
+  title: Sima Zhao Wishes to Marry
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: You heard that Sima Zhao of Wei has taken Wang Yuanji as his wife
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 235
+          CND_UNIQUE: ''
+          CND_NOT_FACTION: wei
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
+         GEN_CND_FACTION: wei
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_wang_yuanji_hero_earth
+          SECOND:
+            DUMMY: ''
+
+- event_name: zhang_bao_bao_sanniang_marriage_spawn
+  event_type: dilemma
+  title: Zhang Bao's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: Zhang Bao has found a bride. He seeks your blessings.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 140
+          CND_UNIQUE: ''
+          GEN_TARGET_FACTION: shu
+          CND_FACTION: shu
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
+         GEN_CND_FACTION: shu
+         GEN_TARGET_CHARACTER: ''
+         GEN_CND_OWNS: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_bao_sanniang_hero_wood
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+
+- event_name: zhang_bao_bao_sanniang_marriage_spawn_npc
+  event_type: incident
+  title: Zhang Bao's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: You heard that Zhang Bao of Wei has taken Bao Sanniang as his wife
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 140
+          CND_UNIQUE: ''
+          CND_NOT_FACTION: shu
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
+         GEN_CND_FACTION: shu
+         GEN_TARGET_CHARACTER: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_bao_sanniang_hero_wood
+          SECOND:
+            DUMMY: ''
+
+- event_name: zhuge_liang_huang_yueying_marriage_spawn
+  event_type: dilemma
+  title: The Sleeping Dragon's Marriage
   ui_image: 3k_event_wedding
   generate: True
   prioritized: True
@@ -12,13 +194,13 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
-          GEN_TARGET_CHARACTER: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
-          GEN_CND_OWNS: ''
+          GEN_TARGET_FACTION: shu
+          CND_FACTION: shu
     - target_character_1:
       - option_junctions:
          GEN_CND_NOT_MARRIED: ''
          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+         GEN_CND_FACTION: shu
          GEN_TARGET_CHARACTER: ''
          GEN_CND_OWNS: ''
       - payloads:
@@ -34,87 +216,29 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-- event_name: cao_ren_test_marriage
-  event_type: dilemma
-  title: Test Turn 1 Marriage
+
+- event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
+  event_type: incident
+  title: The Sleeping Dragon's Marriage
   ui_image: 3k_event_wedding
   generate: True
   prioritized: True
-  description: By the forces that move CA, please make this work
+  description: You heard that Shu's famed strategist Zhuge Liang has taken Huang Yueying as his wife.
   target:
     - default:
       - option_junctions:
-          CND_FIRST_ROUND: 0
+          CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
-          GEN_TARGET_NONE: ''
-          CND_FACTION: wei
+          CND_NOT_FACTION: shu
     - target_character_1:
       - option_junctions:
          GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: xiahou_dun_hero_wood
+         GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+         GEN_CND_FACTION: shu
          GEN_TARGET_CHARACTER: ''
       - payloads:
           FIRST:
             LOCATED: CHARACTER
-            MARRIAGE: lady_wang_yi_hero_fire
+            MARRIAGE: lady_huang_yueying_hero_wood
           SECOND:
             DUMMY: ''
-  choice:
-    FIRST:
-      choice_label: Give them your blessing
-      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
-    SECOND:
-      choice_label: Deny the marriage
-      choice_title: We have must more important matters to attend to.
-- event_name: deub_dilemma
-  event_type: dilemma
-  title: Debug
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: By the forces that move CA, please make this work
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 0
-          GEN_TARGET_NONE: ''
-      - payloads:
-          FIRST:
-            TEXT_DISPLAY: LOOKUP[dummy_factual_choice]
-          SECOND:
-            TREASURY: AMOUNT[10]
-          THIRD:
-            TREASURY: AMOUNT[10]
-          FOURTH:
-            TREASURY: AMOUNT[10]
-    - target_character_1:
-      - option_junctions:
-         GEN_TARGET_CHARACTER: ''
-      - payloads:
-          FOURTH:
-            LOCATED: CHARACTER
-    - target_faction_1:
-      - option_junctions:
-         GEN_TARGET_FACTION: ''
-      - payloads:
-          SECOND:
-            LOCATED: FACTION
-    - target_region_1:
-      - option_junctions:
-         GEN_TARGET_REGION: ''
-      - payloads:
-          THIRD:
-            LOCATED: REGION
-    - target_settlement_1:
-      - option_junctions:
-         GEN_TARGET_SETTLEMENT: ''
-      - payloads:
-          FIRST:
-            LOCATED: SETTLEMENT
-  choice:
-    FIRST:
-      choice_label: Give them your blessing
-      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
-    SECOND:
-      choice_label: Deny the marriage
-      choice_title: We have must more important matters to attend to.

@@ -1,5 +1,5 @@
 #TODO: for now use spawning to generate characters that should join through marriage
-enabled: true
+enabled: False
 events:
 - event_name: lady_bao_sanniang_spawn
   title: Bao Sanniang
