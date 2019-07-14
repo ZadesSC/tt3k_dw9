@@ -10,8 +10,8 @@ import subprocess
 
 file_prefix="tt3k_dw9_"
 
-#input_files_location="events_def/"
-input_files_location="test_def/"
+input_files_location="events_def/"
+#input_files_location="test_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
 text_loc="output/text/db/"
@@ -33,19 +33,25 @@ def main():
 	pathlib.Path(output_files_location + "db/incidents_tables/").mkdir(parents=True, exist_ok=True)
 	pathlib.Path(output_files_location + "db/cdir_events_incident_option_junctions_tables/").mkdir(parents=True, exist_ok=True)
 	pathlib.Path(output_files_location + "db/cdir_events_incident_payloads_tables/").mkdir(parents=True, exist_ok=True)
+
+	pathlib.Path(output_files_location + "db/dilemmas_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "db/cdir_events_dilemma_option_junctions_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "db/cdir_events_dilemma_payloads_tables/").mkdir(parents=True, exist_ok=True)
+	pathlib.Path(output_files_location + "db/cdir_events_dilemma_choice_details_tables/").mkdir(parents=True, exist_ok=True)
+
 	pathlib.Path(output_files_location + "text/db/").mkdir(parents=True, exist_ok=True)
 	pathlib.Path(output_files_location + "script/campaign/mod/").mkdir(parents=True, exist_ok=True)
 
 	#write the incident table tsvs
-	with open(output_files_location + "db/incidents_tables/" + file_prefix + "incident_spawn.tsv", "w") as incident_output, \
-	open(output_files_location + "db/cdir_events_incident_option_junctions_tables/" + file_prefix + "incident_option_junctions_spawn.tsv", "w") as incident_option_junctions_output, \
-	open(output_files_location + "db/cdir_events_incident_payloads_tables/" + file_prefix + "incident_payloads_spawn.tsv", "w") as incident_payloads_output, \
+	with open(output_files_location + "db/incidents_tables/" + file_prefix + "incidents.tsv", "w") as incident_output, \
+	open(output_files_location + "db/cdir_events_incident_option_junctions_tables/" + file_prefix + "incident_option_junctions.tsv", "w") as incident_option_junctions_output, \
+	open(output_files_location + "db/cdir_events_incident_payloads_tables/" + file_prefix + "incident_payloads.tsv", "w") as incident_payloads_output, \
 	open(text_loc + file_prefix + "incidents.loc.tsv", "w") as incident_loc_output, \
 	\
-	open(output_files_location + file_prefix + "dilemma_spawn.tsv", "w") as dilemma_output, \
-	open(output_files_location + file_prefix + "dilemma_option_junctions_spawn.tsv", "w") as dilemma_option_junctions_output, \
-	open(output_files_location + file_prefix + "dilemma_payloads_spawn.tsv", "w") as dilemma_payloads_output, \
-	open(output_files_location + file_prefix + "dilemma_choice_details.tsv", "w") as dilemma_choice_details_output, \
+	open(output_files_location + "db/dilemmas_tables/" + file_prefix + "dilemmas.tsv", "w") as dilemma_output, \
+	open(output_files_location + "db/cdir_events_dilemma_option_junctions_tables/" + file_prefix + "dilemma_option_junctions.tsv", "w") as dilemma_option_junctions_output, \
+	open(output_files_location + "db/cdir_events_dilemma_payloads_tables/" + file_prefix + "dilemma_payloads.tsv", "w") as dilemma_payloads_output, \
+	open(output_files_location + "db/cdir_events_dilemma_choice_details_tables/" + file_prefix + "dilemma_choice_details.tsv", "w") as dilemma_choice_details_output, \
 	open(text_loc + file_prefix + "dilemma_choices.loc.tsv", "w") as dilemma_choices_loc_output, \
 	open(text_loc + file_prefix + "dilemmas.loc.tsv", "w") as dilemma_loc_output:#, \
 	#\
@@ -98,15 +104,15 @@ def main():
 		#write dilemma table header for tsv
 		dilemma_writer.writerow(["dilemmas_tables"])
 		dilemma_writer.writerow(["0"])
-		dilemma_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritised", "event_category", "sound_popup_override", "sound_click_override"])
+		dilemma_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritized", "event_category", "sound_popup_override", "sound_click_override"])
 
 		dilemma_option_junctions_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
 		dilemma_option_junctions_writer.writerow(["0"])
-		dilemma_option_junctions_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target_key"])
+		dilemma_option_junctions_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target"])
 
 		dilemma_payloads_writer.writerow(["cdir_events_dilemma_payloads_tables"])
 		dilemma_payloads_writer.writerow(["0"])
-		dilemma_payloads_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target"])
+		dilemma_payloads_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target_key"])
 
 		dilemma_choice_details_writer.writerow(["cdir_events_dilemma_choice_details_tables"])
 		dilemma_choice_details_writer.writerow(["2"])

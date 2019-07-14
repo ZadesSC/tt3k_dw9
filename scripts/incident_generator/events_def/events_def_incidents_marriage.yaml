@@ -1,4 +1,4 @@
-enabled: False
+enabled: True
 events:
 - event_name: sima_yi_zhang_chunhua_marriage_spawn
   event_type: dilemma
@@ -49,16 +49,13 @@ events:
           CND_NOT_FACTION: wei
     - target_character_1:
       - option_junctions:
-         GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
-         GEN_CND_FACTION: wei
-         GEN_TARGET_CHARACTER: ''
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+          GEN_CND_FACTION: wei
+          GEN_TARGET_CHARACTER: ''
       - payloads:
-          FIRST:
-            LOCATED: CHARACTER
-            MARRIAGE: lady_zhang_chunhua_hero_water
-          SECOND:
-            DUMMY: ''
+          LOCATED: CHARACTER
+          MARRIAGE: lady_zhang_chunhua_hero_water
 
 - event_name: sima_zhao_wang_yuanji_marriage_spawn
   event_type: dilemma
@@ -110,16 +107,14 @@ events:
           CND_NOT_FACTION: wei
     - target_character_1:
       - option_junctions:
-         GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
-         GEN_CND_FACTION: wei
-         GEN_TARGET_CHARACTER: ''
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
+          GEN_CND_FACTION: wei
+          GEN_TARGET_CHARACTER: ''
       - payloads:
-          FIRST:
-            LOCATED: CHARACTER
-            MARRIAGE: lady_wang_yuanji_hero_earth
-          SECOND:
-            DUMMY: ''
+          LOCATED: CHARACTER
+          MARRIAGE: lady_wang_yuanji_hero_earth
+
 
 - event_name: zhang_bao_bao_sanniang_marriage_spawn
   event_type: dilemma
@@ -171,16 +166,13 @@ events:
           CND_NOT_FACTION: shu
     - target_character_1:
       - option_junctions:
-         GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
-         GEN_CND_FACTION: shu
-         GEN_TARGET_CHARACTER: ''
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
+          GEN_CND_FACTION: shu
+          GEN_TARGET_CHARACTER: ''
       - payloads:
-          FIRST:
-            LOCATED: CHARACTER
-            MARRIAGE: lady_bao_sanniang_hero_wood
-          SECOND:
-            DUMMY: ''
+          LOCATED: CHARACTER
+          MARRIAGE: lady_bao_sanniang_hero_wood
 
 - event_name: zhuge_liang_huang_yueying_marriage_spawn
   event_type: dilemma
@@ -232,13 +224,10 @@ events:
           CND_NOT_FACTION: shu
     - target_character_1:
       - option_junctions:
-         GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
-         GEN_CND_FACTION: shu
-         GEN_TARGET_CHARACTER: ''
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+          GEN_CND_FACTION: shu
+          GEN_TARGET_CHARACTER: ''
       - payloads:
-          FIRST:
-            LOCATED: CHARACTER
-            MARRIAGE: lady_huang_yueying_hero_wood
-          SECOND:
-            DUMMY: ''
+          LOCATED: CHARACTER
+          MARRIAGE: lady_huang_yueying_hero_wood
