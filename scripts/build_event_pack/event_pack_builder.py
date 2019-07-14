@@ -27,13 +27,15 @@ def main():
 
             #build loc dbs
             subprocess.call(["python3", "convert_tsv_to_db.py", "--input", filename, "--output", out_name, "--loc"], cwd="../tsv_db_converter/")
-            os.remove(filename)
+            shutil.move(filename, os.path.join(output_root, filename_stem + ".tsv"))
+            #os.remove(filename)
         else:
             out_name= os.path.join(os.path.dirname(os.path.realpath(filename)), filename_stem)
 
             #build db
             subprocess.call(["python3", "convert_tsv_to_db.py", "--input", filename, "--output", out_name], cwd="../tsv_db_converter/")
-            os.remove(filename)
+            shutil.move(filename, os.path.join(output_root, filename_stem + ".tsv"))
+            #os.remove(filename)
         print(out_name)
 
     #pfm information

@@ -22,6 +22,10 @@ def write_loc():
 
     rows_count = 0;
     for index, row in enumerate(tsv_reader):
+        if index == 0:
+            continue
+        if index == 1:
+            continue
         if row[0] is None:
             print("WARN: " + args.input.name + " is missing data in row " + row + ", skipping...")
             continue
@@ -64,7 +68,7 @@ def write_db():
 
     # need to get a normal reader to get the header row so I can make a dict reader :thinking:
     tsv_reader_header = csv.reader(args.input, delimiter='\t')
-    tsv_header = list(tsv_reader_header)[2]
+    tsv_header = list(tsv_reader_header)[1]
     args.input.close()
     f = open(args.input.name)
     p_out("Table Header: " + str(tsv_header))
@@ -77,7 +81,7 @@ def write_db():
     row_count = 0
     for index, row in enumerate(tsv_reader):
         p_out(row)
-        # first row is table name
+        # first row is table name and version
         if index == 0:
             if list(row.items())[0] is None:
                 p_out("ERROR: Invalid File header, line 1: " + args.input.name)
@@ -85,17 +89,16 @@ def write_db():
             table_name = list(row.items())[0][1]
             p_out("Table Name: " + table_name)
             table_schema = get_table_schema(table_name, schema_data)
-        # second row is table version
-        elif index == 1:
-            if list(row.items())[0] is None:
-                print("ERROR: Invalid File header, line 2: " + args.input.name)
+
+            if list(row.items())[1] is None:
+                print("ERROR: Invalid File header, line 1: " + args.input.name)
                 exit(1)
-            table_version = list(row.items())[0][1]
+            table_version = list(row.items())[1][1]
             p_out("Table Version: " + table_version)
-        # third row is definition
-        elif index == 2:
+        # second row is definition
+        elif index == 1:
             pass
-        # fourth row and on is data
+        # third row and on is data
         else:
             if len(row) == 0:
                 continue

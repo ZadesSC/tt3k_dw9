@@ -13,7 +13,7 @@ events:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
           CND_INCIDENT_NOT_GENERATED: sima_yi_zhang_chunhua_marriage_spawn_npc
-          GEN_TARGET_FACTION: wei
+          GEN_TARGET_FACTION: ''
           CND_FACTION: wei
     - target_character_1:
       - option_junctions:
@@ -71,7 +71,7 @@ events:
           CND_FIRST_ROUND: 235
           CND_UNIQUE: ''
           CND_INCIDENT_NOT_GENERATED: sima_zhao_wang_yuanji_marriage_spawn_npc
-          GEN_TARGET_FACTION: wei
+          GEN_TARGET_FACTION: ''
           CND_FACTION: wei
     - target_character_1:
       - option_junctions:
@@ -129,7 +129,7 @@ events:
           CND_FIRST_ROUND: 140
           CND_UNIQUE: ''
           CND_INCIDENT_NOT_GENERATED: zhang_bao_bao_sanniang_marriage_spawn_npc
-          GEN_TARGET_FACTION: shu
+          GEN_TARGET_FACTION: ''
           CND_FACTION: shu
     - target_character_1:
       - option_junctions:
@@ -187,7 +187,7 @@ events:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
           CND_INCIDENT_NOT_GENERATED: zhuge_liang_huang_yueying_marriage_spawn_npc
-          GEN_TARGET_FACTION: shu
+          GEN_TARGET_FACTION: ''
           CND_FACTION: shu
     - target_character_1:
       - option_junctions:

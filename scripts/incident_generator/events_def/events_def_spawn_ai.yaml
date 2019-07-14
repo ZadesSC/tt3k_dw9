@@ -471,7 +471,7 @@ events:
         CND_NOT_FACTION: wei
         GEN_TARGET_NONE: ''
     - payloads:
-        SPAWN_AGENT_OFF_MAP: sima_zhao_hero_earth
+        DUMMY: ''
 - event_name: wei_yan_npc_spawn
   title: Rumors a Terrifying Berserker
   generate: True

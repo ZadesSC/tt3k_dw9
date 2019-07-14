@@ -87,35 +87,35 @@ def main():
 		lua_lines = []
 
 		#write incident table header for tsv
-		incident_writer.writerow(["incidents_tables"])
-		incident_writer.writerow(["0"])
+		incident_writer.writerow(["incidents_tables", "0"])
+		#incident_writer.writerow(["0"])
 		incident_writer.writerow(["generate","key", "ui_image", "prioritised", "event_category"])
 
-		incident_option_junctions_writer.writerow(["cdir_events_incident_option_junctions_tables"])
-		incident_option_junctions_writer.writerow(["0"])
-		incident_option_junctions_writer.writerow(["id", "-", "incident_key", "option_key", "value", "target"])
+		incident_option_junctions_writer.writerow(["cdir_events_incident_option_junctions_tables", "0"])
+		#incident_option_junctions_writer.writerow(["0"])
+		incident_option_junctions_writer.writerow(["id", "incident_key", "option_key", "value", "target"])
 
-		incident_payloads_writer.writerow(["cdir_events_incident_payloads_tables"])
-		incident_payloads_writer.writerow(["0"])
-		incident_payloads_writer.writerow(["id", "-", "incident_key", "payload_key", "value", "target_key"])
+		incident_payloads_writer.writerow(["cdir_events_incident_payloads_tables", "0"])
+		#incident_payloads_writer.writerow(["0"])
+		incident_payloads_writer.writerow(["id", "incident_key", "payload_key", "value", "target_key"])
 
 		#lua writer
 
 		#write dilemma table header for tsv
-		dilemma_writer.writerow(["dilemmas_tables"])
-		dilemma_writer.writerow(["0"])
+		dilemma_writer.writerow(["dilemmas_tables", "0"])
+		#dilemma_writer.writerow(["0"])
 		dilemma_writer.writerow(["generate","key", "localised_description", "localised_title", "ui_image", "prioritized", "event_category", "sound_popup_override", "sound_click_override"])
 
-		dilemma_option_junctions_writer.writerow(["cdir_events_dilemma_option_junctions_tables"])
-		dilemma_option_junctions_writer.writerow(["0"])
-		dilemma_option_junctions_writer.writerow(["dilemma_key", "id", "-", "option_key", "value", "target"])
+		dilemma_option_junctions_writer.writerow(["cdir_events_dilemma_option_junctions_tables", "0"])
+		#dilemma_option_junctions_writer.writerow(["0"])
+		dilemma_option_junctions_writer.writerow(["dilemma_key", "id", "option_key", "value", "target"])
 
-		dilemma_payloads_writer.writerow(["cdir_events_dilemma_payloads_tables"])
-		dilemma_payloads_writer.writerow(["0"])
-		dilemma_payloads_writer.writerow(["choice_key", "dilemma_key", "id", "-", "payload_key", "value", "target_key"])
+		dilemma_payloads_writer.writerow(["cdir_events_dilemma_payloads_tables", "0"])
+		#dilemma_payloads_writer.writerow(["0"])
+		dilemma_payloads_writer.writerow(["choice_key", "dilemma_key", "id", "payload_key", "value", "target_key"])
 
-		dilemma_choice_details_writer.writerow(["cdir_events_dilemma_choice_details_tables"])
-		dilemma_choice_details_writer.writerow(["2"])
+		dilemma_choice_details_writer.writerow(["cdir_events_dilemma_choice_details_tables", "2"])
+		#dilemma_choice_details_writer.writerow(["2"])
 		dilemma_choice_details_writer.writerow(["choice_key", "dilemma_key", "display_dilemma_choice_if_ceo_active", "required_ceos"])
 
 		for events_def_file in os.listdir(input_files_location):
@@ -182,15 +182,15 @@ def main():
 						base_row=[event.get('generate'), event_name, event.get('title'), event.get('description'), event.get('ui_image'), event.get('prioritized'), event.get('event_category'), event.get('sound_popup_override'), event.get('sound_click_override')]
 						event_base_data.append(base_row)
 
-						text_data.append(["dilemmas_localised_title_" + event_name, event.get('title'), True])
-						text_data.append(["dilemmas_localised_description_" + event_name, event.get('description'), True])
+						text_data.append(["dilemmas_localised_title_" + event_name, event.get('title'), "true"])
+						text_data.append(["dilemmas_localised_description_" + event_name, event.get('description'), "true"])
 					else:
 						event_name = resolve_event_name(event.get('event_name'))
 						base_row=[event.get('generate'), event_name, event.get('ui_image'), event.get('prioritized'), event.get('event_category')]
 						event_base_data.append(base_row)
 
-						text_data.append(["incidents_localised_title_" + event_name, event.get('title'), True])
-						text_data.append(["incidents_localised_description_" + event_name, event.get('description'), True])
+						text_data.append(["incidents_localised_title_" + event_name, event.get('title'), "true"])
+						text_data.append(["incidents_localised_description_" + event_name, event.get('description'), "true"])
 
 					#write to option_junctions, the schema for the table should be the same for both
 					for target in event.get('target'):
@@ -212,11 +212,11 @@ def main():
 						if is_dilemma:
 							for key, value in option_junctions_dict.items():
 								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data.append([event_name, get_junctions_id(), 0, key, resolved_value, target_name])
+								event_option_junctions_data.append([event_name, get_junctions_id(), key, resolved_value, target_name])
 						else:
 							for key, value in option_junctions_dict.items():
 								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data.append([get_junctions_id(), 0, event_name, key, resolved_value, target_name])
+								event_option_junctions_data.append([get_junctions_id(), event_name, key, resolved_value, target_name])
 
 						#make sure payloads exists
 						if len(target_data) > 1 and 'payloads' in target_data[1]:
@@ -228,11 +228,11 @@ def main():
 								for choice, choice_values in payloads_dict.items():
 									for key, value in choice_values.items():
 										resolved_value = resolve_payloads_value(key, value)
-										event_payload_data.append([choice, event_name, get_payloads_id(), 0, key, resolved_value, target_name])
+										event_payload_data.append([choice, event_name, get_payloads_id(), key, resolved_value, target_name])
 							else:
 								for key, value in payloads_dict.items():
 									resolved_value = resolve_payloads_value(key, value)
-									event_payload_data.append([get_payloads_id(), 0, event_name, key, resolved_value, target_name])
+									event_payload_data.append([get_payloads_id(), event_name, key, resolved_value, target_name])
 
 					#process dilemma choices
 					if is_dilemma:
@@ -257,8 +257,8 @@ def main():
 							choice_label_key = "cdir_events_dilemma_choice_details_localised_choice_label_" + event_name + choice_key
 							choice_title = choice_data.get('choice_title')
 							choice_label = choice_data.get('choice_label')
-							choices_text_data.append([choice_title_key, choice_title, True])
-							choices_text_data.append([choice_label_key, choice_label, True])
+							choices_text_data.append([choice_title_key, choice_title, "true"])
+							choices_text_data.append([choice_label_key, choice_label, "true"])
 
 					#this is an custom event, generate lua as well
 					#add_lua_lines(lua_lines, event_name_pc, event)
@@ -307,6 +307,20 @@ def main():
 						incident_option_junctions_data.extend(event_option_junctions_data)
 						incident_payloads_data.extend(event_payload_data)
 						incident_text_data.extend(text_data)
+
+		#setup loc header
+		loc_header = []
+		loc_header.append(["Loc PackedFile", "1"])
+		loc_header.append(["key", "text", "tooltip"])
+
+		incident_loc_writer.writerow(["Loc PackedFile", "1"])
+		incident_loc_writer.writerow(["key", "text", "tooltip"])
+
+		dilemma_choices_loc_writer.writerow(["Loc PackedFile", "1"])
+		dilemma_choices_loc_writer.writerow(["key", "text", "tooltip"])
+
+		dilemma_loc_writer.writerow(["Loc PackedFile", "1"])
+		dilemma_loc_writer.writerow(["key", "text", "tooltip"])
 
 		#generate files for incidents for players
 		for row in incident_base_data:
@@ -399,6 +413,10 @@ def resolve_option_junctions_value(key, value_to_resolve):
 		return resolve_faction_name(value_to_resolve)
 	if key == 'CND_NOT_FACTION':
 		return resolve_faction_name(value_to_resolve)
+	if key == 'CND_INCIDENT_NOT_GENERATED':
+		return resolve_event_name(value_to_resolve)
+	if key == 'CND_NOT_DILEMMA_GENERATED':
+		return resolve_event_name(value_to_resolve)
 	return value_to_resolve
 
 def resolve_payloads_value(key, value_to_resolve):
