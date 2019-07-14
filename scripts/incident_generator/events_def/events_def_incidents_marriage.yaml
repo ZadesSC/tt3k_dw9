@@ -12,6 +12,8 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
+          CND_INCIDENT_NOT_GENERATED: sima_yi_zhang_chunhua_marriage_spawn_npc
+          GEN_TARGET_FACTION: wei
           CND_FACTION: wei
     - target_character_1:
       - option_junctions:
@@ -33,7 +35,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-
 - event_name: sima_yi_zhang_chunhua_marriage_spawn_npc
   event_type: incident
   title: The Silver Eminence's Marriage
@@ -46,6 +47,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 85
           CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: sima_yi_zhang_chunhua_marriage_spawn
           CND_NOT_FACTION: wei
     - target_character_1:
       - option_junctions:
@@ -56,7 +58,6 @@ events:
       - payloads:
           LOCATED: CHARACTER
           MARRIAGE: lady_zhang_chunhua_hero_water
-
 - event_name: sima_zhao_wang_yuanji_marriage_spawn
   event_type: dilemma
   title: Sima Zhao Wishes to Marry
@@ -69,6 +70,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 235
           CND_UNIQUE: ''
+          CND_INCIDENT_NOT_GENERATED: sima_zhao_wang_yuanji_marriage_spawn_npc
           GEN_TARGET_FACTION: wei
           CND_FACTION: wei
     - target_character_1:
@@ -91,7 +93,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-
 - event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
   event_type: incident
   title: Sima Zhao Wishes to Marry
@@ -104,6 +105,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 235
           CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: sima_zhao_wang_yuanji_marriage_spawn
           CND_NOT_FACTION: wei
     - target_character_1:
       - option_junctions:
@@ -114,8 +116,6 @@ events:
       - payloads:
           LOCATED: CHARACTER
           MARRIAGE: lady_wang_yuanji_hero_earth
-
-
 - event_name: zhang_bao_bao_sanniang_marriage_spawn
   event_type: dilemma
   title: Zhang Bao's Marriage
@@ -128,6 +128,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 140
           CND_UNIQUE: ''
+          CND_INCIDENT_NOT_GENERATED: zhang_bao_bao_sanniang_marriage_spawn_npc
           GEN_TARGET_FACTION: shu
           CND_FACTION: shu
     - target_character_1:
@@ -150,7 +151,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-
 - event_name: zhang_bao_bao_sanniang_marriage_spawn_npc
   event_type: incident
   title: Zhang Bao's Marriage
@@ -163,6 +163,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 140
           CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: zhang_bao_bao_sanniang_marriage_spawn
           CND_NOT_FACTION: shu
     - target_character_1:
       - option_junctions:
@@ -173,7 +174,6 @@ events:
       - payloads:
           LOCATED: CHARACTER
           MARRIAGE: lady_bao_sanniang_hero_wood
-
 - event_name: zhuge_liang_huang_yueying_marriage_spawn
   event_type: dilemma
   title: The Sleeping Dragon's Marriage
@@ -186,6 +186,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
+          CND_INCIDENT_NOT_GENERATED: zhuge_liang_huang_yueying_marriage_spawn_npc
           GEN_TARGET_FACTION: shu
           CND_FACTION: shu
     - target_character_1:
@@ -208,7 +209,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-
 - event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
   event_type: incident
   title: The Sleeping Dragon's Marriage
@@ -221,6 +221,7 @@ events:
       - option_junctions:
           CND_FIRST_ROUND: 90
           CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: zhuge_liang_huang_yueying_marriage_spawn
           CND_NOT_FACTION: shu
     - target_character_1:
       - option_junctions:
