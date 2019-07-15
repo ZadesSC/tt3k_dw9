@@ -1,5 +1,63 @@
 enabled: True
 events:
+- event_name: guan_suo_bao_sanniang_marriage_spawn
+  event_type: dilemma
+  title: Guan Suo's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: Guan Suo has found a bride. He seeks your blessings.
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 140
+          CND_UNIQUE: ''
+          CND_INCIDENT_NOT_GENERATED: guan_suo_bao_sanniang_marriage_spawn_npc
+          GEN_TARGET_FACTION: ''
+          CND_FACTION: shu
+    - target_character_1:
+      - option_junctions:
+         GEN_CND_NOT_MARRIED: ''
+         GEN_CND_CHARACTER_TEMPLATE: guan_suo_hero_earth
+         GEN_CND_FACTION: shu
+         GEN_TARGET_CHARACTER: ''
+         GEN_CND_OWNS: ''
+      - payloads:
+          FIRST:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_bao_sanniang_hero_wood
+          SECOND:
+            DUMMY: ''
+  choice:
+    FIRST:
+      choice_label: Give them your blessing
+      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
+    SECOND:
+      choice_label: Deny the marriage
+      choice_title: We have must more important matters to attend to.
+- event_name: guan_suo_bao_sanniang_marriage_spawn_npc
+  event_type: incident
+  title: Guan Suo's Marriage
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: You heard that Guan Suo of Shu has taken Bao Sanniang as his wife
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 140
+          CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: guan_suo_bao_sanniang_marriage_spawn
+          CND_NOT_FACTION: shu
+    - target_character_1:
+      - option_junctions:
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: guan_suo_hero_earth
+          GEN_CND_FACTION: shu
+          GEN_TARGET_CHARACTER: ''
+      - payloads:
+          LOCATED: CHARACTER
+          MARRIAGE: lady_bao_sanniang_hero_wood
 - event_name: sima_yi_zhang_chunhua_marriage_spawn
   event_type: dilemma
   title: The Silver Eminence's Marriage
@@ -116,64 +174,6 @@ events:
       - payloads:
           LOCATED: CHARACTER
           MARRIAGE: lady_wang_yuanji_hero_earth
-- event_name: zhang_bao_bao_sanniang_marriage_spawn
-  event_type: dilemma
-  title: Zhang Bao's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: Zhang Bao has found a bride. He seeks your blessings.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 140
-          CND_UNIQUE: ''
-          CND_INCIDENT_NOT_GENERATED: zhang_bao_bao_sanniang_marriage_spawn_npc
-          GEN_TARGET_FACTION: ''
-          CND_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-         GEN_CND_NOT_MARRIED: ''
-         GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
-         GEN_CND_FACTION: shu
-         GEN_TARGET_CHARACTER: ''
-         GEN_CND_OWNS: ''
-      - payloads:
-          FIRST:
-            LOCATED: CHARACTER
-            MARRIAGE: lady_bao_sanniang_hero_wood
-          SECOND:
-            DUMMY: ''
-  choice:
-    FIRST:
-      choice_label: Give them your blessing
-      choice_title: You see nothing wrong with the arragement so you gave them your blessings.
-    SECOND:
-      choice_label: Deny the marriage
-      choice_title: We have must more important matters to attend to.
-- event_name: zhang_bao_bao_sanniang_marriage_spawn_npc
-  event_type: incident
-  title: Zhang Bao's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Zhang Bao of Wei has taken Bao Sanniang as his wife
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 140
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: zhang_bao_bao_sanniang_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhang_bao_hero_metal
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_bao_sanniang_hero_wood
 - event_name: zhuge_liang_huang_yueying_marriage_spawn
   event_type: dilemma
   title: The Sleeping Dragon's Marriage

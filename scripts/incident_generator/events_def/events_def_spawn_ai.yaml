@@ -18,7 +18,7 @@ events:
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
-- event_name: deng_ai_npc_npc_spawn
+- event_name: deng_ai_npc_spawn
   title: Rumors a Remarkable Warrior
   generate: True
   prioritized: True
@@ -32,6 +32,26 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 125
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: wei
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: dian_wei_npc_spawn
+  title: Rumors of a Brute
+  generate: True
+  prioritized: True
+  description: Your intelligence officers has heard that Dian Wei, a mighty warrior of unmatched strength, has joined Cao Cao.
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wei
+      TARGET_TEMPLATE: dian_wei_hero_wood
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 5
+        CND_LAST_ROUND: 15
         CND_UNIQUE: ''
         CND_NOT_FACTION: wei
         GEN_TARGET_NONE: ''
@@ -72,6 +92,26 @@ events:
         CND_FIRST_ROUND: 20
         CND_UNIQUE: ''
         CND_NOT_FACTION: shu
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: gan_ning_npc_spawn
+  title: A pirate joins Wu
+  generate: True
+  prioritized: True
+  description: You heard that the Suns has recuited a pirate named Gan Ning.
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wu
+      TARGET_TEMPLATE: gan_ning_hero_fire
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: wu
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
@@ -524,6 +564,26 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 165
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: wei
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: xu_chu_npc_spawn
+  title: Another strong warrior has joined Cao Cao?
+  generate: True
+  prioritized: True
+  description: Your intelligence officers come back to you to report that a giant of a man with incredible strength has just joined Cao Cao!  He goes by the name Xu Chu.  Just where does Cao Cao get all these mighty warriors?
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wei
+      TARGET_TEMPLATE: xu_chu_hero_wood
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 50
         CND_UNIQUE: ''
         CND_NOT_FACTION: wei
         GEN_TARGET_NONE: ''
