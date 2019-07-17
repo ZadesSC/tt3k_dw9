@@ -474,6 +474,26 @@ events:
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
+- event_name: pang_tong_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Ma Dai joining Shu has reached your ears.  Maybe you can recruit him to your side...
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: shu
+      TARGET_TEMPLATE: pang_tong_hero_water
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 90
+        CND_LAST_ROUND: 100
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: shu
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
 #TODO: spawn on sima yi, not wei
 - event_name: sima_shi_npc_spawn
   title: Son of Sima Yi
@@ -642,6 +662,26 @@ events:
         CND_FIRST_ROUND: 140
         CND_UNIQUE: ''
         CND_NOT_FACTION: shu
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: zhou_yu_npc_spawn
+  title: Son of Zhang Fei
+  generate: True
+  prioritized: True
+  description: Zhang Bao, the son of Zhang Fei, as appeared.
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wu
+      TARGET_TEMPLATE: zhou_yu_hero_water
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 35
+        CND_LAST_ROUND: 50
+        CND_UNIQUE: ''
+        CND_INCIDENT_NOT_GENERATED: 3k_main_char_historical_zhou_yu_spawns_incident
+        CND_NOT_FACTION: wu
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''

@@ -35,29 +35,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-- event_name: guan_suo_bao_sanniang_marriage_spawn_npc
-  event_type: incident
-  title: Guan Suo's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Guan Suo of Shu has taken Bao Sanniang as his wife
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 140
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: guan_suo_bao_sanniang_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: guan_suo_hero_earth
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_bao_sanniang_hero_wood
 - event_name: sima_yi_zhang_chunhua_marriage_spawn
   event_type: dilemma
   title: The Silver Eminence's Marriage
@@ -93,29 +70,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-- event_name: sima_yi_zhang_chunhua_marriage_spawn_npc
-  event_type: incident
-  title: The Silver Eminence's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Wei's famed strategist Sima Yi has taken Zhang Chunhua as his wife.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 85
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: sima_yi_zhang_chunhua_marriage_spawn
-          CND_NOT_FACTION: wei
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
-          GEN_CND_FACTION: wei
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_zhang_chunhua_hero_water
 - event_name: sima_zhao_wang_yuanji_marriage_spawn
   event_type: dilemma
   title: Sima Zhao Wishes to Marry
@@ -151,29 +105,6 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-- event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
-  event_type: incident
-  title: Sima Zhao Wishes to Marry
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Sima Zhao of Wei has taken Wang Yuanji as his wife
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 235
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: sima_zhao_wang_yuanji_marriage_spawn
-          CND_NOT_FACTION: wei
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
-          GEN_CND_FACTION: wei
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_wang_yuanji_hero_earth
 - event_name: zhuge_liang_huang_yueying_marriage_spawn
   event_type: dilemma
   title: The Sleeping Dragon's Marriage
@@ -209,26 +140,3 @@ events:
     SECOND:
       choice_label: Deny the marriage
       choice_title: We have must more important matters to attend to.
-- event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
-  event_type: incident
-  title: The Sleeping Dragon's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Shu's famed strategist Zhuge Liang has taken Huang Yueying as his wife.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 90
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: zhuge_liang_huang_yueying_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_huang_yueying_hero_wood
