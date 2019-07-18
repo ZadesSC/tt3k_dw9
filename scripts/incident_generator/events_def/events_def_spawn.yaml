@@ -12,6 +12,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_INCIDENT_NOT_GENERATED: cao_xiu_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -32,6 +34,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 125
+        CND_LAST_ROUND: 135
+        CND_INCIDENT_NOT_GENERATED: deng_ai_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -50,6 +54,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 90
+        CND_LAST_ROUND: 100
+        CND_INCIDENT_NOT_GENERATED: ding_feng_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -69,6 +75,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 20
+        CND_LAST_ROUND: 30
+        CND_INCIDENT_NOT_GENERATED: fa_zheng_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: shu
@@ -88,6 +96,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 50
+        CND_LAST_ROUND: 60
+        CND_INCIDENT_NOT_GENERATED: guan_ping_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
@@ -106,6 +116,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 60
+        CND_LAST_ROUND: 70
+        CND_INCIDENT_NOT_GENERATED: guan_suo_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
@@ -125,6 +137,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 105
+        CND_LAST_ROUND: 115
+        CND_INCIDENT_NOT_GENERATED: guan_xing_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
@@ -142,50 +156,14 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 75
+        CND_LAST_ROUND: 85
+        CND_INCIDENT_NOT_GENERATED: guo_huai_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
         GEN_TARGET_FACTION: ''
     - payloads:
         SPAWN_AGENT_OFF_MAP: guo_huai_hero_earth
-        LOCATED: FACTION
-- event_name: han_dang_spawn
-  enabled: False
-  title: Han Dang
-  generate: True
-  prioritized: True
-  description: Han Dang, originally a footman from Liaoxi Province, was discovered
-    by Sun Jian wherein he went on to serve Wu as a naval leader. He became a veteran
-    general under Wu wherein he served the Sun family for three generations.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        GEN_CND_FACTION: wu
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: han_dang_hero_fire
-        LOCATED: FACTION
-- event_name: hua_xiong_spawn
-  enabled: false
-  title: Hua Xiong
-  generate: True
-  prioritized: True
-  description: A ferocious retainer of Dong Zhuo, he used his colossal and dominant
-    stature to strike at Sun Jian and Yuan Shao of the Anti-Dong Zhuo coalition at
-    Shisui Gate.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: hua_xiong_hero_fire
         LOCATED: FACTION
 - event_name: jia_chong_spawn
   title: Jia Chong
@@ -198,6 +176,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 225
+        CND_LAST_ROUND: 235
+        CND_INCIDENT_NOT_GENERATED: jia_chong_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -214,6 +194,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 190
+        CND_LAST_ROUND: 200
+        CND_INCIDENT_NOT_GENERATED: jiang_wei_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -232,6 +214,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 90
+        CND_LAST_ROUND: 100
+        CND_INCIDENT_NOT_GENERATED: lady_bu_lianshi_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -251,6 +235,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 25
+        CND_LAST_ROUND: 35
+        CND_INCIDENT_NOT_GENERATED: lady_cai_yan_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -269,6 +255,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 40
+        CND_LAST_ROUND: 50
+        CND_INCIDENT_NOT_GENERATED: lady_dong_bai_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: 3k_main_faction_dong_zhuo
@@ -288,31 +276,14 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 160
+        CND_LAST_ROUND: 170
+        CND_INCIDENT_NOT_GENERATED: lady_guan_yinping_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
         GEN_TARGET_CHARACTER: ''
     - payloads:
         SPAWN_AGENT_OFF_MAP: lady_guan_yinping_hero_wood
-- event_name: lady_lu_lingqi_spawn
-  enabled: false
-  title: Lu Lingqi
-  generate: True
-  prioritized: True
-  description: The daughter of Lu Bu, she possessed an extraordinary fighting ability
-    much like her father, and has the courage to stand on the front lines of any battle.
-    With her strong spirit, she overcame many hardships despite struggling with a
-    fear of loneliness caused by her past.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 40
-        CND_UNIQUE: ''
-        GEN_CND_OWNS: ''
-        GEN_CND_CHARACTER_TEMPLATE: lu_bu_hero_fire
-        GEN_TARGET_CHARACTER: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: lady_lu_lingqi_hero_fire
 - event_name: lady_wang_yi_spawn
   title: Wang Yi
   generate: True
@@ -325,6 +296,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_INCIDENT_NOT_GENERATED: lady_wang_yi_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -343,6 +316,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 95
+        CND_LAST_ROUND: 105
+        CND_INCIDENT_NOT_GENERATED: lady_xin_xianying_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -363,6 +338,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 170
+        CND_LAST_ROUND: 180
+        CND_INCIDENT_NOT_GENERATED: lady_zhang_xingcai_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
@@ -382,6 +359,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 55
+        CND_LAST_ROUND: 65
+        CND_INCIDENT_NOT_GENERATED: lady_zhen_ji_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: 3k_main_faction_yuan_shao
@@ -401,6 +380,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
+        CND_INCIDENT_NOT_GENERATED: li_dian_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -420,6 +401,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 85
+        CND_LAST_ROUND: 95
+        CND_INCIDENT_NOT_GENERATED: ling_tong_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -440,6 +423,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 25
+        CND_LAST_ROUND: 35
+        CND_INCIDENT_NOT_GENERATED: lu_meng_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -459,6 +444,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 55
+        CND_LAST_ROUND: 65
+        CND_INCIDENT_NOT_GENERATED: lu_xun_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -478,29 +465,14 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 90
+        CND_LAST_ROUND: 100
+        CND_INCIDENT_NOT_GENERATED: ma_dai_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: shu
         GEN_TARGET_FACTION: ''
     - payloads:
         SPAWN_AGENT_OFF_MAP: ma_dai_hero_fire
-        LOCATED: FACTION
-- event_name: man_chong_spawn
-  enabled: False
-  title: Man Chong
-  generate: True
-  prioritized: True
-  description: A brilliant general of Wei. Skillful in debates but also excelled as a strategist and tactician during many defensive battles. A close friend to Xu Huang, he recommended that he give his service to Cao Cao.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        GEN_CND_FACTION: wei
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: man_chong_hero_fire
         LOCATED: FACTION
 - event_name: sima_shi_spawn
   title: Sima Shi
@@ -514,6 +486,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 180
+        CND_LAST_ROUND: 190
+        CND_INCIDENT_NOT_GENERATED: sima_shi_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
@@ -531,6 +505,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 195
+        CND_LAST_ROUND: 210
+        CND_INCIDENT_NOT_GENERATED: sima_zhao_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
@@ -549,6 +525,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 100
+        CND_LAST_ROUND: 110
+        CND_INCIDENT_NOT_GENERATED: wei_yan_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: shu
@@ -567,6 +545,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 330
+        CND_LAST_ROUND: 340
+        CND_INCIDENT_NOT_GENERATED: wen_yang_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -586,6 +566,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 165
+        CND_LAST_ROUND: 175
+        CND_INCIDENT_NOT_GENERATED: xiahou_ba_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei
@@ -605,6 +587,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 170
+        CND_LAST_ROUND: 180
+        CND_INCIDENT_NOT_GENERATED: xu_sheng_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
@@ -624,6 +608,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
+        CND_INCIDENT_NOT_GENERATED: xu_shu_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: shu
@@ -643,32 +629,14 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 140
+        CND_LAST_ROUND: 150
+        CND_INCIDENT_NOT_GENERATED: zhang_bao_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_OWNS: ''
         GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
         GEN_TARGET_CHARACTER: ''
     - payloads:
         SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
-- event_name: zhou_cang_spawn
-  enabled: False
-  title: Zhou Cang
-  generate: True
-  prioritized: True
-  generate: True
-  prioritized: True
-  description: 'Follower of Zhang Bao, former leader of the Yellow Turbans. While operating as a bandit at Mt. Woniu he encounters Guan Yu, whom he admired,
-    and swore his loyalty to Guan Yu. An agile officer, it was often said that not only was he a gifted swimmer, he
-    could run a thousand leagues in a day, a feat comparable to Red Hare.'
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_OWNS: ''
-        GEN_CND_CHARACTER_TEMPLATE: guan_yu_hero_wood
-        GEN_TARGET_CHARACTER: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: zhou_cang_hero_wood
 - event_name: zhu_ran_spawn
   title: Zhu Ran
   generate: True
@@ -681,6 +649,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 45
+        CND_LAST_ROUND: 55
+        CND_INCIDENT_NOT_GENERATED: zhu_ran_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wu
@@ -697,6 +667,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 130
+        CND_LAST_ROUND: 140
+        CND_INCIDENT_NOT_GENERATED: zhuge_dan_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         GEN_CND_FACTION: wei

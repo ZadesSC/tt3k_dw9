@@ -10,8 +10,8 @@ import subprocess
 
 file_prefix="tt3k_dw9_"
 
-input_files_location="events_def/"
-#input_files_location="test_def/"
+#input_files_location="events_def/"
+input_files_location="test_def/"
 output_files_location="output/"
 #text_loc="../../text/db/"
 text_loc="output/text/db/"

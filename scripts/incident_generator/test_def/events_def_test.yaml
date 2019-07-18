@@ -1,4 +1,4 @@
-enabled: True
+enabled: False
 events:
   #this is for marriage_move
 - event_name: cao_ren_test_marriage

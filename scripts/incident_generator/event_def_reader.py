@@ -1,6 +1,7 @@
 import yaml
 import csv
 
+events_def_file_location="events_def/events_def_spawn.yaml"
 
 def main():
     with open(events_def_file_location, 'r') as yaml_input_file:
@@ -16,8 +17,15 @@ def main():
                 continue
             print("Event name: " + event.get('event_name'))
 
+            is_dilemma = False
+            if event.get('event_type') == 'dilemma':
+                is_dilemma = True
+
             # write to option_junctions, the schema for the table should be the same for both
             for target in event.get('target'):
+                target_name = next(iter(target))
+                target_data = target.get(target_name)
+                option_junctions_dict = target_data[0].get('option_junctions')
 
                 # make sure payloads exists
                 if len(target_data) > 1 and 'payloads' in target_data[1]:

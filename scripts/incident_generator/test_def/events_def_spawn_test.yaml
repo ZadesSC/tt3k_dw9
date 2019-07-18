@@ -1,0 +1,43 @@
+enabled: True
+events:
+- event_name: cao_xiu_spawn
+  title: Cao Xiu
+  generate: True
+  prioritized: True
+  description: Cao Cao's nephew. When Cao Cao first raised his flag, he traveled from
+    the far-off Wu District to join him. For this, Cao Cao praised him, saying "He
+    is my clan's 1000-Ii (league) Horse." After losing his father at a young age,
+    Cao Cao took him in as a new son.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_INCIDENT_NOT_GENERATED: cao_xiu_npc_spawn
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: wei
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: cao_xiu_hero_fire
+        LOCATED: FACTION
+- event_name: cao_xiu_npc_spawn
+  title: Rumors a Remarkable Warrior
+  generate: True
+  prioritized: True
+  description: Rumors that a remarkable warrior named Cao Xiu joining Cao Cao's forces has reached your ears.  Maybe you can recuit him to your side...
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wei
+      TARGET_TEMPLATE: cao_xiu_hero_fire
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_INCIDENT_NOT_GENERATED: cao_xiu_spawn
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: wei
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
