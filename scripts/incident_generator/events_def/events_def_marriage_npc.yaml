@@ -11,6 +11,7 @@ events:
     - default:
       - option_junctions:
           CND_FIRST_ROUND: 140
+          CND_LAST_ROUND: 150
           CND_UNIQUE: ''
           CND_NOT_DILEMMA_GENERATED: guan_suo_bao_sanniang_marriage_spawn
           CND_NOT_FACTION: shu
@@ -66,7 +67,8 @@ events:
   target:
     - default:
       - option_junctions:
-          CND_FIRST_ROUND: 85
+          CND_FIRST_ROUND: 90
+          CND_LAST_ROUND: 105
           CND_UNIQUE: ''
           CND_NOT_DILEMMA_GENERATED: sima_yi_zhang_chunhua_marriage_spawn
           CND_NOT_FACTION: wei
@@ -90,6 +92,7 @@ events:
     - default:
       - option_junctions:
           CND_FIRST_ROUND: 235
+          CND_LAST_ROUND: 245
           CND_UNIQUE: ''
           CND_NOT_DILEMMA_GENERATED: sima_zhao_wang_yuanji_marriage_spawn
           CND_NOT_FACTION: wei
@@ -102,6 +105,30 @@ events:
       - payloads:
           LOCATED: CHARACTER
           MARRIAGE: lady_wang_yuanji_hero_earth
+- event_name: zhang_fei_xiahou_ji_marriage_spawn_npc
+  event_type: incident
+  title: Zhang Fei Kidnaps and Marries a Girl?
+  ui_image: 3k_event_wedding
+  generate: True
+  prioritized: True
+  description: You heard that Shu's legendary general Zhang Fei has kidnapped a girl named Xiahouji and married her.  What is happening in Shu?
+  target:
+    - default:
+      - option_junctions:
+          CND_FIRST_ROUND: 70
+          CND_LAST_ROUND: 80
+          CND_UNIQUE: ''
+          CND_NOT_DILEMMA_GENERATED: zhang_fei_xiahou_ji_marriage_spawn
+          CND_NOT_FACTION: shu
+    - target_character_1:
+      - option_junctions:
+          GEN_CND_NOT_MARRIED: ''
+          GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+          GEN_CND_FACTION: shu
+          GEN_TARGET_CHARACTER: ''
+      - payloads:
+          LOCATED: CHARACTER
+          MARRIAGE: lady_xiahou_ji_hero_water
 - event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
   event_type: incident
   title: The Sleeping Dragon's Marriage
@@ -113,6 +140,7 @@ events:
     - default:
       - option_junctions:
           CND_FIRST_ROUND: 90
+          CND_LAST_ROUND: 100
           CND_UNIQUE: ''
           CND_NOT_DILEMMA_GENERATED: zhuge_liang_huang_yueying_marriage_spawn
           CND_NOT_FACTION: shu

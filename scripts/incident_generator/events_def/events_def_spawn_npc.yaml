@@ -5,6 +5,7 @@ events:
   generate: True
   prioritized: True
   description: Rumors that a remarkable warrior named Cao Xiu joining Cao Cao's forces has reached your ears.  Maybe you can recuit him to your side...
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wei
@@ -131,6 +132,7 @@ events:
   generate: True
   prioritized: True
   description: You hear that Guan Yu has adopted a son named Guan Ping
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -152,6 +154,7 @@ events:
   generate: True
   prioritized: True
   description: You hear that Guan Yu has a son named Guan Suo
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -173,6 +176,7 @@ events:
   generate: True
   prioritized: True
   description: You hear that Guan Yu has a son named Guan Xing
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -298,6 +302,7 @@ events:
   generate: True
   prioritized: True
   description: The pampered granddaughter of Dong Zhuo has shown up.  What will become of this world.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: 3k_main_faction_dong_zhuo
@@ -319,6 +324,7 @@ events:
   generate: True
   prioritized: True
   description: You hear that Guan Yu's daughter has appeared, and what's more, it appears that she yields inhuman levels of strength!
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -382,6 +388,7 @@ events:
   generate: True
   prioritized: True
   description: It appears that Zhang Fei's daught, Zhang Xingcai has appeared.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -402,6 +409,7 @@ events:
   generate: True
   prioritized: True
   description: Rumors say that Yuan Shao had found a beautiful bride named Zhenji for his son.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: 3k_main_faction_yuan_shao
@@ -549,6 +557,7 @@ events:
   generate: True
   prioritized: True
   description: Sima Shi, the son of Sima Yi, has appeared.  Wonder if he's as cunning as his father.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wei
@@ -570,6 +579,7 @@ events:
   generate: True
   prioritized: True
   description: The second son of Sima Yi, Sima Zhao has appeared.  You hear that he is quite lazy though.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wei
@@ -674,6 +684,7 @@ events:
   generate: True
   prioritized: True
   description: Rumors that a remarkable warrior named Xu Sheng joining Wu has reached your ears.  Maybe you can recruit him to your side...
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wu
@@ -702,9 +713,9 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 10
-        CND_LAST_ROUND: 20
-        CND_INCIDENT_NOT_GENERATED: xu_shu_spawn
+        CND_FIRST_ROUND: 76
+        CND_LAST_ROUND: 86
+        CND_INCIDENT_NOT_GENERATED: 3k_main_historical_liu_xu_shu_joins_incident
         CND_UNIQUE: ''
         CND_NOT_FACTION: shu
         GEN_TARGET_NONE: ''
@@ -716,6 +727,7 @@ events:
   generate: True
   prioritized: True
   description: Zhang Bao, the son of Zhang Fei, as appeared.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: shu
@@ -731,11 +743,33 @@ events:
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
-- event_name: zhou_yu_npc_spawn
-  title: Son of Zhang Fei
+- event_name: zhong_hui_npc_spawn
+  title: Zhong Hui joins Wei
   generate: True
   prioritized: True
-  description: Zhang Bao, the son of Zhang Fei, as appeared.
+  description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: wei
+      TARGET_TEMPLATE: zhong_hui_hero_wood
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 265
+        CND_LAST_ROUND: 275
+        CND_INCIDENT_NOT_GENERATED: zhong_hui_spawn
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: wei
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: zhou_yu_npc_spawn
+  title: Zhou Yu joins Wu
+  generate: True
+  prioritized: True
+  description: Talented, loyal and handsome, Zhou Yu befriended Sun Ce at a young age. The two became inseparable as children and often spent time at each other's residences, showing respect to their families. Zhou’s musical ability is considered peerless and a representation of his keen mind and kind manner.
+  is_custom: True
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wu
@@ -786,6 +820,8 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 130
+        CND_LAST_ROUND: 140
+        CND_INCIDENT_NOT_GENERATED: zhuge_dan_spawn
         CND_UNIQUE: ''
         CND_NOT_FACTION: wei
         GEN_TARGET_NONE: ''

@@ -597,7 +597,7 @@ events:
         SPAWN_AGENT_OFF_MAP: xu_sheng_hero_fire
 - event_name: xu_shu_spawn
   title: Xu Shu
-  generate: True
+  generate: False
   prioritized: True
   description: Originally a disciple of Sima Hui, Xu Shu was a skilled military strategist
     and an expert swordsman. After being involved in a crime for a friend, he was
@@ -636,7 +636,24 @@ events:
         GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
         GEN_TARGET_CHARACTER: ''
     - payloads:
-        SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
+        SPAWN_AGENT_OFF_MAP: zhong_hui_hero_wood
+- event_name: zhong_hui_spawn
+  title: Zhong Hui
+  generate: True
+  prioritized: True
+  description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 265
+        CND_LAST_ROUND: 275
+        CND_INCIDENT_NOT_GENERATED: zhong_hui_npc_spawn
+        CND_UNIQUE: ''
+        GEN_CND_OWNS: ''
+        GEN_CND_CHARACTER_TEMPLATE: cao_pi_hero_earth
+        GEN_TARGET_CHARACTER: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: zhong_hui_hero_wood
 - event_name: zhu_ran_spawn
   title: Zhu Ran
   generate: True

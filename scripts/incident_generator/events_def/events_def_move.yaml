@@ -251,7 +251,7 @@ events:
 #TODO: change to move to cao_pi_hero_earth instead of wei
 - event_name: zhong_hui_move
   title: Zhong Hui
-  generate: True
+  generate: False
   prioritized: True
   description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
   target:
