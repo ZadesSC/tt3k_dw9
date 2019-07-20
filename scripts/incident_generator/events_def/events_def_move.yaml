@@ -9,6 +9,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -16,6 +17,29 @@ events:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: guo_jia_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: huang_zhong_move
+  title: Huang Zhong
+  generate: True
+  prioritized: True
+  description: With an aim that never missed, Huang Zhong's skills as an archer brought him a position as one Shu's Five Tiger Generals. As he became older, he grew more active on the battlefield. Although he had a unique carefree spirit brought about by his age, he also had a rigidness from his years of experience as a warrior.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 110
+        CND_LAST_ROUND: 120
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: huang_zhong_hero_metal
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
@@ -32,6 +56,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 45
+        CND_LAST_ROUND: 55
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -56,6 +81,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 220
+        CND_LAST_ROUND: 230
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
@@ -63,6 +89,29 @@ events:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: jiang_wei_hero_fire
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: ma_chao_move
+  title: Ma Chao
+  generate: True
+  prioritized: True
+  description: A warrior by the name of Ma Chao comes to you saying he wants to serve your cause.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 120
+        CND_LAST_ROUND: 130
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: shu
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: ma_chao_hero_fire
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
@@ -78,6 +127,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 125
+        CND_LAST_ROUND: 135
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -101,6 +151,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 295
+        CND_LAST_ROUND: 305
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
@@ -123,6 +174,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -145,6 +197,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -167,29 +220,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 30
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        CND_FACTION: wei
-  - target_character_1:
-    - option_junctions:
-        GEN_TARGET_CHARACTER: ''
-        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
-  - target_faction_1:
-    - option_junctions:
-        GEN_TARGET_FACTION:
-        GEN_CND_SELF:
-    - payloads:
-        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
-- event_name: yue_jin_move
-  enabled: False
-  title: Yue Jin
-  generate: True
-  prioritized: True
-  description: Previously a court official, Yue Jin joined Cao Cao's army from its formation and served as its general wherein he spearheaded many battles. Despite his small build and quiet personality, his superior physical ability shone once in battle.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
+        CND_LAST_ROUND: 40
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -212,6 +243,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 5
+        CND_LAST_ROUND: 15
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: 3k_main_faction_yuan_shao
@@ -235,6 +267,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 50
+        CND_LAST_ROUND: 60
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -258,6 +291,7 @@ events:
   - default:
     - option_junctions:
         CND_FIRST_ROUND: 70
+        CND_LAST_ROUND: 80
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
@@ -265,29 +299,6 @@ events:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_wood
-  - target_faction_1:
-    - option_junctions:
-        GEN_TARGET_FACTION:
-        GEN_CND_SELF:
-    - payloads:
-        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
-- event_name: zhou_tai_move
-  Enabled: False
-  title: Zhou Tai
-  generate: True
-  prioritized: True
-  description: Originally a pirate, Zhou Tai viewed all with a critical and stern perspective. He was a composed man who could calmly assess any situation and respond accordingly. A quiet man with a large stature, he eventually came to serve Sun Ce wherein he became known for using his body as a shield to guide Sun Quan to safety during the battle of Hefei.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 0
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        CND_FACTION: wu
-  - target_character_1:
-    - option_junctions:
-        GEN_TARGET_CHARACTER: ''
-        GEN_CND_CHARACTER_TEMPLATE: zhou_tai_hero_fire
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
