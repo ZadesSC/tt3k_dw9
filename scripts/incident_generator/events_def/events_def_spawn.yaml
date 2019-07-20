@@ -244,26 +244,6 @@ events:
     - payloads:
         SPAWN_AGENT_OFF_MAP: lady_cai_yan_hero_water
         LOCATED: FACTION
-- event_name: lady_dong_bai_spawn
-  title: Dong Bai
-  generate: True
-  prioritized: True
-  description: Granddaughter of Dong Zhuo, she was doted on by her grandfather and
-    was often given land and fortune even at a young age. Although willful and cruel,
-    she took on a charming persona whenever Dong Zhuo was about.
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 40
-        CND_LAST_ROUND: 50
-        CND_INCIDENT_NOT_GENERATED: lady_dong_bai_npc_spawn
-        CND_UNIQUE: ''
-        GEN_CND_SELF: ''
-        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
-        GEN_TARGET_FACTION: ''
-    - payloads:
-        SPAWN_AGENT_OFF_MAP: lady_dong_bai_hero_fire
-        LOCATED: FACTION
 - event_name: lady_guan_yinping_spawn
   title: Guan Yingping
   generate: True
@@ -573,7 +553,7 @@ events:
         GEN_CND_FACTION: wei
         GEN_TARGET_FACTION: ''
     - payloads:
-        SPAWN_AGENT_OFF_MAP: xiahou_ba_hero_fire
+        SPAWN_AGENT_OFF_MAP: xiahou_ba_hero_wood
         LOCATED: FACTION
 - event_name: xu_sheng_spawn
   title: Xu Sheng
@@ -636,7 +616,7 @@ events:
         GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
         GEN_TARGET_CHARACTER: ''
     - payloads:
-        SPAWN_AGENT_OFF_MAP: zhong_hui_hero_wood
+        SPAWN_AGENT_OFF_MAP: zhang_bao_hero_metal
 - event_name: zhong_hui_spawn
   title: Zhong Hui
   generate: True
@@ -653,7 +633,7 @@ events:
         GEN_CND_CHARACTER_TEMPLATE: cao_pi_hero_earth
         GEN_TARGET_CHARACTER: ''
     - payloads:
-        SPAWN_AGENT_OFF_MAP: zhong_hui_hero_wood
+        SPAWN_AGENT_OFF_MAP: zhong_hui_hero_fire
 - event_name: zhu_ran_spawn
   title: Zhu Ran
   generate: True

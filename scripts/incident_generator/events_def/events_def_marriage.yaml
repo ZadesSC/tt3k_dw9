@@ -62,7 +62,7 @@ events:
       - payloads:
           FIRST:
             LOCATED: CHARACTER
-            MARRIAGE: lady_zhang_chunhua_hero_water
+            MARRIAGE: lady_zhang_chunhua_hero_metal
           SECOND:
             DUMMY: ''
   choice:

@@ -297,27 +297,6 @@ events:
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
-- event_name: lady_dong_bai_npc_spawn
-  title: Granddaughter of the Tyrant
-  generate: True
-  prioritized: True
-  description: The pampered granddaughter of Dong Zhuo has shown up.  What will become of this world.
-  is_custom: True
-  custom_data:
-    - ACTION_TYPE: SPAWN
-      TARGET_FACTION: 3k_main_faction_dong_zhuo
-      TARGET_TEMPLATE: lady_dong_bai_hero_fire
-  target:
-  - default:
-    - option_junctions:
-        CND_FIRST_ROUND: 40
-        CND_LAST_ROUND: 50
-        CND_INCIDENT_NOT_GENERATED: lady_dong_bai_spawn
-        CND_UNIQUE: ''
-        CND_NOT_FACTION: 3k_main_faction_dong_zhuo
-        GEN_TARGET_NONE: ''
-    - payloads:
-        DUMMY: ''
 #TODO: change to spawn with guan yu instead of shu
 - event_name: lady_guan_yinping_npc_spawn
   title: Daught of the God of War
@@ -646,7 +625,7 @@ events:
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wei
-      TARGET_TEMPLATE: xiahou_ba_hero_fire
+      TARGET_TEMPLATE: xiahou_ba_hero_wood
   target:
   - default:
     - option_junctions:
@@ -752,7 +731,7 @@ events:
   custom_data:
     - ACTION_TYPE: SPAWN
       TARGET_FACTION: wei
-      TARGET_TEMPLATE: zhong_hui_hero_wood
+      TARGET_TEMPLATE: zhong_hui_hero_fire
   target:
   - default:
     - option_junctions:

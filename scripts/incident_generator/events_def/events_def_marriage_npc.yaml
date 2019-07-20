@@ -80,7 +80,7 @@ events:
           GEN_TARGET_CHARACTER: ''
       - payloads:
           LOCATED: CHARACTER
-          MARRIAGE: lady_zhang_chunhua_hero_water
+          MARRIAGE: lady_zhang_chunhua_hero_metal
 - event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
   event_type: incident
   title: Sima Zhao Wishes to Marry

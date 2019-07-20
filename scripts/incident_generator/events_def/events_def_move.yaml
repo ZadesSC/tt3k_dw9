@@ -107,7 +107,7 @@ events:
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
-        GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_fire
+        GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_wood
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
@@ -264,7 +264,7 @@ events:
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
-        GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_fire
+        GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_wood
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
