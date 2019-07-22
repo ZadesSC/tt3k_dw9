@@ -1,4 +1,4 @@
-enabled: True
+enabled: False
 events:
 - event_name: cao_xiu_spawn
   title: Cao Xiu

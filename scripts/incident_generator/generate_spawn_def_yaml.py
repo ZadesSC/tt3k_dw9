@@ -211,12 +211,22 @@ def main():
 						#get option_junctions data
 						if is_dilemma:
 							for key, value in option_junctions_dict.items():
-								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data.append([event_name, get_junctions_id(), key, resolved_value, target_name])
+								if isinstance(value, list):
+									for v in value:
+										resolved_value = resolve_option_junctions_value(key, v)
+										event_option_junctions_data.append([event_name, get_junctions_id(), key, resolved_value, target_name])
+								else:
+									resolved_value = resolve_option_junctions_value(key, value)
+									event_option_junctions_data.append([event_name, get_junctions_id(), key, resolved_value, target_name])
 						else:
 							for key, value in option_junctions_dict.items():
-								resolved_value = resolve_option_junctions_value(key, value)
-								event_option_junctions_data.append([get_junctions_id(), event_name, key, resolved_value, target_name])
+								if isinstance(value, list):
+									for v in value:
+										resolved_value = resolve_option_junctions_value(key, v)
+										event_option_junctions_data.append([get_junctions_id(), event_name, key, resolved_value, target_name])
+								else:
+									resolved_value = resolve_option_junctions_value(key, value)
+									event_option_junctions_data.append([get_junctions_id(), event_name, key, resolved_value, target_name])
 
 						#make sure payloads exists
 						if len(target_data) > 1 and 'payloads' in target_data[1]:
@@ -227,12 +237,22 @@ def main():
 							if is_dilemma:
 								for choice, choice_values in payloads_dict.items():
 									for key, value in choice_values.items():
-										resolved_value = resolve_payloads_value(key, value)
-										event_payload_data.append([choice, event_name, get_payloads_id(), key, resolved_value, target_name])
+										if isinstance(value, list):
+											for v in value:
+												resolved_value = resolve_option_junctions_value(key, v)
+												event_option_junctions_data.append([event_name, get_junctions_id(), key, resolved_value, target_name])
+										else:
+											resolved_value = resolve_payloads_value(key, value)
+											event_payload_data.append([choice, event_name, get_payloads_id(), key, resolved_value, target_name])
 							else:
 								for key, value in payloads_dict.items():
-									resolved_value = resolve_payloads_value(key, value)
-									event_payload_data.append([get_payloads_id(), event_name, key, resolved_value, target_name])
+									if isinstance(value, list):
+										for v in value:
+											resolved_value = resolve_option_junctions_value(key, v)
+											event_payload_data.append([get_payloads_id(), event_name, key, resolved_value, target_name])
+									else:
+										resolved_value = resolve_payloads_value(key, value)
+										event_payload_data.append([get_payloads_id(), event_name, key, resolved_value, target_name])
 
 					#process dilemma choices
 					if is_dilemma:
