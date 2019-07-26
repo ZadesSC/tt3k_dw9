@@ -67,6 +67,13 @@ DEFAULT_PIVOT_Y = '0.5000'
 
 
 def main():
+    source_dir = args.source_dir
+    target_dir = args.target_dir
+    character_folder = args.character_folder
+    character_element = args.character_element
+    character_gender = args.character_gender
+    is_generic = args.is_generic
+    build_target_folder_structure(source_dir, target_dir, character_folder, character_element, character_gender, is_generic)
     pass
 
 
@@ -88,47 +95,47 @@ def create_image_dict(source_dir):
 
     # create full set from starting 5 images
     composite_img = Image.open(composite_file)
-    img_dict.update({COMPOSITE_LARGE_KEY, composite_img})
+    img_dict.update({COMPOSITE_LARGE_KEY: composite_img})
 
     bobbleheads_large_img = Image.open(bobbleheads_large_file)
-    bobbleheads_large_img.resize(BOBBLEHEADS_LARGE_SIZE)
-    img_dict.update({BOBBLEHEADS_LARGE_KEY, bobbleheads_large_img})
+    bobbleheads_large_img = bobbleheads_large_img.resize(BOBBLEHEADS_LARGE_SIZE)
+    img_dict.update({BOBBLEHEADS_LARGE_KEY: bobbleheads_large_img})
 
     bobbleheads_img = Image.open(bobbleheads_large_file)
-    bobbleheads_img.rezie(BOBBLEHEADS_SIZE)
-    img_dict.update({BOBBLEHEADS_KEY, bobbleheads_img})
+    bobbleheads_img = bobbleheads_img.resize(BOBBLEHEADS_SIZE)
+    img_dict.update({BOBBLEHEADS_KEY: bobbleheads_img})
 
     halfbody_large_large_img = Image.open(halfbody_large_large_file)
-    halfbody_large_large_img.resize(HALFBODY_LARGE_LARGE_SIZE)
-    img_dict.update({HALFBODY_LARGE_LARGE_KEY, halfbody_large_large_img})
+    halfbody_large_large_img = halfbody_large_large_img.resize(HALFBODY_LARGE_LARGE_SIZE)
+    img_dict.update({HALFBODY_LARGE_LARGE_KEY: halfbody_large_large_img})
 
     halfbody_large_img = Image.open(halfbody_large_large_file)
-    halfbody_large_img.resize(HALFBODY_LARGE_SIZE)
-    img_dict.update({HALFBODY_LARGE_KEY, halfbody_large_img})
+    halfbody_large_img = halfbody_large_img.resize(HALFBODY_LARGE_SIZE)
+    img_dict.update({HALFBODY_LARGE_KEY: halfbody_large_img})
 
     halfbody_small_large_img = Image.open(halfbody_large_large_file)
-    halfbody_small_large_img.resize(HALFBODY_SMALL_LARGE_SIZE)
-    img_dict.update({HALFBODY_SMALL_LARGE_KEY, halfbody_small_large_img})
+    halfbody_small_large_img = halfbody_small_large_img.resize(HALFBODY_SMALL_LARGE_SIZE)
+    img_dict.update({HALFBODY_SMALL_LARGE_KEY: halfbody_small_large_img})
 
-    halfbody_small_img = Image(halfbody_large_large_file)
-    halfbody_small_img.resize(HALFBODY_SMALL_SIZE)
-    img_dict.update({HALFBODY_SMALL_KEY, halfbody_small_img})
+    halfbody_small_img = Image.open(halfbody_large_large_file)
+    halfbody_small_img = halfbody_small_img.resize(HALFBODY_SMALL_SIZE)
+    img_dict.update({HALFBODY_SMALL_KEY: halfbody_small_img})
 
-    mini_large_img = Image(mini_large_file)
-    mini_large_img.resize(MINI_LARGE_SIZE)
-    img_dict.update({MINI_LARGE_KEY, mini_large_img})
+    mini_large_img = Image.open(mini_large_file)
+    mini_large_img = mini_large_img.resize(MINI_LARGE_SIZE)
+    img_dict.update({MINI_LARGE_KEY: mini_large_img})
 
-    mini_img = Image(mini_large_file)
-    mini_img.resize(MINI_SIZE)
-    img_dict.update({MINI_KEY, mini_img})
+    mini_img = Image.open(mini_large_file)
+    mini_img = mini_img.resize(MINI_SIZE)
+    img_dict.update({MINI_KEY: mini_img})
 
-    unitcard_large_img = Image(unitcard_large_file)
-    unitcard_large_img.resize(UNITCARD_LARGE_SIZE)
-    img_dict.update({UNITCARD_LARGE_KEY, unitcard_large_img})
+    unitcard_large_img = Image.open(unitcard_large_file)
+    unitcard_large_img = unitcard_large_img.resize(UNITCARD_LARGE_SIZE)
+    img_dict.update({UNITCARD_LARGE_KEY: unitcard_large_img})
 
-    unitcard_img = Image(unitcard_large_file)
-    unitcard_img.resize(UNITCARD_SIZE)
-    img_dict.update({UNITCARD_KEY, unitcard_img})
+    unitcard_img = Image.open(unitcard_large_file)
+    unitcard_img = unitcard_img.resize(UNITCARD_SIZE)
+    img_dict.update({UNITCARD_KEY: unitcard_img})
 
     return img_dict
 
@@ -141,9 +148,13 @@ def convert():
     pass
 
 
-def build_target_folder_structure(target_dir, generic):
-    # folder folders if they don't exist
-    pass
+def build_target_folder_structure(source_dir, target_dir, character_dir, element, gender, is_generic):
+    image_dict = create_image_dict(source_dir)
+
+    if is_generic:
+        build_generic_target_folder(target_dir, character_dir, image_dict, element, gender)
+    else:
+        build_unique_target_folder(target_dir, character_dir, image_dict)
 
 
 def build_generic_target_folder(target_dir, character_dir, image_dict, element, gender):
@@ -173,9 +184,9 @@ def build_generic_target_folder(target_dir, character_dir, image_dict, element, 
     happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
     normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
 
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
 
     insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
     insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
@@ -232,9 +243,9 @@ def build_unique_target_folder(target_dir, character_dir, image_dict):
     happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
     normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
 
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
-    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_large_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
 
     insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
     insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
@@ -322,9 +333,9 @@ def generate_chunk_tuple(type_flag, content):
 
 def generate_text_chunk_tuple(str_info):
     type_flag = TEXT_CHUNK_FLAG
-    comment_ba = bytearray(bytes("Comment").encode("utf-8"))
-    comment_ba.append(b'\x00')
-    comment_ba.extend(bytes(str_info).encode("utf-8"))
+    comment_ba = bytearray(bytes("Comment", "utf-8"))
+    comment_ba.extend(b'\x00')
+    comment_ba.extend(bytes(str_info, "utf-8"))
 
     return tuple([type_flag, bytes(comment_ba)])
 
@@ -333,21 +344,21 @@ def insert_text_chunk(target, text, index=1):
     if index < 0:
         raise Exception('The index value {} less than 0!'.format(index))
 
-    reader = png.Reader(filename=target)
+    reader = png.Reader(filename=str(target))
     chunks = reader.chunks()
     chunk_list = list(chunks)
 
     # add non comment chunks to new list, basically removes all existing comments
     new_chunk_list = []
     for chunk in chunk_list:
-        if 'tEXt' not in chunk[0]:
+        if b'tEXt' not in chunk[0]:
             new_chunk_list.append(chunk)
 
     # add the new comment with postions
     chunk_item = generate_text_chunk_tuple(text)
     new_chunk_list.insert(index, chunk_item)
 
-    with open(target, 'wb') as dst_file:
+    with open(str(target), 'wb') as dst_file:
         png.write_chunks(dst_file, new_chunk_list)
 
 
@@ -358,16 +369,16 @@ def insert_text_chunk_to_png(src, message):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Processes or converts image files around to create character folders')
-    parser.add_argument("--source_dir", required=True, help="source folder", type=PathType)
-    parser.add_argument("--target_dir", required=True, help="target folder", type=PathType)
+    parser.add_argument("--source_dir", required=True, help="source folder", type=str)
+    parser.add_argument("--target_dir", required=True, help="target folder", type=str)
     parser.add_argument("--character_folder", required=True, help="name used to create the target folder", type=str)
     parser.add_argument("--character_element", required=True, help="element of the target character", type=str)
     parser.add_argument("--character_gender", required=True, help="gender of the target character", type=str)
     parser.add_argument("--composite_x", required=False, help="x offset of the composite image", type=str)
     parser.add_argument("--composite_y", required=False, help="y offset of the composite image", type=str)
-    parser.add_argument("--generic", help="this is a generic character",  action='store_true')
-    parser.add_argument("--convert", help="switches to convert mode",  action='store_true')
-    parser.add_argument("--vanilla_unique", help="enable debug logging",  action='store_true')
+    parser.add_argument("--is_generic", help="this is a generic character",  action='store_true')
+    parser.add_argument("--is_convert", help="switches to convert mode",  action='store_true')
+    parser.add_argument("--is_vanilla_unique", help="enable debug logging",  action='store_true')
     parser.add_argument("--verbose", help="enable debug logging",  action='store_true')
     args = parser.parse_args()
     main()
