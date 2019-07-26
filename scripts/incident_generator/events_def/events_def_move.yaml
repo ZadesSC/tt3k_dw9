@@ -1,5 +1,30 @@
 enabled: True
 events:
+#TODO: move to wherever Lu Bu is instead
+- event_name: chen_gong_move
+  title: Chen Gong
+  generate: True
+  prioritized: True
+  description: Despite his typical humorous attitude, Chen Gong was willing to make any sacrifice for his ambitions. After realizing that he would be unfulfilled serving Cao Cao, he pledged his loyalty to Lu Bu as a strategist instead.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: 3k_main_faction_dong_zhuo
+        CND_INCIDENT_NOT_GENERATED: chen_gong_npc_move
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: chen_gong_hero_water
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
 - event_name: guo_jia_move
   title: Guo Jia
   generate: True
@@ -13,6 +38,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: guo_jia_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -36,6 +62,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
+        CND_INCIDENT_NOT_GENERATED: huang_zhong_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -60,6 +87,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: jia_xu_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -80,11 +108,12 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 220
-        CND_LAST_ROUND: 230
+        CND_FIRST_ROUND: 190
+        CND_LAST_ROUND: 200
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
+        CND_INCIDENT_NOT_GENERATED: jiang_wei_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -108,6 +137,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
+        CND_INCIDENT_NOT_GENERATED: ma_chao_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -131,10 +161,35 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: pang_de_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: pang_de_hero_wood
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: taishi_ci_move
+  title: Taishi Ci
+  generate: True
+  prioritized: True
+  description: With the belief that the way of the warrior was the true path to fulfilling his duty, he became known for always wielding his blade for what he believed to be right with a steadfast devotion. This belief was on full display when he saved Kong Rong, the prefect of Beihai, to repay the aid his mother had received from Kong Rong. After initially serving Liu Yong, Taishi Ci was forced to submit to Sun Ce wherein he eventually joined Wu after Liu Yong's defeat against Wu.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wu
+        CND_INCIDENT_NOT_GENERATED: taishi_ci_npc_move
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: taishi_ci_hero_metal
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
@@ -155,10 +210,35 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: shu
+        CND_INCIDENT_NOT_GENERATED: xiahou_ba_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_wood
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_SELF:
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+- event_name: xu_huang_move
+  title: Xu Huang
+  generate: True
+  prioritized: True
+  description: Praised by Cao Cao as "a match to Sun Tzu," Xu Huang's wisdom and courage also earned him a position as one of the Five Generals of Wei. As a fervent disciple of the way of the warrior, he showed great respect to any friend or foe who proved to be skillful and virtuous.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xu_huang_npc_move
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xu_huang_hero_metal
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:
@@ -178,6 +258,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xun_you_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -201,6 +282,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xun_yu_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -219,11 +301,12 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 30
-        CND_LAST_ROUND: 40
+        CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: yu_jin_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -247,6 +330,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: 3k_main_faction_yuan_shao
+        CND_INCIDENT_NOT_GENERATED: zhang_he_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -271,6 +355,7 @@ events:
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: zhang_he_2_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
@@ -281,24 +366,24 @@ events:
         GEN_CND_SELF:
     - payloads:
         CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
-#TODO: change to move to cao_pi_hero_earth instead of wei
-- event_name: zhong_hui_move
-  title: Zhong Hui
-  generate: False
+- event_name: zhang_liao_move
+  title: Zhang Liao
+  generate: True
   prioritized: True
-  description: Zhong Hui became a general at a very young age, and considered Deng Ai as his rival. Extremely talented, he enjoyed battles, but was not trusted by older generals due to his overconfidence.
+  description: Before serving Cao Cao, he fought in many battles serving Lu Bu until his defeat and death. Always calm and collected, his ability to make quick and accurate decisions on the battlefield earned him fame and glory, as well as appointment as the leader of the Five Generals of Wei. Never forgetting morality, he showed great respect to all, friend or foe alike.
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 70
-        CND_LAST_ROUND: 80
+        CND_FIRST_ROUND: 45
+        CND_LAST_ROUND: 55
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
         CND_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: zhang_liao_npc_move
   - target_character_1:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
-        GEN_CND_CHARACTER_TEMPLATE: zhong_hui_hero_wood
+        GEN_CND_CHARACTER_TEMPLATE: zhang_liao_hero_metal
   - target_faction_1:
     - option_junctions:
         GEN_TARGET_FACTION:

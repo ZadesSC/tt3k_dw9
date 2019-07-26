@@ -193,8 +193,8 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 190
-        CND_LAST_ROUND: 200
+        CND_FIRST_ROUND: 160
+        CND_LAST_ROUND: 170
         CND_INCIDENT_NOT_GENERATED: jiang_wei_npc_spawn
         CND_UNIQUE: ''
         GEN_CND_SELF: ''
@@ -389,6 +389,24 @@ events:
         GEN_TARGET_FACTION: ''
     - payloads:
         SPAWN_AGENT_OFF_MAP: ling_tong_hero_wood
+        LOCATED: FACTION
+- event_name: liu_shan_spawn
+  title: Liu Shan
+  generate: True
+  prioritized: True
+  description: Much was expected of Liu Shan as the son of Liu Bei, whose compassion and charisma drew together numerous heroes. However, many mistakenly thought of him as a slow and foolish son due to how he acted only after calmly considering all factors of any situation.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_LAST_ROUND: 95
+        CND_INCIDENT_NOT_GENERATED: liu_shan_npc_spawn
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        GEN_CND_FACTION: shu
+        GEN_TARGET_FACTION: ''
+    - payloads:
+        SPAWN_AGENT_OFF_MAP: liu_shan_hero_earth
         LOCATED: FACTION
 - event_name: lu_meng_spawn
   title: Lu Meng

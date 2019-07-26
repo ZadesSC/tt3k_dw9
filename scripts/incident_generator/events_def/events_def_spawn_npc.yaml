@@ -247,8 +247,8 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 190
-        CND_LAST_ROUND: 200
+        CND_FIRST_ROUND: 160
+        CND_LAST_ROUND: 170
         CND_INCIDENT_NOT_GENERATED: jiang_wei_spawn
         CND_UNIQUE: ''
         CND_NOT_FACTION: wei
@@ -443,6 +443,27 @@ events:
         CND_INCIDENT_NOT_GENERATED: ling_tong_spawn
         CND_UNIQUE: ''
         CND_NOT_FACTION: wu
+        GEN_TARGET_NONE: ''
+    - payloads:
+        DUMMY: ''
+- event_name: liu_shan_npc_spawn
+  title: Heir of Liu Bei
+  generate: True
+  prioritized: True
+  description: Liu Bei's son has appeared
+  is_custom: True
+  custom_data:
+    - ACTION_TYPE: SPAWN
+      TARGET_FACTION: shu
+      TARGET_TEMPLATE: liu_shan_hero_earth
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 85
+        CND_LAST_ROUND: 95
+        CND_INCIDENT_NOT_GENERATED: liu_shan_spawn
+        CND_UNIQUE: ''
+        CND_NOT_FACTION: shu
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
