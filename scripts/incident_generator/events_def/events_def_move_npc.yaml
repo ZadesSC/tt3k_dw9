@@ -1,0 +1,402 @@
+enabled: True
+events:
+- event_name: chen_gong_npc_move
+  title: Chen Gong joins Dong Zhuo
+  generate: True
+  prioritized: True
+  description: You heard news that a famed strategist named Chen Gong has decided to join Dong Zhuo
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
+        CND_NOT_FACTION: 3k_main_faction_dong_zhuo
+        CND_INCIDENT_NOT_GENERATED: chen_gong_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: 3k_main_faction_dong_zhuo
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: chen_gong_hero_water
+        GEN_CND_NOT_OWNS:
+- event_name: guo_jia_npc_move
+  title: Guo Jia Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed strategist named Guo Jia has decided to join Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_NOT_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: guo_jia_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: guo_jia_hero_water
+        GEN_CND_NOT_OWNS:
+- event_name: huang_zhong_npc_move
+  title: Huang Zhong Joins Shu
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Huang Zhong has decided to join Shu
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 110
+        CND_LAST_ROUND: 120
+        CND_NOT_FACTION: [shu, 3k_main_faction_liu_biao]
+        CND_INCIDENT_NOT_GENERATED: huang_zhong_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: shu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: huang_zhong_hero_metal
+        GEN_CND_NOT_OWNS:
+- event_name: jia_xu_npc_move
+  title: Jia Xu Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed Strategist named Jia Xu has decided to join Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_LAST_ROUND: 55
+        CND_NOT_FACTION: [wei, 3k_main_faction_dong_zhuo]
+        CND_INCIDENT_NOT_GENERATED: jia_xu_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jia_xu_hero_water
+        GEN_CND_NOT_OWNS:
+- event_name: jiang_wei_npc_move
+  title: Jiang Wei defects to Shu
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Jiang Wei has defected to Shu
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 190
+        CND_LAST_ROUND: 200
+        CND_NOT_FACTION: [wei, shu]
+        CND_INCIDENT_NOT_GENERATED: jiang_wei_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: shu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: jiang_wei_hero_fire
+        GEN_CND_NOT_OWNS:
+- event_name: ma_chao_npc_move
+  title: Ma Chao Joins Shu
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Ma Chao has decided to join Shu
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 120
+        CND_LAST_ROUND: 130
+        CND_NOT_FACTION: [shu, 3k_main_faction_ma_teng]
+        CND_INCIDENT_NOT_GENERATED: ma_chao_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: shu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: ma_chao_hero_fire
+        GEN_CND_NOT_OWNS:
+- event_name: pang_de_npc_move
+  title: Pang De Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Pang De has decided to join Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 125
+        CND_LAST_ROUND: 135
+        CND_NOT_FACTION: [wei, 3k_main_faction_ma_teng]
+        CND_INCIDENT_NOT_GENERATED: pang_de_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: pang_de_hero_wood
+        GEN_CND_NOT_OWNS:
+- event_name: taishi_ci_npc_move
+  title: Taishi Ci Joins Wu
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Taishi Ci has decided to join Wu
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_NOT_FACTION: wu
+        CND_INCIDENT_NOT_GENERATED: taishi_ci_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: taishi_ci_hero_metal
+        GEN_CND_NOT_OWNS:
+- event_name: xiahou_ba_npc_move
+  title: Xiahou Ba Defects to Shu
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Xiahou Ba has decided to defect to Shu
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 295
+        CND_LAST_ROUND: 305
+        CND_NOT_FACTION: [wei, shu]
+        CND_INCIDENT_NOT_GENERATED: xiahou_ba_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: shu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xiahou_ba_hero_wood
+        GEN_CND_NOT_OWNS:
+- event_name: xu_huang_npc_move
+  title: Xu Huang Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Xu Huang has decided to join to Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_NOT_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xu_huang_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xu_huang_hero_metal
+        GEN_CND_NOT_OWNS:
+- event_name: xun_you_npc_move
+  title: Xun You Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Xun You has decided to join to Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_NOT_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xun_you_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_you_hero_earth
+        GEN_CND_NOT_OWNS:
+- event_name: xun_yu_npc_move
+  title: Xun Yu Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed Strategist named Xun Yu has decided to join to Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 30
+        CND_LAST_ROUND: 40
+        CND_NOT_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: xun_yu_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: xun_yu_hero_water
+        GEN_CND_NOT_OWNS:
+- event_name: yu_jin_npc_move
+  title: Yu Jin Joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Yu Jin has decided to join to Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 10
+        CND_LAST_ROUND: 20
+        CND_NOT_FACTION: wei
+        CND_INCIDENT_NOT_GENERATED: yu_jin_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: yu_jin_hero_metal
+        GEN_CND_NOT_OWNS:
+- event_name: zhang_he_npc_move
+  title: Zhang He joins Yuan Shao
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Zhang He has decided to join to Yuan Shao
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 5
+        CND_LAST_ROUND: 15
+        CND_NOT_FACTION: 3k_main_faction_yuan_shao
+        CND_INCIDENT_NOT_GENERATED: zhang_he_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: 3k_main_faction_yuan_shao
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+        GEN_CND_NOT_OWNS:
+- event_name: zhang_he_2_npc_move
+  title: Zhang He defects to Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Zhang He has decided to defect to Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 50
+        CND_LAST_ROUND: 60
+        CND_NOT_FACTION: [wei, 3k_main_faction_yuan_shao]
+        CND_INCIDENT_NOT_GENERATED: zhang_he_2_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_he_hero_fire
+        GEN_CND_NOT_OWNS:
+- event_name: zhang_liao_npc_move
+  title: Zhang Liao joins Wei
+  generate: True
+  prioritized: True
+  description: You heard news that a famed General named Zhang Liao has decided to join Wei
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 45
+        CND_LAST_ROUND: 55
+        CND_NOT_FACTION: [wei, 3k_main_faction_dong_zhuo]
+        CND_INCIDENT_NOT_GENERATED: zhang_liao_move
+        CND_UNIQUE: ''
+        GEN_TARGET_NONE: ''
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wei
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhang_liao_hero_metal
+        GEN_CND_NOT_OWNS:
