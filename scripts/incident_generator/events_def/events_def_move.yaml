@@ -1,5 +1,35 @@
 enabled: True
 events:
+- event_name: zhou_tai_any_move
+  title: Zhaou Tai
+  generate: True
+  prioritized: True
+  description: Zhou Tai from Jiujiang has heard of Sun Ce's reputation as a man who treated able people liberally. He vows to give up his life style of plundering the country side and instead pledge his alliegence to the Sun family.
+  target:
+  - default:
+    - option_junctions:
+        CND_FIRST_ROUND: 0
+        CND_LAST_ROUND: 95
+        CND_UNIQUE: ''
+        GEN_CND_SELF: ''
+        CND_INCIDENT_NOT_GENERATED: sun_zhou_tai_joins_any
+  - target_character_1:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: zhou_tai_hero_fire
+        GEN_CND_NOT_FACTION_LEADER:
+   - target_character_3:
+    - option_junctions:
+        GEN_TARGET_CHARACTER: ''
+        GEN_CND_CHARACTER_TEMPLATE: sun_ce_hero_fire
+        GEN_CND_FACTION_LEADER:
+  - target_faction_1:
+    - option_junctions:
+        GEN_TARGET_FACTION:
+        GEN_CND_FACTION: wu
+    - payloads:
+        CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
+
 #TODO: move to wherever Lu Bu is instead
 - event_name: chen_gong_move
   title: Chen Gong
