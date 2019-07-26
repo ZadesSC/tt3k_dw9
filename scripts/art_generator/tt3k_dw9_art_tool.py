@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+########################################################################################################################
+# This script is used to convert images and build image folders for characters.  It can also be used to convert between
+# image folders.
+########################################################################################################################
+
 import png
 import sys
 import argparse

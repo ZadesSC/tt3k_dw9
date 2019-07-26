@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+########################################################################################################################
+# This script is used to build unique portrait sets from generics provided by CA
+########################################################################################################################
+
+import png
+import sys
+import argparse
+from path_type import PathType
+from PIL import Image
+from pathlib import Path
+
+
+def main():
+    pass
+
+
+def build_element_set():
+    pass
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Process generic elemental folder and build custom generic/unique folders')
+    parser.add_argument("--source_dir", required=True, help="source folder, must be the data/UI/characters/ folder and must have the elemental folders", type=str)
+    parser.add_argument("--target_dir", required=True, help="will output similar to what is in the data/UI/characters/ folder", type=str)
+    args = parser.parse_args()
+    main()
