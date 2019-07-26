@@ -1,4 +1,5 @@
-import os
+import png
+import sys
 import argparse
 from path_type import PathType
 from PIL import Image
@@ -56,6 +57,13 @@ SUBDIR_DICTS = [{'dir': BOBBLEHEADS_DIR, 'img_key': BOBBLEHEADS_KEY, 'img_large_
                 {'dir': HALFBODY_SMALL_DIR, 'img_key': HALFBODY_SMALL_KEY, 'img_large_key': HALFBODY_SMALL_LARGE_KEY},
                 {'dir': MINI_DIR, 'img_key': MINI_LARGE_KEY, 'img_large_key': MINI_LARGE_KEY},
                 {'dir': UNITCARDS_DIR, 'img_key': UNITCARD_KEY, 'img_large_key': UNITCARD_LARGE_KEY}]
+
+# PNG Chuck Stuff
+TEXT_CHUNK_FLAG = b'tEXt'
+DEFAULT_X = '-25'
+DEFAULT_Y = '-75'
+DEFAULT_PIVOT_X = '0.5000'
+DEFAULT_PIVOT_Y = '0.5000'
 
 
 def main():
@@ -138,7 +146,8 @@ def build_target_folder_structure(target_dir, generic):
     pass
 
 
-def build_generic_target_folder_structure(target_dir, character_dir, image_dict, element, gender):
+def build_generic_target_folder(target_dir, character_dir, image_dict, element, gender):
+    composite_img = "face.png"
     composite_faces_dir = Path(target_dir).joinpath(COMPOSITES_DIR).joinpath(FACES_DIR).joinpath(character_dir)
 
     composite_large_panel_dir = composite_faces_dir.joinpath(LARGE_PANEL_DIR)
@@ -151,13 +160,26 @@ def build_generic_target_folder_structure(target_dir, character_dir, image_dict,
     composite_small_panel_dir.joinpath(HAPPY_DIR).mkdir(parents=True, exist_ok=True)
     composite_small_panel_dir.joinpath(NORMAL_DIR).mkdir(parents=True, exist_ok=True)
 
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(ANGRY_DIR).joinpath("face.png"))
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(HAPPY_DIR).joinpath("face.png"))
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(NORMAL_DIR).joinpath("face.png"))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img))
 
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath("face.png"))
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath("face.png"))
-    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath("face.png"))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img))
+
+    # TODO: redo composites to take from source values
+    angry_comment = '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+    happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+    normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
+
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
 
     for subdir_dict in SUBDIR_DICTS:
         subdir = subdir_dict.get('dir')
@@ -183,8 +205,53 @@ def build_generic_target_folder_structure(target_dir, character_dir, image_dict,
             blank_png.save(still_large_dir.joinpath(ancillary_image), PNG)
 
 
-def build_unique_target_folder_structure(target_dir):
-    pass
+def build_unique_target_folder(target_dir, character_dir, image_dict):
+    composite_img = "head.png"
+    composite_dir = Path(target_dir).joinpath(COMPOSITES_DIR)
+
+    composite_large_panel_dir = composite_dir.joinpath(LARGE_PANEL_DIR)
+    composite_large_panel_dir.joinpath(ANGRY_DIR).mkdir(parents=True, exist_ok=True)
+    composite_large_panel_dir.joinpath(HAPPY_DIR).mkdir(parents=True, exist_ok=True)
+    composite_large_panel_dir.joinpath(NORMAL_DIR).mkdir(parents=True, exist_ok=True)
+
+    composite_small_panel_dir = composite_dir.joinpath(SMALL_PANEL_DIR)
+    composite_small_panel_dir.joinpath(ANGRY_DIR).mkdir(parents=True, exist_ok=True)
+    composite_small_panel_dir.joinpath(HAPPY_DIR).mkdir(parents=True, exist_ok=True)
+    composite_small_panel_dir.joinpath(NORMAL_DIR).mkdir(parents=True, exist_ok=True)
+
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img))
+
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img))
+    image_dict.get(COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img))
+
+    # TODO: redo composites to take from source values
+    angry_comment = '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+    happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+    normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
+
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(ANGRY_DIR).joinpath(composite_img), angry_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(HAPPY_DIR).joinpath(composite_img), happy_comment)
+    insert_text_chunk_to_png(composite_small_panel_dir.joinpath(NORMAL_DIR).joinpath(composite_img), normal_comment)
+
+    for subdir_dict in SUBDIR_DICTS:
+        subdir = subdir_dict.get('dir')
+        img_key = subdir_dict.get('img_key')
+        img_large_key = subdir_dict.get('img_large_key')
+
+        still_dir = Path(target_dir).joinpath(STILLS_DIR).joinpath(subdir)
+        still_large_dir = still_dir.joinpath(LARGE_DIR)
+
+        still_large_dir.mkdir(parents=True, exist_ok=True)
+
+        image_dict.get(img_large_key).save(still_dir.joinpath(character_dir + ".png"))
+        image_dict.get(img_key).save(still_large_dir.joinpath(character_dir + ".png"))
 
 
 def get_ancillary_images_list(element, gender):
@@ -249,6 +316,46 @@ def get_ancillary_images_list(element, gender):
     return ancillary_images
 
 
+def generate_chunk_tuple(type_flag, content):
+    return tuple([type_flag, content])
+
+
+def generate_text_chunk_tuple(str_info):
+    type_flag = TEXT_CHUNK_FLAG
+    comment_ba = bytearray(bytes("Comment").encode("utf-8"))
+    comment_ba.append(b'\x00')
+    comment_ba.extend(bytes(str_info).encode("utf-8"))
+
+    return tuple([type_flag, bytes(comment_ba)])
+
+
+def insert_text_chunk(target, text, index=1):
+    if index < 0:
+        raise Exception('The index value {} less than 0!'.format(index))
+
+    reader = png.Reader(filename=target)
+    chunks = reader.chunks()
+    chunk_list = list(chunks)
+
+    # add non comment chunks to new list, basically removes all existing comments
+    new_chunk_list = []
+    for chunk in chunk_list:
+        if 'tEXt' not in chunk[0]:
+            new_chunk_list.append(chunk)
+
+    # add the new comment with postions
+    chunk_item = generate_text_chunk_tuple(text)
+    new_chunk_list.insert(index, chunk_item)
+
+    with open(target, 'wb') as dst_file:
+        png.write_chunks(dst_file, new_chunk_list)
+
+
+def insert_text_chunk_to_png(src, message):
+    # src = r'E:\temp\png\register_05.png'
+    insert_text_chunk(src, message)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Processes or converts image files around to create character folders')
     parser.add_argument("--source_dir", required=True, help="source folder", type=PathType)
@@ -256,6 +363,8 @@ if __name__ == '__main__':
     parser.add_argument("--character_folder", required=True, help="name used to create the target folder", type=str)
     parser.add_argument("--character_element", required=True, help="element of the target character", type=str)
     parser.add_argument("--character_gender", required=True, help="gender of the target character", type=str)
+    parser.add_argument("--composite_x", required=False, help="x offset of the composite image", type=str)
+    parser.add_argument("--composite_y", required=False, help="y offset of the composite image", type=str)
     parser.add_argument("--generic", help="this is a generic character",  action='store_true')
     parser.add_argument("--convert", help="switches to convert mode",  action='store_true')
     parser.add_argument("--vanilla_unique", help="enable debug logging",  action='store_true')
