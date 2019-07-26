@@ -13,15 +13,24 @@
 hero=$1
 
 #3k Mod character folder:
-#MAKE SURE THIS POINTS TO YOUR GAME's CHARACTER FOLDER
+#E:\Games\Steam\SteamApps\common\Total War THREE KINGDOMS\data\UI\characters
 character_dir="/mnt/e/Games/Steam/SteamApps/common/Total War THREE KINGDOMS/data/UI/characters"
 
 #workspace folder:
-#MAKE SURE THIS POINTS TO YOUR SOURCE GENERALS FOLDER
+#C:\Users\zades\Pictures\tt3k_workspace\dw9\generals
 workspace_dir='/mnt/c/Users/zades/Pictures/tt3k_workspace/dw9/generals'
+pic_x=-25
+pic_y=-75
 
 #set variables
 case ${hero} in
+	bian_huilan)
+	pic_x=-23
+	pic_y=2
+	element="earth"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_lady_bian_huilan"
+	;;
 	bao_sanniang)
 	element="wood"
 	type="unique"
@@ -88,8 +97,13 @@ case ${hero} in
 	mod_folder_name="3k_main_hero_special_${element}_ding_feng"
 	;;
 	dong_bai)
-	element="fire"
-	type="unique"
+	element="metal"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_lady_dong_bai"
+	;;
+	dong_bai_alt)
+	element="metal"
+	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_lady_dong_bai"
 	;;
 	dong_zhuo)
@@ -143,7 +157,7 @@ case ${hero} in
 	mod_folder_name="3k_main_hero_special_${element}_guo_jia"
 	;;
 	han_dang)
-	element="fire"
+	element="wood"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_han_dang"
 	;;
@@ -167,6 +181,11 @@ case ${hero} in
 	element="water"
 	type="unique"
 	mod_folder_name="3k_main_hero_special_${element}_huang_zhong"
+	;;
+	iskandar)
+	element="fire"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_iskandar"
 	;;
 	jia_chong)
 	element="water"
@@ -261,7 +280,7 @@ case ${hero} in
 	mod_folder_name="3k_main_hero_special_${element}_man_chong"
 	;;
 	meng_huo)
-	element="metal"
+	element="wood"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_meng_huo"
 	;;
@@ -315,6 +334,11 @@ case ${hero} in
 	type="unique"
 	mod_folder_name="3k_main_hero_special_${element}_taishi_ci"
 	;;
+	tohsaka_rin)
+	element="fire"
+	type="unique"
+	mod_folder_name="3k_main_hero_special_${element}_lady_tohsaka_rin"
+	;;
 	wang_yi)
 	element="fire"
 	type="unique"
@@ -330,13 +354,25 @@ case ${hero} in
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_wei_yan"
 	;;
+	wei_yan_2)
+	pic_x=30
+	pic_y=25
+	element="fire"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_wei_yan"
+	;;
 	wen_yang)
 	element="wood"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_wen_yang"
 	;;
 	xiahou_ba)
-	element="fire"
+	element="wood"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_xiahou_ba"
+	;;
+	xiahou_ba_alt)
+	element="wood"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_xiahou_ba"
 	;;
@@ -431,7 +467,7 @@ case ${hero} in
 	mod_folder_name="3k_main_hero_special_${element}_zhang_bao"
 	;;
 	zhang_chunhua)
-	element="water"
+	element="metal"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_lady_zhang_chunhua"
 	;;
@@ -461,12 +497,22 @@ case ${hero} in
 	mod_folder_name="3k_main_hero_special_${element}_zhao_yun"
 	;;
 	zhong_hui)
-	element="wood"
+	element="earth"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_zhong_hui"
+	;;
+	zhong_hui_alt)
+	element="earth"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_zhong_hui"
 	;;
 	zhou_cang)
-	element="wood"
+	element="fire"
+	type="generic"
+	mod_folder_name="3k_main_hero_special_${element}_zhou_cang"
+	;;
+	zhou_cang_alt)
+	element="fire"
 	type="generic"
 	mod_folder_name="3k_main_hero_special_${element}_zhou_cang"
 	;;
@@ -518,6 +564,15 @@ case ${hero} in
 	;;
 esac
 
+#gender='male'
+#if [[ ${mod_folder_name} == *"lady"* ]]; then
+#	gender='female'
+#fi
+#hero="generic_${element}_${gender}"
+
+echo "x: ${pic_x}"
+echo "y: ${pic_y}"
+
 convert ${workspace_dir}/${hero}/halfbody_large_large.png -resize 312x250 -background transparent -gravity center -extent 312x250 ${workspace_dir}/${hero}/halfbody_large.png
 convert ${workspace_dir}/${hero}/halfbody_large_large.png -resize 176x134 -background transparent -gravity center -extent 176x134 ${workspace_dir}/${hero}/halfbody_small_large.png
 convert ${workspace_dir}/${hero}/halfbody_large_large.png -resize 176x134 -background transparent -gravity center -extent 110x84 ${workspace_dir}/${hero}/halfbody_small.png
@@ -541,9 +596,9 @@ if [[ ${type} == "unique" ]]; then
 	cp ${workspace_dir}/${hero}/head.png "${character_dir}"/${mod_folder_name}/composites/large_panel/happy/head.png
 	cp ${workspace_dir}/${hero}/head.png "${character_dir}"/${mod_folder_name}/composites/large_panel/norm/head.png
 
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/angry/head.png '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/happy/head.png '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/norm/head.png '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/angry/head.png "[type:angry;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/happy/head.png "[type:happy;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/large_panel/norm/head.png "[type:norm;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
 
 	cp ${workspace_dir}/${hero}/bobbleheads.png "${character_dir}"/${mod_folder_name}/stills/bobbleheads/${mod_folder_name}.png
 	cp ${workspace_dir}/${hero}/bobbleheads_large.png "${character_dir}"/${mod_folder_name}/stills/bobbleheads/large/${mod_folder_name}.png
@@ -583,13 +638,13 @@ elif [[ ${type} == "generic" ]]; then
 	cp ${workspace_dir}/${hero}/head.png "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/happy/face.png
 	cp ${workspace_dir}/${hero}/head.png "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/norm/face.png
 
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/angry/face.png '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/happy/face.png '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/norm/face.png '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/angry/face.png "[type:angry;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/happy/face.png "[type:happy;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/large_panel/norm/face.png "[type:norm;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
 
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/angry/face.png '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/happy/face.png '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-	python add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/norm/face.png '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/angry/face.png "[type:angry;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/happy/face.png "[type:happy;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
+	python /mnt/c/Users/zades/Pictures/tt3k_workspace/10_gold_flowers/source/add_comment.py "${character_dir}"/${mod_folder_name}/composites/faces/${mod_folder_name}/small_panel/norm/face.png "[type:norm;x:${pic_x};y:${pic_y};z-order:0;pivot_x:0.5000;pivot_y:0.5000;]"
 
 	cp ${workspace_dir}/${hero}/bobbleheads.png "${character_dir}"/${mod_folder_name}/stills/bobbleheads/faces/${mod_folder_name}.png
 	cp ${workspace_dir}/${hero}/bobbleheads_large.png "${character_dir}"/${mod_folder_name}/stills/bobbleheads/faces/large/${mod_folder_name}.png
@@ -606,7 +661,6 @@ elif [[ ${type} == "generic" ]]; then
 	if [[ ${mod_folder_name} == *"lady"* ]]; then
 		gender='female'
 	fi
-
 	#create blank ancillary files
 
 	for dir in "${character_dir}"/${mod_folder_name}/stills/*; do
