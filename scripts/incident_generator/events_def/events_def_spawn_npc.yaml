@@ -692,8 +692,8 @@ events:
   target:
   - default:
     - option_junctions:
-        CND_FIRST_ROUND: 170
-        CND_LAST_ROUND: 180
+        CND_FIRST_ROUND: 100
+        CND_LAST_ROUND: 110
         CND_INCIDENT_NOT_GENERATED: xu_sheng_spawn
         CND_UNIQUE: ''
         CND_NOT_FACTION: shu
