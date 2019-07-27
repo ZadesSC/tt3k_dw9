@@ -2,7 +2,7 @@ enabled: True
 events:
   - event_name: cao_pi_zhenji_marriage_move
     event_type: dilemma
-    enabled: False
+    enabled: True
     title: Beauty on the battlefield
     ui_image: 3k_event_wedding
     generate: True

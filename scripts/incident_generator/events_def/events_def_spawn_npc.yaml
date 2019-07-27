@@ -696,7 +696,7 @@ events:
         CND_LAST_ROUND: 110
         CND_INCIDENT_NOT_GENERATED: xu_sheng_spawn
         CND_UNIQUE: ''
-        CND_NOT_FACTION: shu
+        CND_NOT_FACTION: wu
         GEN_TARGET_NONE: ''
     - payloads:
         DUMMY: ''
