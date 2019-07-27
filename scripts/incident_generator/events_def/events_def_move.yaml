@@ -408,7 +408,7 @@ events:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: zhou_tai_hero_fire
         GEN_CND_NOT_FACTION_LEADER:
-   - target_character_3:
+  - target_character_3:
     - option_junctions:
         GEN_TARGET_CHARACTER: ''
         GEN_CND_CHARACTER_TEMPLATE: sun_ce_hero_fire
@@ -419,4 +419,3 @@ events:
         GEN_CND_FACTION: wu
     - payloads:
         CAMPAIGN_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_character_move_to_faction];FACTION;SOURCE_CHARACTER[target_character_1]
-        
