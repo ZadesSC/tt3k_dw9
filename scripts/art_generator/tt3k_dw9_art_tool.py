@@ -80,7 +80,12 @@ def main():
     character_element = args.character_element
     character_gender = args.character_gender
     is_generic = args.is_generic
-    build_target_folder_structure(source_dir, target_dir, character_folder, character_element, character_gender, is_generic)
+    is_invert = args.is_invert
+
+    if is_invert:
+        build_five_image_folder(source_dir, target_dir, character_folder, character_element, character_gender, is_generic)
+    else:
+        build_target_folder_structure(source_dir, target_dir, character_folder, character_element, character_gender, is_generic)
     pass
 
 
@@ -153,6 +158,67 @@ def create_image_dict_convert_mode():
 
 def convert():
     pass
+
+
+def build_five_image_folder(source_dir, target_dir, character_dir, element, gender, is_generic):
+    if is_generic:
+        build_generic_five_image_folder(source_dir, target_dir, character_dir, element, gender)
+    else:
+        build_unique_five_image_folder(source_dir, target_dir, character_dir, element, gender)
+
+
+def build_generic_five_image_folder(source_dir, target_dir, character_dir, element, gender):
+    composite_img = "face.png"
+    composite_img_path = Path(source_dir).joinpath(COMPOSITES_DIR).joinpath(FACES_DIR).joinpath(character_dir).joinpath(LARGE_PANEL_DIR).joinpath(ANGRY_DIR).joinpath(composite_img)
+    bobbleheads_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(BOBBLEHEADS_DIR).joinpath(FACES_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    halfbody_large_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(HALFBODY_LARGE_DIR).joinpath(FACES_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    mini_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(MINI_DIR).joinpath(FACES_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    unitcards_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(UNITCARDS_DIR).joinpath(FACES_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+
+    composite_img = Image.open(composite_img_path)
+    bobbleheads_img = Image.open(bobbleheads_large_img_path)
+    halfbody_img = Image.open(halfbody_large_large_img_path)
+    mini_img = Image.open(mini_large_img_path)
+    unitcards_img = Image.open(unitcards_large_img_path)
+
+    composite = "head.png"
+    bobbleheads_large = "bobbleheads_large.png"
+    halfbody_large_large = "halfbody_large_large.png"
+    mini_large = "mini_large.png"
+    unitcard_large = "unitcard_large.png"
+
+    composite_img.save(Path(target_dir).joinpath(composite), PNG)
+    bobbleheads_img.save(Path(target_dir).joinpath(bobbleheads_large), PNG)
+    halfbody_img.save(Path(target_dir).joinpath(halfbody_large_large), PNG)
+    mini_img.save(Path(target_dir).joinpath(mini_large), PNG)
+    unitcards_img.save(Path(target_dir).joinpath(unitcard_large), PNG)
+
+
+def build_unique_five_image_folder(source_dir, target_dir, character_dir, element, gender):
+    composite_img = "head.png"
+    composite_img_path = Path(source_dir).joinpath(COMPOSITES_DIR).joinpath(LARGE_PANEL_DIR).joinpath(ANGRY_DIR).joinpath(composite_img)
+    bobbleheads_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(BOBBLEHEADS_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    halfbody_large_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(HALFBODY_LARGE_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    mini_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(MINI_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+    unitcards_large_img_path = Path(target_dir).joinpath(STILLS_DIR).joinpath(UNITCARDS_DIR).joinpath(LARGE_DIR).joinpath(character_dir + ".png")
+
+    composite_img = Image.open(composite_img_path)
+    bobbleheads_img = Image.open(bobbleheads_large_img_path)
+    halfbody_img = Image.open(halfbody_large_large_img_path)
+    mini_img = Image.open(mini_large_img_path)
+    unitcards_img = Image.open(unitcards_large_img_path)
+
+    composite = "head.png"
+    bobbleheads_large = "bobbleheads_large.png"
+    halfbody_large_large = "halfbody_large_large.png"
+    mini_large = "mini_large.png"
+    unitcard_large = "unitcard_large.png"
+
+    composite_img.save(Path(target_dir).joinpath(composite), PNG)
+    bobbleheads_img.save(Path(target_dir).joinpath(bobbleheads_large), PNG)
+    halfbody_img.save(Path(target_dir).joinpath(halfbody_large_large), PNG)
+    mini_img.save(Path(target_dir).joinpath(mini_large), PNG)
+    unitcards_img.save(Path(target_dir).joinpath(unitcard_large), PNG)
 
 
 def build_target_folder_structure(source_dir, target_dir, character_dir, element, gender, is_generic):
@@ -384,6 +450,7 @@ if __name__ == '__main__':
     parser.add_argument("--composite_x", required=False, help="x offset of the composite image", type=str)
     parser.add_argument("--composite_y", required=False, help="y offset of the composite image", type=str)
     parser.add_argument("--is_generic", help="this is a generic character",  action='store_true')
+    parser.add_argument("--is_invert", help="switches to dumping a character folder into the 5 image folder",  action='store_true')
     parser.add_argument("--is_convert", help="switches to convert mode",  action='store_true')
     parser.add_argument("--is_vanilla_unique", help="enable debug logging",  action='store_true')
     parser.add_argument("--verbose", help="enable debug logging",  action='store_true')
