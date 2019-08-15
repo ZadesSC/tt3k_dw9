@@ -1,155 +1,186 @@
 enabled: True
 events:
-- event_name: guan_suo_bao_sanniang_marriage_spawn_npc
-  event_type: incident
-  title: Guan Suo's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Guan Suo of Shu has taken Bao Sanniang as his wife
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 140
-          CND_LAST_ROUND: 150
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: guan_suo_bao_sanniang_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: guan_suo_hero_earth
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_bao_sanniang_hero_wood
-- event_name: qiao_sisters_marriage_spawn_npc
-  event_type: incident
-  title: The Two Qiaos
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: The Elder Qiao, a gentleman of the Han, has two daughters, famed throughout the lands for their beauty and musical skill. You heard that he offered them to Sun Ce and Zhou Yu of Wu for marriage.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 48
-          CND_LAST_ROUND: 52
-          CND_UNIQUE: ''
-          CND_INCIDENT_NOT_GENERATED: 3k_main_historical_sun_qiao_sisters_pc_incident
-          CND_NOT_FACTION: wu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: sun_ce_hero_fire
-          GEN_CND_FACTION: wu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_da_qiao_hero_earth
-    - target_character_2:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhou_yu_hero_water
-          GEN_CND_FACTION: wu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_xiao_qiao_hero_metal
-- event_name: sima_yi_zhang_chunhua_marriage_spawn_npc
-  event_type: incident
-  title: The Silver Eminence's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Wei's famed strategist Sima Yi has taken Zhang Chunhua as his wife.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 90
-          CND_LAST_ROUND: 105
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: sima_yi_zhang_chunhua_marriage_spawn
-          CND_NOT_FACTION: wei
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
-          GEN_CND_FACTION: wei
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_zhang_chunhua_hero_metal
-- event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
-  event_type: incident
-  title: Sima Zhao Wishes to Marry
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Sima Zhao of Wei has taken Wang Yuanji as his wife
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 235
-          CND_LAST_ROUND: 245
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: sima_zhao_wang_yuanji_marriage_spawn
-          CND_NOT_FACTION: wei
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
-          GEN_CND_FACTION: wei
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_wang_yuanji_hero_earth
-- event_name: zhang_fei_xiahou_ji_marriage_spawn_npc
-  event_type: incident
-  title: Zhang Fei Kidnaps and Marries a Girl?
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Shu's legendary general Zhang Fei has kidnapped a girl named Xiahouji and married her.  What is happening in Shu?
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 70
-          CND_LAST_ROUND: 80
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: zhang_fei_xiahou_ji_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_xiahou_ji_hero_water
-- event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
-  event_type: incident
-  title: The Sleeping Dragon's Marriage
-  ui_image: 3k_event_wedding
-  generate: True
-  prioritized: True
-  description: You heard that Shu's famed strategist Zhuge Liang has taken Huang Yueying as his wife.
-  target:
-    - default:
-      - option_junctions:
-          CND_FIRST_ROUND: 90
-          CND_LAST_ROUND: 100
-          CND_UNIQUE: ''
-          CND_NOT_DILEMMA_GENERATED: zhuge_liang_huang_yueying_marriage_spawn
-          CND_NOT_FACTION: shu
-    - target_character_1:
-      - option_junctions:
-          GEN_CND_NOT_MARRIED: ''
-          GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
-          GEN_CND_FACTION: shu
-          GEN_TARGET_CHARACTER: ''
-      - payloads:
-          LOCATED: CHARACTER
-          MARRIAGE: lady_huang_yueying_hero_wood
+  - event_name: cao_pi_zhenji_marriage_move_npc
+    event_type: incident
+    enabled: True
+    title: Love in War
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: Cao Cao's son Cao Pi has found a beatiful lady named Zhenji on the battlefield and has taken her as his wife.
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 75
+            CND_LAST_ROUND: 85
+            CND_UNIQUE: ''
+            CND_NOT_FACTION: [wei, 3k_main_faction_yuan_shao]
+            CND_NOT_DILEMMA_GENERATED: cao_pi_zhenji_marriage_move
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: cao_pi_hero_earth
+            GEN_CND_FACTION: wei
+            GEN_TARGET_CHARACTER: ''
+      - target_character_2:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: lady_zhen_ji_hero_earth
+            GEN_CND_FACTION: 3k_main_faction_yuan_shao
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            CAMPAING_PAYLOAD_RECORD: PAYLOAD[3k_main_campaign_payload_marry];CHARACTER;SOURCE_CHARACTER[target_character_1]
+  - event_name: guan_suo_bao_sanniang_marriage_spawn_npc
+    event_type: incident
+    title: Guan Suo's Marriage
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: You heard that Guan Suo of Shu has taken Bao Sanniang as his wife
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 140
+            CND_LAST_ROUND: 150
+            CND_UNIQUE: ''
+            CND_NOT_DILEMMA_GENERATED: guan_suo_bao_sanniang_marriage_spawn
+            CND_NOT_FACTION: shu
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: guan_suo_hero_earth
+            GEN_CND_FACTION: shu
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_bao_sanniang_hero_wood
+  - event_name: qiao_sisters_marriage_spawn_npc
+    event_type: incident
+    title: The Two Qiaos
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: The Elder Qiao, a gentleman of the Han, has two daughters, famed throughout the lands for their beauty and musical skill. You heard that he offered them to Sun Ce and Zhou Yu of Wu for marriage.
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 48
+            CND_LAST_ROUND: 52
+            CND_UNIQUE: ''
+            CND_INCIDENT_NOT_GENERATED: 3k_main_historical_sun_qiao_sisters_pc_incident
+            CND_NOT_FACTION: wu
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: sun_ce_hero_fire
+            GEN_CND_FACTION: wu
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_da_qiao_hero_earth
+      - target_character_2:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: zhou_yu_hero_water
+            GEN_CND_FACTION: wu
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_xiao_qiao_hero_metal
+  - event_name: sima_yi_zhang_chunhua_marriage_spawn_npc
+    event_type: incident
+    title: The Silver Eminence's Marriage
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: You heard that Wei's famed strategist Sima Yi has taken Zhang Chunhua as his wife.
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 90
+            CND_LAST_ROUND: 105
+            CND_UNIQUE: ''
+            CND_NOT_DILEMMA_GENERATED: sima_yi_zhang_chunhua_marriage_spawn
+            CND_NOT_FACTION: wei
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: sima_yi_hero_water
+            GEN_CND_FACTION: wei
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_zhang_chunhua_hero_metal
+  - event_name: sima_zhao_wang_yuanji_marriage_spawn_npc
+    event_type: incident
+    title: Sima Zhao Wishes to Marry
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: You heard that Sima Zhao of Wei has taken Wang Yuanji as his wife
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 235
+            CND_LAST_ROUND: 245
+            CND_UNIQUE: ''
+            CND_NOT_DILEMMA_GENERATED: sima_zhao_wang_yuanji_marriage_spawn
+            CND_NOT_FACTION: wei
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: sima_zhao_hero_earth
+            GEN_CND_FACTION: wei
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_wang_yuanji_hero_earth
+  - event_name: zhang_fei_xiahou_ji_marriage_spawn_npc
+    event_type: incident
+    title: Zhang Fei Kidnaps and Marries a Girl?
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: You heard that Shu's legendary general Zhang Fei has kidnapped a girl named Xiahouji and married her.  What is happening in Shu?
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 70
+            CND_LAST_ROUND: 80
+            CND_UNIQUE: ''
+            CND_NOT_DILEMMA_GENERATED: zhang_fei_xiahou_ji_marriage_spawn
+            CND_NOT_FACTION: shu
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: zhang_fei_hero_fire
+            GEN_CND_FACTION: shu
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_xiahou_ji_hero_water
+  - event_name: zhuge_liang_huang_yueying_marriage_spawn_npc
+    event_type: incident
+    title: The Sleeping Dragon's Marriage
+    ui_image: 3k_event_wedding
+    generate: True
+    prioritized: True
+    description: You heard that Shu's famed strategist Zhuge Liang has taken Huang Yueying as his wife.
+    target:
+      - default:
+        - option_junctions:
+            CND_FIRST_ROUND: 90
+            CND_LAST_ROUND: 100
+            CND_UNIQUE: ''
+            CND_NOT_DILEMMA_GENERATED: zhuge_liang_huang_yueying_marriage_spawn
+            CND_NOT_FACTION: shu
+      - target_character_1:
+        - option_junctions:
+            GEN_CND_NOT_MARRIED: ''
+            GEN_CND_CHARACTER_TEMPLATE: zhuge_liang_hero_water
+            GEN_CND_FACTION: shu
+            GEN_TARGET_CHARACTER: ''
+        - payloads:
+            LOCATED: CHARACTER
+            MARRIAGE: lady_huang_yueying_hero_wood
