@@ -351,7 +351,11 @@ def get_ancillary_images_list(element, gender):
                             "3k_main_ancillary_armour_medium_leather_common_shared_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_leather_exceptional_earth_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_leather_refined_shared_" + gender + ".png",
-                            "3k_main_ancillary_armour_medium_leather_unique_earth_" + gender + ".png"
+                            "3k_main_ancillary_armour_medium_leather_unique_earth_" + gender + ".png",
+                            "ep_ancillary_armour_light_leather_partial_exceptional_earth_" + gender + ".png",
+                            "ep_ancillary_armour_light_leather_partial_unique_earth_" + gender + ".png",
+                            "ep_ancillary_armour_medium_leather_exceptional_earth_" + gender + ".png",
+                            "ep_ancillary_armour_medium_leather_unique_earth_" + gender + ".png"
                             ]
     elif element == 'fire':
         ancillary_images = ["3k_main_ancillary_armour_heavy_iron_common_shared_" + gender + ".png",
@@ -361,7 +365,11 @@ def get_ancillary_images_list(element, gender):
                             "3k_main_ancillary_armour_medium_iron_partial_common_shared_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_iron_partial_exceptional_fire_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_iron_partial_refined_shared_" + gender + ".png",
-                            "3k_main_ancillary_armour_medium_iron_partial_unique_fire_" + gender + ".png"
+                            "3k_main_ancillary_armour_medium_iron_partial_unique_fire_" + gender + ".png",
+                            "ep_ancillary_armour_heavy_iron_exceptional_fire_" + gender + ".png",
+                            "ep_ancillary_armour_heavy_iron_unique_fire_" + gender + ".png",
+                            "ep_ancillary_armour_medium_iron_partial_exceptional_fire_" + gender + ".png",
+                            "ep_ancillary_armour_medium_iron_partial_unique_fire_" + gender + ".png"
                             ]
     elif element == 'metal':
         ancillary_images = ["3k_main_ancillary_armour_light_leather_partial_common_shared_" + gender + ".png",
@@ -371,13 +379,19 @@ def get_ancillary_images_list(element, gender):
                             "3k_main_ancillary_armour_medium_leather_common_shared_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_leather_exceptional_metal_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_leather_refined_shared_" + gender + ".png",
-                            "3k_main_ancillary_armour_medium_leather_unique_metal_" + gender + ".png"
+                            "3k_main_ancillary_armour_medium_leather_unique_metal_" + gender + ".png",
+                            "ep_ancillary_armour_light_leather_partial_exceptional_metal_" + gender + ".png",
+                            "ep_ancillary_armour_light_leather_partial_unique_metal_" + gender + ".png",
+                            "ep_ancillary_armour_medium_leather_exceptional_metal_" + gender + ".png",
+                            "ep_ancillary_armour_medium_leather_unique_metal_" + gender + ".png"
                             ]
     elif element == 'water':
         ancillary_images = ["3k_main_ancillary_armour_light_tunic_common_water_" + gender + ".png",
                             "3k_main_ancillary_armour_light_tunic_exceptional_water_" + gender + ".png",
                             "3k_main_ancillary_armour_light_tunic_refined_water_" + gender + ".png",
-                            "3k_main_ancillary_armour_light_tunic_unique_water_" + gender + ".png"
+                            "3k_main_ancillary_armour_light_tunic_unique_water_" + gender + ".png",
+                            "ep_ancillary_armour_light_tunic_exceptional_water_" + gender + ".png",
+                            "ep_ancillary_armour_light_tunic_unique_water_" + gender + ".png"
                             ]
     elif element == 'wood':
         ancillary_images = ["3k_main_ancillary_armour_heavy_iron_common_shared_" + gender + ".png",
@@ -387,14 +401,30 @@ def get_ancillary_images_list(element, gender):
                             "3k_main_ancillary_armour_medium_iron_partial_common_shared_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_iron_partial_exceptional_wood_" + gender + ".png",
                             "3k_main_ancillary_armour_medium_iron_partial_refined_shared_" + gender + ".png",
-                            "3k_main_ancillary_armour_medium_iron_partial_unique_wood_" + gender + ".png"
+                            "3k_main_ancillary_armour_medium_iron_partial_unique_wood_" + gender + ".png",
+                            "ep_ancillary_armour_heavy_iron_exceptional_wood_" + gender + ".png",
+                            "ep_ancillary_armour_heavy_iron_unique_wood_" + gender + ".png",
+                            "ep_ancillary_armour_medium_iron_partial_exceptional_wood_" + gender + ".png",
+                            "ep_ancillary_armour_medium_iron_partial_unique_wood_" + gender + ".png"
                             ]
     elif element == "healer":
-        pass
+        ancillary_images = ["3k_ytr_ancillary_armour_healer_yellow_turban_common.png",
+                            "3k_ytr_ancillary_armour_healer_yellow_turban_exceptional.png",
+                            "3k_ytr_ancillary_armour_healer_yellow_turban_refined.png",
+                            "3k_ytr_ancillary_armour_healer_yellow_turban_unique.png"
+                            ]
+    elif element == "scholar":
+        ancillary_images = ["3k_ytr_ancillary_armour_scholar_medium_yellow_turban_common.png",
+                            "3k_ytr_ancillary_armour_scholar_medium_yellow_turban_exceptional.png",
+                            "3k_ytr_ancillary_armour_scholar_medium_yellow_turban_refined.png",
+                            "3k_ytr_ancillary_armour_scholar_medium_yellow_turban_unique.png"
+                            ]
     elif element == "veteran":
-        pass
-    elif element == "colonel":
-        pass
+        ancillary_images = ["3k_ytr_ancillary_armour_veteran_medium_yellow_turban_common.png",
+                            "3k_ytr_ancillary_armour_veteran_medium_yellow_turban_exceptional.png",
+                            "3k_ytr_ancillary_armour_veteran_medium_yellow_turban_refined.png",
+                            "3k_ytr_ancillary_armour_veteran_medium_yellow_turban_unique.png"
+                            ]
     else:
         raise Exception('{} is not a valid element'.format(element))
     return ancillary_images
