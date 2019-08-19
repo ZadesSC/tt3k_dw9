@@ -851,22 +851,6 @@ arts:
         z_order: 0
         x_pivot: 0.5000
         y_pivot: 0.5000
-  - internal_name: sima_shi
-    src_dir: sima_shi
-    char_dir_name: 3k_main_hero_special_earth_sima_shi
-    char_file_name: 3k_main_hero_special_earth_sima_shi
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   - internal_name: sima_yi
     src_dir: sima_yi
     char_dir_name: 3k_main_hero_special_water_sima_yi
@@ -1012,7 +996,6 @@ arts:
         x_pivot: 0.5000
         y_pivot: 0.5000
   - internal_name: wei_yan
-    enabled: False
     src_dir: wei_yan
     char_dir_name: 3k_main_hero_special_fire_wei_yan
     char_file_name: 3k_main_hero_special_fire_wei_yan
@@ -1025,22 +1008,6 @@ arts:
       - name: head.png
         x_pos: -25
         y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wei_yan_2
-    src_dir: wei_yan_2
-    char_dir_name: 3k_main_hero_special_fire_wei_yan
-    char_file_name: 3k_main_hero_special_fire_wei_yan
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: 30
-        y_pos: 25
         z_order: 0
         x_pivot: 0.5000
         y_pivot: 0.5000
