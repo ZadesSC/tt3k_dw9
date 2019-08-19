@@ -42,7 +42,7 @@ SMALL_PANEL_DIR = "small_panel"
 FACES_DIR = "faces"
 ANGRY_DIR = "angry"
 HAPPY_DIR = "happy"
-NORMAL_DIR = "normal"
+NORMAL_DIR = "norm"
 LARGE_DIR = "large"
 
 # Image references for the dictionary
