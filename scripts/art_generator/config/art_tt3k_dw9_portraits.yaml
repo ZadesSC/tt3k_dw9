@@ -1,1606 +1,1590 @@
 enabled: True
+name: tt3k_dw9_portraits
 source_dir: /mnt/c/Users/zades/Pictures/tt3k_workspace/dw9/generals/
 arts:
-  - internal_name: bao_sanniang
-    src_dir: bao_sanniang
-    char_dir_name: 3k_main_hero_special_wood_lady_bao_sanniang
-    char_file_name: 3k_main_hero_special_wood_lady_bao_sanniang
-    element: wood
-    type: unique
-    gender: female
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: cai_wenji
-    src_dir: cai_wenji
-    char_dir_name: 3k_main_hero_special_water_lady_cai_yan
-    char_file_name: 3k_main_hero_special_water_lady_cai_yan
-    element: water
-    type: generic
-    gender: female
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: cao_cao
-    src_dir: cao_cao
-    char_dir_name: 3k_main_hero_special_earth_cao_cao
-    char_file_name: 3k_main_hero_special_earth_cao_cao
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 10
-    complex_composite: True
-    complex_composite_data:
-      - mood: angry
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
-      - mood: happy
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
-      - mood: norm
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
-  - internal_name: cao_pi
-    src_dir: cao_pi
-    char_dir_name: 3k_main_hero_special_earth_cao_pi
-    char_file_name: 3k_main_hero_special_earth_cao_pi
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: cao_ren
-    src_dir: cao_ren
-    char_dir_name: 3k_main_hero_special_earth_cao_ren
-    char_file_name: 3k_main_hero_special_earth_cao_ren
-    element: metal
-    type: unique
-    gender: male
-    generic_fallback_number: 06
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: cao_xiu
-    src_dir: cao_xiu
-    char_dir_name: 3k_main_hero_special_earth_cao_xiu
-    char_file_name: 3k_main_hero_special_earth_cao_xiu
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: chen_gong
-    src_dir: chen_gong
-    char_dir_name: 3k_main_hero_special_water_chen_gong
-    char_file_name: 3k_main_hero_special_water_chen_gong
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: cheng_pu
-    src_dir: cheng_pu
-    char_dir_name: 3k_main_hero_special_metal_cheng_pu
-    char_file_name: 3k_main_hero_special_metal_cheng_pu
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: da_qiao
-    src_dir: da_qiao
-    char_dir_name: 3k_main_hero_special_earth_lady_da_qiao
-    char_file_name: 3k_main_hero_special_earth_lady_da_qiao
-    element: earth
-    type: generic
-    gender: female
-    generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: deng_ai
-    src_dir: deng_ai
-    char_dir_name: 3k_main_hero_special_metal_deng_ai
-    char_file_name: 3k_main_hero_special_metal_deng_ai
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 12
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: dian_wei
-    src_dir: dian_wei
-    char_dir_name: 3k_main_hero_special_wood_dian_wei
-    char_file_name: 3k_main_hero_special_wood_dian_wei
-    element: wood
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 43
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: diao_chan
-    src_dir: diao_chan
-    char_dir_name: 3k_main_hero_special_water_lady_diao_chan
-    char_file_name: 3k_main_hero_special_water_lady_diao_chan
-    element: water
-    type: unique
-    gender: female
-    generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: ding_feng
-    src_dir: ding_feng
-    char_dir_name: 3k_main_hero_special_metal_ding_feng
-    char_file_name: 3k_main_hero_special_metal_ding_feng
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 13
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: dong_bai
-    src_dir: dong_bai
-    char_dir_name: 3k_main_hero_special_metal_lady_dong_bai
-    char_file_name: 3k_main_hero_special_metal_lady_dong_bai
-    element: metal
-    type: generic
-    gender: female
-    generic_fallback_number: 08
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: dong_zhuo
-    src_dir: dong_zhuo
-    char_dir_name: 3k_main_hero_special_fire_dong_zhuo
-    char_file_name: 3k_main_hero_special_fire_dong_zhuo
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: fa_zheng
-    src_dir: fa_zheng
-    char_dir_name: 3k_main_hero_special_water_fa_zheng
-    char_file_name: 3k_main_hero_special_water_fa_zheng
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 22
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: gan_ning
-    src_dir: gan_ning
-    char_dir_name: 3k_main_hero_special_fire_gan_ning
-    char_file_name: 3k_main_hero_special_fire_gan_ning
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guan_ping
-    src_dir: guan_ping
-    char_dir_name: 3k_main_hero_special_fire_guan_ping
-    char_file_name: 3k_main_hero_special_fire_guan_ping
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guan_suo
-    src_dir: guan_suo
-    char_dir_name: 3k_main_hero_special_earth_guan_suo
-    char_file_name: 3k_main_hero_special_earth_guan_suo
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guan_xing
-    src_dir: guan_xing
-    char_dir_name: 3k_main_hero_special_wood_guan_xing
-    char_file_name: 3k_main_hero_special_wood_guan_xing
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guan_yinping
-    src_dir: guan_yinping
-    char_dir_name: 3k_main_hero_special_wood_lady_guan_yinping
-    char_file_name: 3k_main_hero_special_wood_lady_guan_yinping
-    element: wood
-    type: unique
-    gender: female
-    generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guan_yu
-    src_dir: guan_yu
-    char_dir_name: 3k_main_hero_special_wood_guan_yu
-    char_file_name: 3k_main_hero_special_wood_guan_yu
-    element: wood
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guo_huai
-    src_dir: guo_huai
-    char_dir_name: 3k_main_hero_special_earth_guo_huai
-    char_file_name: 3k_main_hero_special_earth_guo_huai
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: guo_jia
-    src_dir: guo_jia
-    char_dir_name: 3k_main_hero_special_water_guo_jia
-    char_file_name: 3k_main_hero_special_water_guo_jia
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 25
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: han_dang
-    src_dir: han_dang
-    char_dir_name: 3k_main_hero_special_wood_han_dang
-    char_file_name: 3k_main_hero_special_wood_han_dang
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: hua_xiong
-    src_dir: hua_xiong
-    char_dir_name: 3k_main_hero_special_fire_hua_xiong
-    char_file_name: 3k_main_hero_special_fire_hua_xiong
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: huang_gai
-    src_dir: huang_gai
-    char_dir_name: 3k_main_hero_special_wood_huang_gai
-    char_file_name: 3k_main_hero_special_wood_huang_gai
-    element: wood
-    type: unique
-    gender: male
-    generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: huang_zhong
-    src_dir: huang_zhong
-    char_dir_name: 3k_main_hero_special_metal_huang_zhong
-    char_file_name: 3k_main_hero_special_metal_huang_zhong
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 34
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: huang_zhong_water
-    src_dir: huang_zhong
-    char_dir_name: 3k_main_hero_special_water_huang_zhong
-    char_file_name: 3k_main_hero_special_water_huang_zhong
-    element: water
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 34
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: jia_chong
-    src_dir: jia_chong
-    char_dir_name: 3k_main_hero_special_water_jia_chong
-    char_file_name: 3k_main_hero_special_water_hia_chong
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 19
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: jia_xu
-    src_dir: jia_xu
-    char_dir_name: 3k_main_hero_special_water_jia_xu
-    char_file_name: 3k_main_hero_special_water_jia_xu
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: jiang_wei
-    src_dir: jian_wei
-    char_dir_name: 3k_main_hero_special_fire_jiang_wei
-    char_file_name: 3k_main_hero_special_fire_jiang_wei
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 02
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: li_dian
-    src_dir: li_dian
-    char_dir_name: 3k_main_hero_special_metal_li_dian
-    char_file_name: 3k_main_hero_special_metal_li_dian
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lian_shi
-    src_dir: lian_shi
-    char_dir_name: 3k_main_hero_special_wood_lian_shi
-    char_file_name: 3k_main_hero_special_wood_lian_shi
-    element: wood
-    type: unique
-    gender: female
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: ling_tong
-    src_dir: ling_tong
-    char_dir_name: 3k_main_hero_special_wood_ling_tong
-    char_file_name: 3k_main_hero_special_wood_ling_tong
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: liu_bei
-    src_dir: liu_bei
-    char_dir_name: 3k_main_hero_special_earth_liu_bei
-    char_file_name: 3k_main_hero_special_earth_liu_bei
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: liu_bei_historical
-    src_dir: liu_bei
-    char_dir_name: 3k_main_hero_special_earth_liu_bei_historical
-    char_file_name: 3k_main_hero_special_earth_liu_bei_historical
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: liu_shan
-    src_dir: liu_shan
-    char_dir_name: 3k_main_hero_special_earth_liu_shan
-    char_file_name: 3k_main_hero_special_earth_liu_shan
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 19
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_bu
-    src_dir: lu_bu
-    char_dir_name: 3k_main_hero_special_fire_lu_bu
-    char_file_name: 3k_main_hero_special_fire_lu_bu
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_bu_historical
-    src_dir: lu_bu
-    char_dir_name: 3k_main_hero_special_fire_lu_bu_historical
-    char_file_name: 3k_main_hero_special_fire_lu_bu_historical
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_lingqi
-    src_dir: lu_lingqi
-    char_dir_name: 3k_main_hero_special_fire_lady_lu_lingqi
-    char_file_name: 3k_main_hero_special_fire_lady_lu_lingqi
-    element: fire
-    type: unique
-    gender: female
-    generic_fallback_number: 13
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_meng
-    src_dir: lu_meng
-    char_dir_name: 3k_main_hero_special_metal_lu_meng
-    char_file_name: 3k_main_hero_special_metal_lu_meng
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 11
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_su
-    src_dir: lu_su
-    char_dir_name: 3k_main_hero_special_water_lu_su
-    char_file_name: 3k_main_hero_special_water_lu_su
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 12
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: lu_xun
-    src_dir: lu_xun
-    char_dir_name: 3k_main_hero_special_water_lu_xun
-    char_file_name: 3k_main_hero_special_water_lu_xun
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 46
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: ma_chao
-    src_dir: ma_chao
-    char_dir_name: 3k_main_hero_special_fire_ma_chao
-    char_file_name: 3k_main_hero_special_fire_ma_chao
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: ma_dai
-    src_dir: ma_dai
-    char_dir_name: 3k_main_hero_special_fire_ma_dai
-    char_file_name: 3k_main_hero_special_fire_ma_dai
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 26
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: man_chong
-    src_dir: man_chong
-    char_dir_name: 3k_main_hero_special_fire_man_chong
-    char_file_name: 3k_main_hero_special_fire_man_chong
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: meng_huo
-    src_dir: meng_huo
-    char_dir_name: 3k_main_hero_special_wood_meng_huo
-    char_file_name: 3k_main_hero_special_wood_meng_huo
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: pang_de
-    src_dir: pang_de
-    char_dir_name: 3k_main_hero_special_wood_pang_de
-    char_file_name: 3k_main_hero_special_wood_pang_de
-    element: wood
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: pang_tong
-    src_dir: pang_tong
-    char_dir_name: 3k_main_hero_special_water_pang_tong
-    char_file_name: 3k_main_hero_special_water_pang_tong
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 25
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sima_shi
-    src_dir: sima_shi
-    char_dir_name: 3k_main_hero_special_earth_sima_shi
-    char_file_name: 3k_main_hero_special_earth_sima_shi
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sima_yi
-    src_dir: sima_yi
-    char_dir_name: 3k_main_hero_special_water_sima_yi
-    char_file_name: 3k_main_hero_special_water_sima_yi
-    element: water
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sima_zhao
-    src_dir: sima_zhao
-    char_dir_name: 3k_main_hero_special_earth_sima_zhao
-    char_file_name: 3k_main_hero_special_earth_sima_zhao
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 28
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sun_ce
-    src_dir: sun_ce
-    char_dir_name: 3k_main_hero_special_fire_sun_ce
-    char_file_name: 3k_main_hero_special_fire_sun_ce
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sun_jian
-    src_dir: sun_jian
-    char_dir_name: 3k_main_hero_special_metal_sun_jian
-    char_file_name: 3k_main_hero_special_metal_sun_jian
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sun_quan
-    src_dir: sun_quan
-    char_dir_name: 3k_main_hero_special_earth_sun_quan
-    char_file_name: 3k_main_hero_special_earth_sun_quan
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 07
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: sun_shangxiang
-    src_dir: sun_shangxiang
-    char_dir_name: 3k_main_hero_special_fire_lady_sun
-    char_file_name: 3k_main_hero_special_fire_lady_sun
-    element: fire
-    type: ca_unique
-    gender: female
-    generic_fallback_number: 04
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: taishi_ci
-    src_dir: taishi_ci
-    char_dir_name: 3k_main_hero_special_metal_taishi_ci
-    char_file_name: 3k_main_hero_special_metal_taishi_ci
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wang_yi
-    src_dir: wang_yi
-    char_dir_name: 3k_main_hero_special_fire_lady_wang_yi
-    char_file_name: 3k_main_hero_special_fire_lady_wang_yi
-    element: fire
-    type: unique
-    gender: female
-    generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wang_yuanji
-    src_dir: wang_yuanji
-    char_dir_name: 3k_main_hero_special_earth_lady_wang_yuanji
-    char_file_name: 3k_main_hero_special_earth_lady_wang_yuanji
-    element: earth
-    type: generic
-    gender: female
-    generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wei_yan
-    enabled: False
-    src_dir: wei_yan
-    char_dir_name: 3k_main_hero_special_fire_wei_yan
-    char_file_name: 3k_main_hero_special_fire_wei_yan
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 26
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wei_yan
-    src_dir: wei_yan_2
-    char_dir_name: 3k_main_hero_special_fire_wei_yan
-    char_file_name: 3k_main_hero_special_fire_wei_yan
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: 30
-        y_pos: 25
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: wen_yang
-    src_dir: wen_yang
-    char_dir_name: 3k_main_hero_special_wood_wen_yang
-    char_file_name: 3k_main_hero_special_wood_wen_yang
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xiahou_ba
-    src_dir: xiahou_ba
-    char_dir_name: 3k_main_hero_special_wood_xiahou_ba
-    char_file_name: 3k_main_hero_special_wood_xiahou_ba
-    element: wood
-    type: generic
-    gender: male
-    generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xiahou_dun
-    src_dir: xiahou_dun
-    char_dir_name: 3k_main_hero_special_wood_xiahou_dun
-    char_file_name: 3k_main_hero_special_wood_xiahou_dun
-    element: wood
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 17
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xiahou_ji
-    src_dir: xiahou_ji
-    char_dir_name: 3k_main_hero_special_water_lady_xiahou_ji
-    char_file_name: 3k_main_hero_special_water_lady_xiahou_ji
-    element: water
-    type: generic
-    gender: female
-    generic_fallback_number: 38
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xiahou_yuan
-    src_dir: xiahou_yuan
-    char_dir_name: 3k_main_hero_special_fire_xiahou_yuan
-    char_file_name: 3k_main_hero_special_fire_xiahou_yuan
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 22
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xiao_qiao
-    src_dir: xiao_qiao
-    char_dir_name: 3k_main_hero_special_metal_lady_xiao_qiao
-    char_file_name: 3k_main_hero_special_metal_lady_xiao_qiao
-    element: metal
-    type: generic
-    gender: female
-    generic_fallback_number: 21
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xin_xianying
-    src_dir: xin_xianying
-    char_dir_name: 3k_main_hero_special_water_lady_xin_xianying
-    char_file_name: 3k_main_hero_special_water_lady_xin_xianying
-    element: water
-    type: generic
-    gender: female
-    generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xing_cai
-    src_dir: xing_cai
-    char_dir_name: 3k_main_hero_special_metal_lady_xing_cai
-    char_file_name: 3k_main_hero_special_metal_lady_xing_cai
-    element: metal
-    type: generic
-    gender: female
-    generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xu_huang
-    src_dir: xu_huang
-    char_dir_name: 3k_main_hero_special_metal_xu_huang
-    char_file_name: 3k_main_hero_special_metal_xu_huang
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xu_sheng
-    src_dir: xu_sheng
-    char_dir_name: 3k_main_hero_special_fire_xu_sheng
-    char_file_name: 3k_main_hero_special_fire_xu_sheng
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xu_shu
-    src_dir: xu_shu
-    char_dir_name: 3k_main_hero_special_water_xu_shu
-    char_file_name: 3k_main_hero_special_water_xu_shu
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 45
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xu_zhu
-    src_dir: xu_zhu
-    char_dir_name: 3k_main_hero_special_wood_xu_zhu
-    char_file_name: 3k_main_hero_special_wood_xu_zhu
-    element: wood
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 30
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xun_you
-    src_dir: xun_you
-    char_dir_name: 3k_main_hero_special_earth_xun_you
-    char_file_name: 3k_main_hero_special_earth_xun_you
-    element: water
-    type: unique
-    gender: male
-    generic_fallback_number: 42
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: xun_yu
-    src_dir: xun_yu
-    char_dir_name: 3k_main_hero_special_water_xun_yu
-    char_file_name: 3k_main_hero_special_water_xun_yu
-    element: water
-    type: unique
-    gender: male
-    generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: yuan_shao
-    src_dir: yuan_shao
-    char_dir_name: 3k_main_hero_special_earth_yuan_shao
-    char_file_name: 3k_main_hero_special_earth_yuan_shao
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 02
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: yuan_shu
-    src_dir: yuan_shu
-    char_dir_name: 3k_main_hero_special_earth_yuan_shu
-    char_file_name: 3k_main_hero_special_earth_yuan_shu
-    element: earth
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: yu_jin
-    src_dir: yu_jin
-    char_dir_name: 3k_main_hero_special_metal_yu_jin
-    char_file_name: 3k_main_hero_special_metal_yu_jin
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 04
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: yue_jin
-    src_dir: yue_jin
-    char_dir_name: 3k_main_hero_special_metal_yue_jin
-    char_file_name: 3k_main_hero_special_metal_yue_jin
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: yue_ying
-    src_dir: yue_ying
-    char_dir_name: 3k_main_hero_special_wood_lady_yue_ying
-    char_file_name: 3k_main_hero_special_wood_lady_yue_ying
-    element: wood
-    type: unique
-    gender: female
-    generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_bao
-    src_dir: zhang_bao
-    char_dir_name: 3k_main_hero_special_metal_zhang_bao
-    char_file_name: 3k_main_hero_special_metal_zhang_bao
-    element: metal
-    type: generic
-    gender: male
-    generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_chunhua
-    src_dir: zhang_chunhua
-    char_dir_name: 3k_main_hero_special_metal_lady_zhang_chunhua
-    char_file_name: 3k_main_hero_special_metal_lady_zhang_chunhua
-    element: metal
-    type: generic
-    gender: female
-    generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_fei
-    src_dir: zhang_fei
-    char_dir_name: 3k_main_hero_special_fire_zhang_fei
-    char_file_name: 3k_main_hero_special_fire_zhang_fei
-    element: fire
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 30
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_he
-    src_dir: zhang_he
-    char_dir_name: 3k_main_hero_special_fire_zhang_he
-    char_file_name: 3k_main_hero_special_fire_zhang_he
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 50
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_liao
-    src_dir: zhang_liao
-    char_dir_name: 3k_main_hero_special_metal_zhang_liao
-    char_file_name: 3k_main_hero_special_metal_zhang_liao
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhang_jiao
-    src_dir: zhang_jiao
-    char_dir_name: 3k_ytr_hero_special_healer_zhang_jiao
-    char_file_name: 3k_ytr_hero_special_healer_zhang_jiao
-    element: healer
-    type: generic
-    gender: male
-    generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhao_yun
-    src_dir: zhao_yun
-    char_dir_name: 3k_main_hero_special_metal_zhao_yun
-    char_file_name: 3k_main_hero_special_metal_zhao_yun
-    element: metal
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhong_hui
-    src_dir: zhong_hui
-    char_dir_name: 3k_main_hero_special_earth_zhong_hui
-    char_file_name: 3k_main_hero_special_earth_zhong_hui
-    element: earth
-    type: generic
-    gender: male
-    generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhou_cang
-    src_dir: zhou_cang
-    char_dir_name: 3k_main_hero_special_fire_zhou_cang
-    char_file_name: 3k_main_hero_special_fire_zhou_cang
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 46
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhen_ji
-    src_dir: zhen_ji
-    char_dir_name: 3k_main_hero_special_earth_lady_zhen_ji
-    char_file_name: 3k_main_hero_special_earth_lady_zhen_ji
-    element: earth
-    type: generic
-    gender: female
-    generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhou_tai
-    src_dir: zhou_tai
-    char_dir_name: 3k_main_hero_special_fire_zhou_tai
-    char_file_name: 3k_main_hero_special_fire_zhou_tai
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhou_yu
-    src_dir: zhou_yu
-    char_dir_name: 3k_main_hero_special_water_zhou_yu
-    char_file_name: 3k_main_hero_special_water_zhou_yu
-    element: water
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhou_yu_historical
-    src_dir: zhou_yu
-    char_dir_name: 3k_main_hero_special_water_zhou_yu_historical
-    char_file_name: 3k_main_hero_special_water_zhou_yu_historical
-    element: water
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhu_ran
-    src_dir: zhu_ran
-    char_dir_name: 3k_main_hero_special_fire_zhu_ran
-    char_file_name: 3k_main_hero_special_fire_zhu_ran
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 16
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhu_rong
-    src_dir: zhu_rong
-    char_dir_name: 3k_main_hero_special_fire_lady_zhu_rong
-    char_file_name: 3k_main_hero_special_fire_lady_zhu_rong
-    element: fire
-    type: unique
-    gender: female
-    generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhuge_dan
-    src_dir: zhuge_dan
-    char_dir_name: 3k_main_hero_special_fire_zhuge_dan
-    char_file_name: 3k_main_hero_special_fire_zhuge_dan
-    element: fire
-    type: generic
-    gender: male
-    generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zhuge_liang
-    src_dir: zhuge_liang
-    char_dir_name: 3k_main_hero_special_water_zhuge_liang
-    char_file_name: 3k_main_hero_special_water_zhuge_liang
-    element: water
-    type: ca_unique
-    gender: male
-    generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
-  - internal_name: zuo_ci
-    src_dir: zuo_ci
-    char_dir_name: 3k_main_hero_special_water_zuo_ci
-    char_file_name: 3k_main_hero_special_water_zuo_ci
-    element: water
-    type: generic
-    gender: male
-    generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
+  - bao_sanniang:
+      src_dir: bao_sanniang
+      char_dir_name: 3k_main_hero_special_wood_lady_bao_sanniang
+      char_file_name: 3k_main_hero_special_wood_lady_bao_sanniang
+      element: wood
+      type: unique
+      gender: female
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - cai_wenji:
+      src_dir: cai_wenji
+      char_dir_name: 3k_main_hero_special_water_lady_cai_yan
+      char_file_name: 3k_main_hero_special_water_lady_cai_yan
+      element: water
+      type: generic
+      gender: female
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - cao_cao:
+      src_dir: cao_cao
+      char_dir_name: 3k_main_hero_special_earth_cao_cao
+      char_file_name: 3k_main_hero_special_earth_cao_cao
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 10
+      complex_composite: True
+      complex_composite_data:
+        - mood: angry
+          images:
+            - name: head.png
+              x_pos: -25
+              y_pos: -75
+              z_order: 0
+              x_pivot: 0.5000
+              y_pivot: 0.5000
+        - mood: happy
+          images:
+            - name: head.png
+              x_pos: -25
+              y_pos: -75
+              z_order: 0
+              x_pivot: 0.5000
+              y_pivot: 0.5000
+        - mood: norm
+          images:
+            - name: head.png
+              x_pos: -25
+              y_pos: -75
+              z_order: 0
+              x_pivot: 0.5000
+              y_pivot: 0.5000
+  - cao_pi:
+      src_dir: cao_pi
+      char_dir_name: 3k_main_hero_special_earth_cao_pi
+      char_file_name: 3k_main_hero_special_earth_cao_pi
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 05
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - cao_ren:
+      src_dir: cao_ren
+      char_dir_name: 3k_main_hero_special_earth_cao_ren
+      char_file_name: 3k_main_hero_special_earth_cao_ren
+      element: metal
+      type: unique
+      gender: male
+      generic_fallback_number: 06
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - cao_xiu:
+      src_dir: cao_xiu
+      char_dir_name: 3k_main_hero_special_earth_cao_xiu
+      char_file_name: 3k_main_hero_special_earth_cao_xiu
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 05
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - chen_gong:
+      src_dir: chen_gong
+      char_dir_name: 3k_main_hero_special_water_chen_gong
+      char_file_name: 3k_main_hero_special_water_chen_gong
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 10
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - cheng_pu:
+      src_dir: cheng_pu
+      char_dir_name: 3k_main_hero_special_metal_cheng_pu
+      char_file_name: 3k_main_hero_special_metal_cheng_pu
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 10
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - da_qiao:
+      src_dir: da_qiao
+      char_dir_name: 3k_main_hero_special_earth_lady_da_qiao
+      char_file_name: 3k_main_hero_special_earth_lady_da_qiao
+      element: earth
+      type: generic
+      gender: female
+      generic_fallback_number: 03
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - deng_ai:
+      src_dir: deng_ai
+      char_dir_name: 3k_main_hero_special_metal_deng_ai
+      char_file_name: 3k_main_hero_special_metal_deng_ai
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 12
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - dian_wei:
+      src_dir: dian_wei
+      char_dir_name: 3k_main_hero_special_wood_dian_wei
+      char_file_name: 3k_main_hero_special_wood_dian_wei
+      element: wood
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 43
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - diao_chan:
+      src_dir: diao_chan
+      char_dir_name: 3k_main_hero_special_water_lady_diao_chan
+      char_file_name: 3k_main_hero_special_water_lady_diao_chan
+      element: water
+      type: unique
+      gender: female
+      generic_fallback_number: 10
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - ding_feng:
+      src_dir: ding_feng
+      char_dir_name: 3k_main_hero_special_metal_ding_feng
+      char_file_name: 3k_main_hero_special_metal_ding_feng
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 13
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - dong_bai:
+      src_dir: dong_bai
+      char_dir_name: 3k_main_hero_special_metal_lady_dong_bai
+      char_file_name: 3k_main_hero_special_metal_lady_dong_bai
+      element: metal
+      type: generic
+      gender: female
+      generic_fallback_number: 08
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - dong_zhuo:
+      src_dir: dong_zhuo
+      char_dir_name: 3k_main_hero_special_fire_dong_zhuo
+      char_file_name: 3k_main_hero_special_fire_dong_zhuo
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 14
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - fa_zheng:
+      src_dir: fa_zheng
+      char_dir_name: 3k_main_hero_special_water_fa_zheng
+      char_file_name: 3k_main_hero_special_water_fa_zheng
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 22
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - gan_ning:
+      src_dir: gan_ning
+      char_dir_name: 3k_main_hero_special_fire_gan_ning
+      char_file_name: 3k_main_hero_special_fire_gan_ning
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guan_ping:
+      src_dir: guan_ping
+      char_dir_name: 3k_main_hero_special_fire_guan_ping
+      char_file_name: 3k_main_hero_special_fire_guan_ping
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guan_suo:
+      src_dir: guan_suo
+      char_dir_name: 3k_main_hero_special_earth_guan_suo
+      char_file_name: 3k_main_hero_special_earth_guan_suo
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 29
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guan_xing:
+      src_dir: guan_xing
+      char_dir_name: 3k_main_hero_special_wood_guan_xing
+      char_file_name: 3k_main_hero_special_wood_guan_xing
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 14
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guan_yinping:
+      src_dir: guan_yinping
+      char_dir_name: 3k_main_hero_special_wood_lady_guan_yinping
+      char_file_name: 3k_main_hero_special_wood_lady_guan_yinping
+      element: wood
+      type: unique
+      gender: female
+      generic_fallback_number: 03
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guan_yu:
+      src_dir: guan_yu
+      char_dir_name: 3k_main_hero_special_wood_guan_yu
+      char_file_name: 3k_main_hero_special_wood_guan_yu
+      element: wood
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 37
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guo_huai:
+      src_dir: guo_huai
+      char_dir_name: 3k_main_hero_special_earth_guo_huai
+      char_file_name: 3k_main_hero_special_earth_guo_huai
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 20
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - guo_jia:
+      src_dir: guo_jia
+      char_dir_name: 3k_main_hero_special_water_guo_jia
+      char_file_name: 3k_main_hero_special_water_guo_jia
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 25
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - han_dang:
+      src_dir: han_dang
+      char_dir_name: 3k_main_hero_special_wood_han_dang
+      char_file_name: 3k_main_hero_special_wood_han_dang
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 27
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - hua_xiong:
+      src_dir: hua_xiong
+      char_dir_name: 3k_main_hero_special_fire_hua_xiong
+      char_file_name: 3k_main_hero_special_fire_hua_xiong
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 24
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - huang_gai:
+      src_dir: huang_gai
+      char_dir_name: 3k_main_hero_special_wood_huang_gai
+      char_file_name: 3k_main_hero_special_wood_huang_gai
+      element: wood
+      type: unique
+      gender: male
+      generic_fallback_number: 03
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - huang_zhong:
+      src_dir: huang_zhong
+      char_dir_name: 3k_main_hero_special_metal_huang_zhong
+      char_file_name: 3k_main_hero_special_metal_huang_zhong
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 34
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - huang_zhong_water:
+      src_dir: huang_zhong
+      char_dir_name: 3k_main_hero_special_water_huang_zhong
+      char_file_name: 3k_main_hero_special_water_huang_zhong
+      element: water
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 34
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - jia_chong:
+      src_dir: jia_chong
+      char_dir_name: 3k_main_hero_special_water_jia_chong
+      char_file_name: 3k_main_hero_special_water_hia_chong
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 19
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - jia_xu:
+      src_dir: jia_xu
+      char_dir_name: 3k_main_hero_special_water_jia_xu
+      char_file_name: 3k_main_hero_special_water_jia_xu
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 24
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - jiang_wei:
+      src_dir: jian_wei
+      char_dir_name: 3k_main_hero_special_fire_jiang_wei
+      char_file_name: 3k_main_hero_special_fire_jiang_wei
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 02
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - li_dian:
+      src_dir: li_dian
+      char_dir_name: 3k_main_hero_special_metal_li_dian
+      char_file_name: 3k_main_hero_special_metal_li_dian
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 24
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lian_shi:
+      src_dir: lian_shi
+      char_dir_name: 3k_main_hero_special_wood_lian_shi
+      char_file_name: 3k_main_hero_special_wood_lian_shi
+      element: wood
+      type: unique
+      gender: female
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - ling_tong:
+      src_dir: ling_tong
+      char_dir_name: 3k_main_hero_special_wood_ling_tong
+      char_file_name: 3k_main_hero_special_wood_ling_tong
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - liu_bei:
+      src_dir: liu_bei
+      char_dir_name: 3k_main_hero_special_earth_liu_bei
+      char_file_name: 3k_main_hero_special_earth_liu_bei
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - liu_bei_historical:
+      src_dir: liu_bei
+      char_dir_name: 3k_main_hero_special_earth_liu_bei_historical
+      char_file_name: 3k_main_hero_special_earth_liu_bei_historical
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - liu_shan:
+      src_dir: liu_shan
+      char_dir_name: 3k_main_hero_special_earth_liu_shan
+      char_file_name: 3k_main_hero_special_earth_liu_shan
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 19
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_bu:
+      src_dir: lu_bu
+      char_dir_name: 3k_main_hero_special_fire_lu_bu
+      char_file_name: 3k_main_hero_special_fire_lu_bu
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 41
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_bu_historical:
+      src_dir: lu_bu
+      char_dir_name: 3k_main_hero_special_fire_lu_bu_historical
+      char_file_name: 3k_main_hero_special_fire_lu_bu_historical
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 41
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_lingqi:
+      src_dir: lu_lingqi
+      char_dir_name: 3k_main_hero_special_fire_lady_lu_lingqi
+      char_file_name: 3k_main_hero_special_fire_lady_lu_lingqi
+      element: fire
+      type: unique
+      gender: female
+      generic_fallback_number: 13
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_meng:
+      src_dir: lu_meng
+      char_dir_name: 3k_main_hero_special_metal_lu_meng
+      char_file_name: 3k_main_hero_special_metal_lu_meng
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 11
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_su:
+      src_dir: lu_su
+      char_dir_name: 3k_main_hero_special_water_lu_su
+      char_file_name: 3k_main_hero_special_water_lu_su
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 12
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - lu_xun:
+      src_dir: lu_xun
+      char_dir_name: 3k_main_hero_special_water_lu_xun
+      char_file_name: 3k_main_hero_special_water_lu_xun
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 46
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - ma_chao:
+      src_dir: ma_chao
+      char_dir_name: 3k_main_hero_special_fire_ma_chao
+      char_file_name: 3k_main_hero_special_fire_ma_chao
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 37
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - ma_dai:
+      src_dir: ma_dai
+      char_dir_name: 3k_main_hero_special_fire_ma_dai
+      char_file_name: 3k_main_hero_special_fire_ma_dai
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 26
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - man_chong:
+      src_dir: man_chong
+      char_dir_name: 3k_main_hero_special_fire_man_chong
+      char_file_name: 3k_main_hero_special_fire_man_chong
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 15
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - meng_huo:
+      src_dir: meng_huo
+      char_dir_name: 3k_main_hero_special_wood_meng_huo
+      char_file_name: 3k_main_hero_special_wood_meng_huo
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 10
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - pang_de:
+      src_dir: pang_de
+      char_dir_name: 3k_main_hero_special_wood_pang_de
+      char_file_name: 3k_main_hero_special_wood_pang_de
+      element: wood
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 14
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - pang_tong:
+      src_dir: pang_tong
+      char_dir_name: 3k_main_hero_special_water_pang_tong
+      char_file_name: 3k_main_hero_special_water_pang_tong
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 25
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sima_shi:
+      src_dir: sima_shi
+      char_dir_name: 3k_main_hero_special_earth_sima_shi
+      char_file_name: 3k_main_hero_special_earth_sima_shi
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 31
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sima_yi:
+      src_dir: sima_yi
+      char_dir_name: 3k_main_hero_special_water_sima_yi
+      char_file_name: 3k_main_hero_special_water_sima_yi
+      element: water
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 27
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sima_zhao:
+      src_dir: sima_zhao
+      char_dir_name: 3k_main_hero_special_earth_sima_zhao
+      char_file_name: 3k_main_hero_special_earth_sima_zhao
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 28
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sun_ce:
+      src_dir: sun_ce
+      char_dir_name: 3k_main_hero_special_fire_sun_ce
+      char_file_name: 3k_main_hero_special_fire_sun_ce
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 09
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sun_jian:
+      src_dir: sun_jian
+      char_dir_name: 3k_main_hero_special_metal_sun_jian
+      char_file_name: 3k_main_hero_special_metal_sun_jian
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 18
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sun_quan:
+      src_dir: sun_quan
+      char_dir_name: 3k_main_hero_special_earth_sun_quan
+      char_file_name: 3k_main_hero_special_earth_sun_quan
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 07
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - sun_shangxiang:
+      src_dir: sun_shangxiang
+      char_dir_name: 3k_main_hero_special_fire_lady_sun
+      char_file_name: 3k_main_hero_special_fire_lady_sun
+      element: fire
+      type: ca_unique
+      gender: female
+      generic_fallback_number: 04
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - taishi_ci:
+      src_dir: taishi_ci
+      char_dir_name: 3k_main_hero_special_metal_taishi_ci
+      char_file_name: 3k_main_hero_special_metal_taishi_ci
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 20
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - wang_yi:
+      src_dir: wang_yi
+      char_dir_name: 3k_main_hero_special_fire_lady_wang_yi
+      char_file_name: 3k_main_hero_special_fire_lady_wang_yi
+      element: fire
+      type: unique
+      gender: female
+      generic_fallback_number: 29
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - wang_yuanji:
+      src_dir: wang_yuanji
+      char_dir_name: 3k_main_hero_special_earth_lady_wang_yuanji
+      char_file_name: 3k_main_hero_special_earth_lady_wang_yuanji
+      element: earth
+      type: generic
+      gender: female
+      generic_fallback_number: 09
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - wei_yan:
+      src_dir: wei_yan_2
+      char_dir_name: 3k_main_hero_special_fire_wei_yan
+      char_file_name: 3k_main_hero_special_fire_wei_yan
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 15
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: 30
+          y_pos: 25
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - wen_yang:
+      src_dir: wen_yang
+      char_dir_name: 3k_main_hero_special_wood_wen_yang
+      char_file_name: 3k_main_hero_special_wood_wen_yang
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 23
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xiahou_ba:
+      src_dir: xiahou_ba
+      char_dir_name: 3k_main_hero_special_wood_xiahou_ba
+      char_file_name: 3k_main_hero_special_wood_xiahou_ba
+      element: wood
+      type: generic
+      gender: male
+      generic_fallback_number: 15
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xiahou_dun:
+      src_dir: xiahou_dun
+      char_dir_name: 3k_main_hero_special_wood_xiahou_dun
+      char_file_name: 3k_main_hero_special_wood_xiahou_dun
+      element: wood
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 17
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xiahou_ji:
+      src_dir: xiahou_ji
+      char_dir_name: 3k_main_hero_special_water_lady_xiahou_ji
+      char_file_name: 3k_main_hero_special_water_lady_xiahou_ji
+      element: water
+      type: generic
+      gender: female
+      generic_fallback_number: 38
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xiahou_yuan:
+      src_dir: xiahou_yuan
+      char_dir_name: 3k_main_hero_special_fire_xiahou_yuan
+      char_file_name: 3k_main_hero_special_fire_xiahou_yuan
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 22
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xiao_qiao:
+      src_dir: xiao_qiao
+      char_dir_name: 3k_main_hero_special_metal_lady_xiao_qiao
+      char_file_name: 3k_main_hero_special_metal_lady_xiao_qiao
+      element: metal
+      type: generic
+      gender: female
+      generic_fallback_number: 21
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xin_xianying:
+      src_dir: xin_xianying
+      char_dir_name: 3k_main_hero_special_water_lady_xin_xianying
+      char_file_name: 3k_main_hero_special_water_lady_xin_xianying
+      element: water
+      type: generic
+      gender: female
+      generic_fallback_number: 18
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xing_cai:
+      src_dir: xing_cai
+      char_dir_name: 3k_main_hero_special_metal_lady_xing_cai
+      char_file_name: 3k_main_hero_special_metal_lady_xing_cai
+      element: metal
+      type: generic
+      gender: female
+      generic_fallback_number: 05
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xu_huang:
+      src_dir: xu_huang
+      char_dir_name: 3k_main_hero_special_metal_xu_huang
+      char_file_name: 3k_main_hero_special_metal_xu_huang
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 27
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xu_sheng:
+      src_dir: xu_sheng
+      char_dir_name: 3k_main_hero_special_fire_xu_sheng
+      char_file_name: 3k_main_hero_special_fire_xu_sheng
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 10
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xu_shu:
+      src_dir: xu_shu
+      char_dir_name: 3k_main_hero_special_water_xu_shu
+      char_file_name: 3k_main_hero_special_water_xu_shu
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 45
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xu_zhu:
+      src_dir: xu_zhu
+      char_dir_name: 3k_main_hero_special_wood_xu_zhu
+      char_file_name: 3k_main_hero_special_wood_xu_zhu
+      element: wood
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 30
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xun_you:
+      src_dir: xun_you
+      char_dir_name: 3k_main_hero_special_earth_xun_you
+      char_file_name: 3k_main_hero_special_earth_xun_you
+      element: water
+      type: unique
+      gender: male
+      generic_fallback_number: 42
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - xun_yu:
+      src_dir: xun_yu
+      char_dir_name: 3k_main_hero_special_water_xun_yu
+      char_file_name: 3k_main_hero_special_water_xun_yu
+      element: water
+      type: unique
+      gender: male
+      generic_fallback_number: 23
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - yuan_shao:
+      src_dir: yuan_shao
+      char_dir_name: 3k_main_hero_special_earth_yuan_shao
+      char_file_name: 3k_main_hero_special_earth_yuan_shao
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 02
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - yuan_shu:
+      src_dir: yuan_shu
+      char_dir_name: 3k_main_hero_special_earth_yuan_shu
+      char_file_name: 3k_main_hero_special_earth_yuan_shu
+      element: earth
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 03
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - yu_jin:
+      src_dir: yu_jin
+      char_dir_name: 3k_main_hero_special_metal_yu_jin
+      char_file_name: 3k_main_hero_special_metal_yu_jin
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 04
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - yue_jin:
+      src_dir: yue_jin
+      char_dir_name: 3k_main_hero_special_metal_yue_jin
+      char_file_name: 3k_main_hero_special_metal_yue_jin
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 05
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - yue_ying:
+      src_dir: yue_ying
+      char_dir_name: 3k_main_hero_special_wood_lady_yue_ying
+      char_file_name: 3k_main_hero_special_wood_lady_yue_ying
+      element: wood
+      type: unique
+      gender: female
+      generic_fallback_number: 05
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_bao:
+      src_dir: zhang_bao
+      char_dir_name: 3k_main_hero_special_metal_zhang_bao
+      char_file_name: 3k_main_hero_special_metal_zhang_bao
+      element: metal
+      type: generic
+      gender: male
+      generic_fallback_number: 20
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_chunhua:
+      src_dir: zhang_chunhua
+      char_dir_name: 3k_main_hero_special_metal_lady_zhang_chunhua
+      char_file_name: 3k_main_hero_special_metal_lady_zhang_chunhua
+      element: metal
+      type: generic
+      gender: female
+      generic_fallback_number: 15
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_fei:
+      src_dir: zhang_fei
+      char_dir_name: 3k_main_hero_special_fire_zhang_fei
+      char_file_name: 3k_main_hero_special_fire_zhang_fei
+      element: fire
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 30
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_he:
+      src_dir: zhang_he
+      char_dir_name: 3k_main_hero_special_fire_zhang_he
+      char_file_name: 3k_main_hero_special_fire_zhang_he
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 50
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_liao:
+      src_dir: zhang_liao
+      char_dir_name: 3k_main_hero_special_metal_zhang_liao
+      char_file_name: 3k_main_hero_special_metal_zhang_liao
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 23
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhang_jiao:
+      src_dir: zhang_jiao
+      char_dir_name: 3k_ytr_hero_special_healer_zhang_jiao
+      char_file_name: 3k_ytr_hero_special_healer_zhang_jiao
+      element: healer
+      type: generic
+      gender: male
+      generic_fallback_number: 09
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhao_yun:
+      src_dir: zhao_yun
+      char_dir_name: 3k_main_hero_special_metal_zhao_yun
+      char_file_name: 3k_main_hero_special_metal_zhao_yun
+      element: metal
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 14
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhong_hui:
+      src_dir: zhong_hui
+      char_dir_name: 3k_main_hero_special_earth_zhong_hui
+      char_file_name: 3k_main_hero_special_earth_zhong_hui
+      element: earth
+      type: generic
+      gender: male
+      generic_fallback_number: 37
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhou_cang:
+      src_dir: zhou_cang
+      char_dir_name: 3k_main_hero_special_fire_zhou_cang
+      char_file_name: 3k_main_hero_special_fire_zhou_cang
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 46
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhen_ji:
+      src_dir: zhen_ji
+      char_dir_name: 3k_main_hero_special_earth_lady_zhen_ji
+      char_file_name: 3k_main_hero_special_earth_lady_zhen_ji
+      element: earth
+      type: generic
+      gender: female
+      generic_fallback_number: 09
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhou_tai:
+      src_dir: zhou_tai
+      char_dir_name: 3k_main_hero_special_fire_zhou_tai
+      char_file_name: 3k_main_hero_special_fire_zhou_tai
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 18
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhou_yu:
+      src_dir: zhou_yu
+      char_dir_name: 3k_main_hero_special_water_zhou_yu
+      char_file_name: 3k_main_hero_special_water_zhou_yu
+      element: water
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 31
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhou_yu_historical:
+      src_dir: zhou_yu
+      char_dir_name: 3k_main_hero_special_water_zhou_yu_historical
+      char_file_name: 3k_main_hero_special_water_zhou_yu_historical
+      element: water
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 31
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhu_ran:
+      src_dir: zhu_ran
+      char_dir_name: 3k_main_hero_special_fire_zhu_ran
+      char_file_name: 3k_main_hero_special_fire_zhu_ran
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 16
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhu_rong:
+      src_dir: zhu_rong
+      char_dir_name: 3k_main_hero_special_fire_lady_zhu_rong
+      char_file_name: 3k_main_hero_special_fire_lady_zhu_rong
+      element: fire
+      type: unique
+      gender: female
+      generic_fallback_number: 01
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhuge_dan:
+      src_dir: zhuge_dan
+      char_dir_name: 3k_main_hero_special_fire_zhuge_dan
+      char_file_name: 3k_main_hero_special_fire_zhuge_dan
+      element: fire
+      type: generic
+      gender: male
+      generic_fallback_number: 41
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zhuge_liang:
+      src_dir: zhuge_liang
+      char_dir_name: 3k_main_hero_special_water_zhuge_liang
+      char_file_name: 3k_main_hero_special_water_zhuge_liang
+      element: water
+      type: ca_unique
+      gender: male
+      generic_fallback_number: 29
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
+  - zuo_ci:
+      src_dir: zuo_ci
+      char_dir_name: 3k_main_hero_special_water_zuo_ci
+      char_file_name: 3k_main_hero_special_water_zuo_ci
+      element: water
+      type: generic
+      gender: male
+      generic_fallback_number: 31
+      complex_composite: False
+      simple_composite_data:
+        - name: head.png
+          x_pos: -25
+          y_pos: -75
+          z_order: 0
+          x_pivot: 0.5000
+          y_pivot: 0.5000
