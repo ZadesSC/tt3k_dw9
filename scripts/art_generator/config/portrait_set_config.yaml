@@ -1,0 +1,491 @@
+enabled: True
+source_dir: /mnt/c/Users/zades/Pictures/tt3k_workspace/
+art_sets:
+  tt3k_dw9_portraits:
+    dir: dw9
+  tt3k_dw9_alt:
+    dir: alt
+  sad_puzzle:
+    dir: sad_puzzle
+  generic_placeholder:
+    dir: generic_placeholder
+art_set_build_priority:
+  tt3k_dw9_portraits_main:
+    priority:
+      0: tt3k_dw9_portraits
+      1: sad_puzzle
+      2: generic_placeholder
+  tt3k_dw9_portraits_alt:
+    priority:
+      0: tt3k_dw9_alt
+      1: sad_puzzle
+      2: generic_placeholder
+  generic_placeholder:
+    priority:
+        0: generic_placeholder
+arts:
+  bian_huilan:
+    art_sets:
+      ? generic_placeholder
+  bao_sanniang:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cai_wenji:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cao_cao:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cao_pi:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cao_ren:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cao_xiu:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  chen_gong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  cheng_pu:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  da_qiao:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  deng_ai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  dian_wei:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  diao_chan:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  ding_feng:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  dong_bai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  dong_zhuo:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  fa_zheng:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  gan_ning:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guan_ping:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guan_suo:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guan_xing:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guan_yinping:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guan_yu:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guo_huai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  guo_jia:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  han_dang:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  hua_xiong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  huang_gai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  huang_zhong:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  huang_zhong_water:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  jia_chong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  jia_xu:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  jiang_wei:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  li_dian:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lian_shi:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  ling_tong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  liu_bei:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  liu_bei_historical:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  liu_shan:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_bu:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_bu_historical:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_lingqi:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_meng:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_su:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  lu_xun:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  ma_chao:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  ma_dai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  man_chong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  meng_huo:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  pang_de:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  pang_tong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sima_shi:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sima_yi:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sima_zhao:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sun_ce:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sun_jian:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sun_quan:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  sun_shangxiang:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  taishi_ci:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  wang_yi:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  wang_yuanji:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  wei_yan:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  wen_yang:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xiahou_ba:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xiahou_dun:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xiahou_ji:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xiahou_yuan:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xiao_qiao:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xin_xianying:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xing_cai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xu_huang:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xu_sheng:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xu_shu:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xu_zhu:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xun_you:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  xun_yu:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  yuan_shao:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  yuan_shu:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  yu_jin:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  yue_jin:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  yue_ying:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_bao:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_chunhua:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_fei:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_he:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_liao:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhang_jiao:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhao_yun:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhong_hui:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhou_cang:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhen_ji:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhou_tai:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhou_yu:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhou_yu_historical:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhu_ran:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhu_rong:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhuge_dan:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zhuge_liang:
+    art_sets:
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
+  zuo_ci:
+    art_sets:
+      ? generic_placeholder
+      ? tt3k_dw9_portraits
+      ? tt3k_dw9_alt
