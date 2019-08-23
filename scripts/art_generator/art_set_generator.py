@@ -24,6 +24,7 @@ def read_portrait_set_config():
 
     return portrait_set_config_data
 
+
 def read_portrait_set(portrait_set_file_name):
     portrait_set_path = Path(CONFIG_DIR).joinpath(portrait_set_file_name)
 
@@ -32,13 +33,16 @@ def read_portrait_set(portrait_set_file_name):
 
     return portrait_set_data
 
+
 def build_portrait_set(build_target, target_dir):
     config_data = read_portrait_set_config()
     portrait_set_file_name = config_data.get("art_sets").get(build_target).get("dir")
     ps_data = read_portrait_set(portrait_set_file_name)
 
-
-    pass
+    # logic
+    # get load order, pull load order yaml files
+    # loop through arts in config data
+    # check if load order name exists, if it does, run the art tool on the ps_data
 
 
 if __name__ == '__main__':
