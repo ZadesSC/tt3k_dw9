@@ -3,26 +3,33 @@ source_dir: /mnt/c/Users/zades/Pictures/tt3k_workspace/
 art_sets:
   tt3k_dw9_portraits:
     dir: dw9
+    file_name: art_tt3k_dw9_portraits.yaml
   tt3k_dw9_alt:
     dir: alt
+    file_name: art_tt3k_dw9_portraits_alt.yaml
   sad_puzzle:
     dir: sad_puzzle
+    file_name: sad_puzzle_portraits.yaml
   generic_placeholder:
     dir: generic_placeholder
+    file_name: generic_placeholder_portraits.yaml
 art_set_build_priority:
+  tt3k_dw9_portraits_only:
+    priority:
+      - tt3k_dw9_portraits
   tt3k_dw9_portraits_main:
     priority:
-      0: tt3k_dw9_portraits
-      1: sad_puzzle
-      2: generic_placeholder
+      - tt3k_dw9_portraits
+      - sad_puzzle
+      - generic_placeholder
   tt3k_dw9_portraits_alt:
     priority:
-      0: tt3k_dw9_alt
-      1: sad_puzzle
-      2: generic_placeholder
+      - tt3k_dw9_alt
+      - sad_puzzle
+      - generic_placeholder
   generic_placeholder:
     priority:
-        0: generic_placeholder
+        - generic_placeholder
 arts:
   bian_huilan:
     art_sets:

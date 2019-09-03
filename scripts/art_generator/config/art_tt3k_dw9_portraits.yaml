@@ -1286,8 +1286,8 @@ arts:
         y_pivot: 0.5000
   yue_ying:
     src_dir: yue_ying
-    char_dir_name: 3k_main_hero_special_wood_lady_yue_ying
-    char_file_name: 3k_main_hero_special_wood_lady_yue_ying
+    char_dir_name: 3k_main_hero_special_wood_lady_huang_yueying
+    char_file_name: 3k_main_hero_special_wood_lady_huang_yueying
     element: wood
     type: unique
     gender: female
