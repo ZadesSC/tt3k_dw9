@@ -43,7 +43,6 @@ class ArtSetGenerator:
         #for now just only load the first one
         ps_data = {}
         for load_order_set in load_order:
-            print(config_data.get("art_sets").get(load_order_set).get("file_name"))
             portrait_set = self.read_portrait_set(config_data.get("art_sets").get(load_order_set).get("file_name"))
             ps_data.update({load_order_set: portrait_set})
 
@@ -62,7 +61,9 @@ class ArtSetGenerator:
 
             # get art and create it
             art_data = ps_data.get(selected_art_set)
+            character_art_data = art_data.get("arts").get(art)
 
+            #run art tool here
 
 def main():
     build_target = args.build_target
