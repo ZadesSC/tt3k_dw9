@@ -7,7 +7,7 @@ import png
 import sys
 import argparse
 from path_type import PathType
-from PIL import Image
+from PIL import Image #this is Pillow and not PIL
 from pathlib import Path
 
 
