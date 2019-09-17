@@ -9,7 +9,7 @@ import argparse
 from path_type import PathType
 from PIL import Image #this is Pillow and not PIL
 from pathlib import Path
-
+from distutils.dir_util import copy_tree
 
 
 class ArtTool:
@@ -211,12 +211,12 @@ class ArtTool:
         image_dict = self.create_image_dict(source_dir)
 
         if is_generic:
-            self.build_generic_target_folder(target_dir, character_dir, image_dict, element, gender)
+            self.build_generic_target_folder(source_dir, target_dir, character_dir, image_dict, element, gender)
         else:
-            self.build_unique_target_folder(target_dir, character_dir, image_dict)
+            self.build_unique_target_folder(source_dir, target_dir, character_dir, image_dict)
 
 
-    def build_generic_target_folder(self, target_dir, character_dir, image_dict, element, gender):
+    def build_generic_target_folder(self, source_dir, target_dir, character_dir, image_dict, element, gender):
         composite_img = "face.png"
         composite_faces_dir = Path(target_dir).joinpath(self.COMPOSITES_DIR).joinpath(self.FACES_DIR).joinpath(character_dir)
 
@@ -275,7 +275,7 @@ class ArtTool:
                 blank_png.save(still_large_dir.joinpath(ancillary_image), self.PNG)
 
 
-    def build_unique_target_folder(self, target_dir, character_dir, image_dict):
+    def build_unique_target_folder(self, source_dir, target_dir, character_dir, image_dict):
         composite_img = "head.png"
         composite_dir = Path(target_dir).joinpath(self.COMPOSITES_DIR)
 
@@ -288,6 +288,11 @@ class ArtTool:
         composite_small_panel_dir.joinpath(self.ANGRY_DIR).mkdir(parents=True, exist_ok=True)
         composite_small_panel_dir.joinpath(self.HAPPY_DIR).mkdir(parents=True, exist_ok=True)
         composite_small_panel_dir.joinpath(self.NORMAL_DIR).mkdir(parents=True, exist_ok=True)
+
+        #check to see if the composite/<name> folder exists, if if it does, copy the contents over
+        src_composite_dir = Path(source_dir).joinpath("composites").joinpath(Path(source_dir).name)
+        if src_composite_dir.exists():
+            copy_tree(str(src_composite_dir), str(target_dir))
 
         image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img))
         image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img))
