@@ -310,7 +310,7 @@ class ArtTool:
         self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img), happy_comment)
         self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img), normal_comment)
 
-        for subdir_dict in SUBDIR_DICTS:
+        for subdir_dict in self.SUBDIR_DICTS:
             subdir = subdir_dict.get('dir')
             img_key = subdir_dict.get('img_key')
             img_large_key = subdir_dict.get('img_large_key')

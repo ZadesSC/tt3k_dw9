@@ -1,11 +1,11 @@
 enabled: True
-source_dir: /mnt/c/Users/zades/Pictures/tt3k_workspace/
+source_dir: /mnt/d/Projects/tt3k_dw9_art/portraits/
 art_sets:
   tt3k_dw9_portraits:
     dir: dw9
     file_name: art_tt3k_dw9_portraits.yaml
   tt3k_dw9_alt:
-    dir: alt
+    dir: dw9_alt
     file_name: art_tt3k_dw9_portraits_alt.yaml
   sad_puzzle:
     dir: sad_puzzle

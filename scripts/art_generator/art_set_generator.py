@@ -67,7 +67,7 @@ class ArtSetGenerator:
             art_data = ps_data.get(selected_art_set)
             character_art_data = art_data.get("arts").get(art)
             pp = pprint.PrettyPrinter(indent=4)
-            pp.pprint(character_art_data)
+            #pp.pprint(character_art_data)
 
             #run art tool here
             char_source_dir = Path(config_data.get("source_dir")).joinpath(config_data.get("art_sets").get(selected_art_set).get("dir")).joinpath(character_art_data.get("src_dir"))
@@ -89,7 +89,7 @@ class ArtSetGenerator:
             print(char_element)
             print(char_gender)
             print(char_is_generic)
-            #art_tool.build_target_folder_structure(source_dir, target_dir, character_folder, character_element, character_gender, is_generic)
+            art_tool.build_target_folder_structure(char_source_dir, char_target_dir, char_card, char_element, char_gender, char_is_generic)
 
 def main():
     build_target = args.build_target

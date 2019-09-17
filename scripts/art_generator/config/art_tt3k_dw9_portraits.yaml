@@ -517,7 +517,7 @@ arts:
         x_pivot: 0.5000
         y_pivot: 0.5000
   jiang_wei:
-    src_dir: jian_wei
+    src_dir: jiang_wei
     char_dir_name: 3k_main_hero_special_fire_jiang_wei
     char_file_name: 3k_main_hero_special_fire_jiang_wei
     element: metal
@@ -981,7 +981,7 @@ arts:
         x_pivot: 0.5000
         y_pivot: 0.5000
   wei_yan:
-    src_dir: wei_yan_2
+    src_dir: wei_yan
     char_dir_name: 3k_main_hero_special_fire_wei_yan
     char_file_name: 3k_main_hero_special_fire_wei_yan
     element: fire
