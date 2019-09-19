@@ -10,14 +10,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   cai_wenji:
     src_dir: cai_wenji
     char_dir_name: 3k_main_hero_special_water_lady_cai_yan
@@ -26,14 +18,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   cao_cao:
     src_dir: cao_cao
     char_dir_name: 3k_main_hero_special_earth_cao_cao
@@ -42,32 +26,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 10
-    complex_composite: True
-    complex_composite_data:
-      - mood: angry
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
-      - mood: happy
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
-      - mood: norm
-        images:
-          - name: head.png
-            x_pos: -25
-            y_pos: -75
-            z_order: 0
-            x_pivot: 0.5000
-            y_pivot: 0.5000
   cao_pi:
     src_dir: cao_pi
     char_dir_name: 3k_main_hero_special_earth_cao_pi
@@ -76,14 +34,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   cao_ren:
     src_dir: cao_ren
     char_dir_name: 3k_main_hero_special_earth_cao_ren
@@ -92,14 +42,6 @@ arts:
     type: unique
     gender: male
     generic_fallback_number: 06
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   cao_xiu:
     src_dir: cao_xiu
     char_dir_name: 3k_main_hero_special_earth_cao_xiu
@@ -108,14 +50,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   chen_gong:
     src_dir: chen_gong
     char_dir_name: 3k_main_hero_special_water_chen_gong
@@ -124,14 +58,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   cheng_pu:
     src_dir: cheng_pu
     char_dir_name: 3k_main_hero_special_metal_cheng_pu
@@ -140,14 +66,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   da_qiao:
     src_dir: da_qiao
     char_dir_name: 3k_main_hero_special_earth_lady_da_qiao
@@ -156,14 +74,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   deng_ai:
     src_dir: deng_ai
     char_dir_name: 3k_main_hero_special_metal_deng_ai
@@ -172,14 +82,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 12
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   dian_wei:
     src_dir: dian_wei
     char_dir_name: 3k_main_hero_special_wood_dian_wei
@@ -188,14 +90,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 43
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   diao_chan:
     src_dir: diao_chan
     char_dir_name: 3k_main_hero_special_water_lady_diao_chan
@@ -204,14 +98,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   ding_feng:
     src_dir: ding_feng
     char_dir_name: 3k_main_hero_special_metal_ding_feng
@@ -220,14 +106,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 13
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   dong_bai:
     src_dir: dong_bai
     char_dir_name: 3k_main_hero_special_metal_lady_dong_bai
@@ -236,14 +114,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 08
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   dong_zhuo:
     src_dir: dong_zhuo
     char_dir_name: 3k_main_hero_special_fire_dong_zhuo
@@ -252,14 +122,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   fa_zheng:
     src_dir: fa_zheng
     char_dir_name: 3k_main_hero_special_water_fa_zheng
@@ -268,14 +130,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 22
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   gan_ning:
     src_dir: gan_ning
     char_dir_name: 3k_main_hero_special_fire_gan_ning
@@ -284,14 +138,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guan_ping:
     src_dir: guan_ping
     char_dir_name: 3k_main_hero_special_fire_guan_ping
@@ -300,14 +146,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guan_suo:
     src_dir: guan_suo
     char_dir_name: 3k_main_hero_special_earth_guan_suo
@@ -316,14 +154,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guan_xing:
     src_dir: guan_xing
     char_dir_name: 3k_main_hero_special_wood_guan_xing
@@ -332,14 +162,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guan_yinping:
     src_dir: guan_yinping
     char_dir_name: 3k_main_hero_special_wood_lady_guan_yinping
@@ -348,14 +170,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guan_yu:
     src_dir: guan_yu
     char_dir_name: 3k_main_hero_special_wood_guan_yu
@@ -364,14 +178,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guo_huai:
     src_dir: guo_huai
     char_dir_name: 3k_main_hero_special_earth_guo_huai
@@ -380,14 +186,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   guo_jia:
     src_dir: guo_jia
     char_dir_name: 3k_main_hero_special_water_guo_jia
@@ -396,14 +194,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 25
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   han_dang:
     src_dir: han_dang
     char_dir_name: 3k_main_hero_special_wood_han_dang
@@ -412,14 +202,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   hua_xiong:
     src_dir: hua_xiong
     char_dir_name: 3k_main_hero_special_fire_hua_xiong
@@ -428,14 +210,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   huang_gai:
     src_dir: huang_gai
     char_dir_name: 3k_main_hero_special_wood_huang_gai
@@ -444,14 +218,6 @@ arts:
     type: unique
     gender: male
     generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   huang_zhong:
     src_dir: huang_zhong
     char_dir_name: 3k_main_hero_special_metal_huang_zhong
@@ -460,14 +226,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 34
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   huang_zhong_water:
     src_dir: huang_zhong
     char_dir_name: 3k_main_hero_special_water_huang_zhong
@@ -476,14 +234,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 34
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   jia_chong:
     src_dir: jia_chong
     char_dir_name: 3k_main_hero_special_water_jia_chong
@@ -492,14 +242,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 19
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   jia_xu:
     src_dir: jia_xu
     char_dir_name: 3k_main_hero_special_water_jia_xu
@@ -508,14 +250,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   jiang_wei:
     src_dir: jiang_wei
     char_dir_name: 3k_main_hero_special_fire_jiang_wei
@@ -524,14 +258,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 02
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   li_dian:
     src_dir: li_dian
     char_dir_name: 3k_main_hero_special_metal_li_dian
@@ -540,14 +266,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 24
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lian_shi:
     src_dir: lian_shi
     char_dir_name: 3k_main_hero_special_wood_lian_shi
@@ -556,14 +274,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   ling_tong:
     src_dir: ling_tong
     char_dir_name: 3k_main_hero_special_wood_ling_tong
@@ -572,14 +282,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   liu_bei:
     src_dir: liu_bei
     char_dir_name: 3k_main_hero_special_earth_liu_bei
@@ -588,14 +290,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   liu_bei_historical:
     src_dir: liu_bei
     char_dir_name: 3k_main_hero_special_earth_liu_bei_historical
@@ -604,14 +298,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   liu_shan:
     src_dir: liu_shan
     char_dir_name: 3k_main_hero_special_earth_liu_shan
@@ -620,14 +306,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 19
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_bu:
     src_dir: lu_bu
     char_dir_name: 3k_main_hero_special_fire_lu_bu
@@ -636,14 +314,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_bu_historical:
     src_dir: lu_bu
     char_dir_name: 3k_main_hero_special_fire_lu_bu_historical
@@ -652,14 +322,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_lingqi:
     src_dir: lu_lingqi
     char_dir_name: 3k_main_hero_special_fire_lady_lu_lingqi
@@ -668,14 +330,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 13
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_meng:
     src_dir: lu_meng
     char_dir_name: 3k_main_hero_special_metal_lu_meng
@@ -684,14 +338,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 11
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_su:
     src_dir: lu_su
     char_dir_name: 3k_main_hero_special_water_lu_su
@@ -700,14 +346,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 12
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   lu_xun:
     src_dir: lu_xun
     char_dir_name: 3k_main_hero_special_water_lu_xun
@@ -716,14 +354,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 46
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   ma_chao:
     src_dir: ma_chao
     char_dir_name: 3k_main_hero_special_fire_ma_chao
@@ -732,14 +362,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   ma_dai:
     src_dir: ma_dai
     char_dir_name: 3k_main_hero_special_fire_ma_dai
@@ -748,14 +370,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 26
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   man_chong:
     src_dir: man_chong
     char_dir_name: 3k_main_hero_special_fire_man_chong
@@ -764,14 +378,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   meng_huo:
     src_dir: meng_huo
     char_dir_name: 3k_main_hero_special_wood_meng_huo
@@ -780,14 +386,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   pang_de:
     src_dir: pang_de
     char_dir_name: 3k_main_hero_special_wood_pang_de
@@ -796,14 +394,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   pang_tong:
     src_dir: pang_tong
     char_dir_name: 3k_main_hero_special_water_pang_tong
@@ -812,14 +402,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 25
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sima_shi:
     src_dir: sima_shi
     char_dir_name: 3k_main_hero_special_earth_sima_shi
@@ -828,14 +410,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sima_yi:
     src_dir: sima_yi
     char_dir_name: 3k_main_hero_special_water_sima_yi
@@ -844,14 +418,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sima_zhao:
     src_dir: sima_zhao
     char_dir_name: 3k_main_hero_special_earth_sima_zhao
@@ -860,14 +426,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 28
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sun_ce:
     src_dir: sun_ce
     char_dir_name: 3k_main_hero_special_fire_sun_ce
@@ -876,14 +434,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sun_jian:
     src_dir: sun_jian
     char_dir_name: 3k_main_hero_special_metal_sun_jian
@@ -892,14 +442,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sun_quan:
     src_dir: sun_quan
     char_dir_name: 3k_main_hero_special_earth_sun_quan
@@ -908,14 +450,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 07
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   sun_shangxiang:
     src_dir: sun_shangxiang
     char_dir_name: 3k_main_hero_special_fire_lady_sun
@@ -924,14 +458,6 @@ arts:
     type: ca_unique
     gender: female
     generic_fallback_number: 04
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   taishi_ci:
     src_dir: taishi_ci
     char_dir_name: 3k_main_hero_special_metal_taishi_ci
@@ -940,14 +466,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   wang_yi:
     src_dir: wang_yi
     char_dir_name: 3k_main_hero_special_fire_lady_wang_yi
@@ -956,14 +474,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   wang_yuanji:
     src_dir: wang_yuanji
     char_dir_name: 3k_main_hero_special_earth_lady_wang_yuanji
@@ -972,14 +482,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   wei_yan:
     src_dir: wei_yan
     char_dir_name: 3k_main_hero_special_fire_wei_yan
@@ -988,14 +490,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: 30
-        y_pos: 25
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   wen_yang:
     src_dir: wen_yang
     char_dir_name: 3k_main_hero_special_wood_wen_yang
@@ -1004,14 +498,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xiahou_ba:
     src_dir: xiahou_ba
     char_dir_name: 3k_main_hero_special_wood_xiahou_ba
@@ -1020,14 +506,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xiahou_dun:
     src_dir: xiahou_dun
     char_dir_name: 3k_main_hero_special_wood_xiahou_dun
@@ -1036,14 +514,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 17
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xiahou_ji:
     src_dir: xiahou_ji
     char_dir_name: 3k_main_hero_special_water_lady_xiahou_ji
@@ -1052,14 +522,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 38
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xiahou_yuan:
     src_dir: xiahou_yuan
     char_dir_name: 3k_main_hero_special_fire_xiahou_yuan
@@ -1068,14 +530,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 22
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xiao_qiao:
     src_dir: xiao_qiao
     char_dir_name: 3k_main_hero_special_metal_lady_xiao_qiao
@@ -1084,14 +538,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 21
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xin_xianying:
     src_dir: xin_xianying
     char_dir_name: 3k_main_hero_special_water_lady_xin_xianying
@@ -1100,14 +546,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xing_cai:
     src_dir: xing_cai
     char_dir_name: 3k_main_hero_special_metal_lady_xing_cai
@@ -1116,14 +554,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xu_huang:
     src_dir: xu_huang
     char_dir_name: 3k_main_hero_special_metal_xu_huang
@@ -1132,14 +562,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 27
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xu_sheng:
     src_dir: xu_sheng
     char_dir_name: 3k_main_hero_special_fire_xu_sheng
@@ -1148,14 +570,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 10
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xu_shu:
     src_dir: xu_shu
     char_dir_name: 3k_main_hero_special_water_xu_shu
@@ -1164,14 +578,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 45
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xu_zhu:
     src_dir: xu_zhu
     char_dir_name: 3k_main_hero_special_wood_xu_zhu
@@ -1180,14 +586,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 30
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xun_you:
     src_dir: xun_you
     char_dir_name: 3k_main_hero_special_earth_xun_you
@@ -1196,14 +594,6 @@ arts:
     type: unique
     gender: male
     generic_fallback_number: 42
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   xun_yu:
     src_dir: xun_yu
     char_dir_name: 3k_main_hero_special_water_xun_yu
@@ -1212,14 +602,6 @@ arts:
     type: unique
     gender: male
     generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   yuan_shao:
     src_dir: yuan_shao
     char_dir_name: 3k_main_hero_special_earth_yuan_shao
@@ -1228,14 +610,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 02
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   yuan_shu:
     src_dir: yuan_shu
     char_dir_name: 3k_main_hero_special_earth_yuan_shu
@@ -1244,14 +618,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 03
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   yu_jin:
     src_dir: yu_jin
     char_dir_name: 3k_main_hero_special_metal_yu_jin
@@ -1260,14 +626,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 04
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   yue_jin:
     src_dir: yue_jin
     char_dir_name: 3k_main_hero_special_metal_yue_jin
@@ -1276,14 +634,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   yue_ying:
     src_dir: yue_ying
     char_dir_name: 3k_main_hero_special_wood_lady_huang_yueying
@@ -1292,14 +642,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 05
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_bao:
     src_dir: zhang_bao
     char_dir_name: 3k_main_hero_special_metal_zhang_bao
@@ -1308,14 +650,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 20
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_chunhua:
     src_dir: zhang_chunhua
     char_dir_name: 3k_main_hero_special_metal_lady_zhang_chunhua
@@ -1324,14 +658,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 15
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_fei:
     src_dir: zhang_fei
     char_dir_name: 3k_main_hero_special_fire_zhang_fei
@@ -1340,14 +666,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 30
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_he:
     src_dir: zhang_he
     char_dir_name: 3k_main_hero_special_fire_zhang_he
@@ -1356,14 +674,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 50
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_liao:
     src_dir: zhang_liao
     char_dir_name: 3k_main_hero_special_metal_zhang_liao
@@ -1372,14 +682,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 23
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhang_jiao:
     src_dir: zhang_jiao
     char_dir_name: 3k_ytr_hero_special_healer_zhang_jiao
@@ -1388,14 +690,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhao_yun:
     src_dir: zhao_yun
     char_dir_name: 3k_main_hero_special_metal_zhao_yun
@@ -1404,14 +698,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 14
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhong_hui:
     src_dir: zhong_hui
     char_dir_name: 3k_main_hero_special_earth_zhong_hui
@@ -1420,14 +706,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 37
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhou_cang:
     src_dir: zhou_cang
     char_dir_name: 3k_main_hero_special_fire_zhou_cang
@@ -1436,14 +714,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 46
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhen_ji:
     src_dir: zhen_ji
     char_dir_name: 3k_main_hero_special_earth_lady_zhen_ji
@@ -1452,14 +722,6 @@ arts:
     type: generic
     gender: female
     generic_fallback_number: 09
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhou_tai:
     src_dir: zhou_tai
     char_dir_name: 3k_main_hero_special_fire_zhou_tai
@@ -1468,14 +730,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 18
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhou_yu:
     src_dir: zhou_yu
     char_dir_name: 3k_main_hero_special_water_zhou_yu
@@ -1484,14 +738,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhou_yu_historical:
     src_dir: zhou_yu
     char_dir_name: 3k_main_hero_special_water_zhou_yu_historical
@@ -1500,14 +746,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhu_ran:
     src_dir: zhu_ran
     char_dir_name: 3k_main_hero_special_fire_zhu_ran
@@ -1516,14 +754,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 16
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhu_rong:
     src_dir: zhu_rong
     char_dir_name: 3k_main_hero_special_fire_lady_zhu_rong
@@ -1532,14 +762,6 @@ arts:
     type: unique
     gender: female
     generic_fallback_number: 01
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhuge_dan:
     src_dir: zhuge_dan
     char_dir_name: 3k_main_hero_special_fire_zhuge_dan
@@ -1548,14 +770,6 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 41
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zhuge_liang:
     src_dir: zhuge_liang
     char_dir_name: 3k_main_hero_special_water_zhuge_liang
@@ -1564,14 +778,6 @@ arts:
     type: ca_unique
     gender: male
     generic_fallback_number: 29
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
   zuo_ci:
     src_dir: zuo_ci
     char_dir_name: 3k_main_hero_special_water_zuo_ci
@@ -1580,11 +786,3 @@ arts:
     type: generic
     gender: male
     generic_fallback_number: 31
-    complex_composite: False
-    simple_composite_data:
-      - name: head.png
-        x_pos: -25
-        y_pos: -75
-        z_order: 0
-        x_pivot: 0.5000
-        y_pivot: 0.5000
