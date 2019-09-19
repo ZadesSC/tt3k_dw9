@@ -6,6 +6,7 @@
 import png
 import sys
 import argparse
+import yaml
 from path_type import PathType
 from PIL import Image #this is Pillow and not PIL
 from pathlib import Path
@@ -17,6 +18,7 @@ class ArtTool:
     TRANSPARENT_BACKGROUND = "transparent"
     CENTER = "center"
     PNG = "PNG"
+    RGBA = "RGBA"
 
     # Image sizes
     BOBBLEHEADS_LARGE_SIZE = 134, 220
@@ -29,6 +31,7 @@ class ArtTool:
     MINI_SIZE = 30, 30
     UNITCARD_LARGE_SIZE = 131, 435
     UNITCARD_SIZE = 82, 272
+    BLANK_SIZE = 1, 1
 
     # Subdirectory names
     COMPOSITES_DIR = "composites"
@@ -74,6 +77,27 @@ class ArtTool:
     DEFAULT_Y = '-75'
     DEFAULT_PIVOT_X = '0.5000'
     DEFAULT_PIVOT_Y = '0.5000'
+
+    # Composites information
+    COMPOSITES_CONFIG_FILE = "composites.yaml"
+    ENABLED = "enabled"
+    ARTS = "arts"
+    FILE = "file"
+    TYPE = "type"
+    HAPPY = "happy"
+    SAD = "sad"
+    ANGRY = "angry"
+    TYPE_BLANK = "blank"
+    TYPE_REPLACE = "replace"
+    LOCATIONS = "locations"
+    PATH = "path"
+    SOURCE = "source"
+    X_POS = "x_pos"
+    Y_POS = "y_pos"
+    Z_ORDER = "z_order"
+    X_PIVOT = "x_pivot"
+    Y_PIVOT = "y_pivot"
+
 
     # Takes a folder with base 5 large version of the required images and builds a image dictionary from them
     def create_image_dict(self, source_dir):
@@ -276,7 +300,6 @@ class ArtTool:
 
 
     def build_unique_target_folder(self, source_dir, target_dir, character_dir, image_dict):
-        composite_img = "head.png"
         composite_dir = Path(target_dir).joinpath(self.COMPOSITES_DIR)
 
         composite_large_panel_dir = composite_dir.joinpath(self.LARGE_PANEL_DIR)
@@ -289,31 +312,61 @@ class ArtTool:
         composite_small_panel_dir.joinpath(self.HAPPY_DIR).mkdir(parents=True, exist_ok=True)
         composite_small_panel_dir.joinpath(self.NORMAL_DIR).mkdir(parents=True, exist_ok=True)
 
-        #check to see if the composite/<name> folder exists, if if it does, copy the contents over
-        src_composite_dir = Path(source_dir).joinpath("composites").joinpath(Path(source_dir).name)
-        if src_composite_dir.exists():
-            copy_tree(str(src_composite_dir), str(target_dir))
+        # Check to see if a composites.yaml file exists, if it does load it, if not, preform default behavior
+        # Load composites.yaml and build composites based on it
+        composites_config_path = Path(source_dir).joinpath(self.COMPOSITES_CONFIG_FILE)
+        using_composites_config = False
 
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img))
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img))
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img))
+        if composites_config_path.exists():
+            composites_config_data = self.read_composites_config(composites_config_path)
+            if composites_config_data.get(self.ENABLED):
+                using_composites_config = True
 
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img))
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img))
-        image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img))
+        if using_composites_config:
+            composite_character_data = composites_config_data.get(self.ARTS).get(character_dir)
+            for file_data in composite_character_data:
+                file = file_data.get(self.FILE)
+                type = file_data.get(self.TYPE)
+                if type == self.TYPE_BLANK:
+                    blank_img = Image.new(self.RGBA, self.BLANK_SIZE, (255, 0, 0, 0))
+                    for location in file_data.get(self.LOCATIONS):
+                        Path(target_dir).joinpath(location.get(self.PATH)).mkdir(parents=True, exist_ok=True)
+                        location_path = Path(target_dir).joinpath(location.get(self.PATH)).joinpath(file)
+                        blank_img.save(location_path, self.PNG)
+                elif type == self.TYPE_REPLACE:
+                    source_img = Image.open(Path(source_dir).joinpath(file_data.get(self.SOURCE)))
+                    for location in file_data.get(self.LOCATIONS):
+                        Path(target_dir).joinpath(location.get(self.PATH)).mkdir(parents=True, exist_ok=True)
+                        location_path = Path(target_dir).joinpath(location.get(self.PATH)).joinpath(file)
+                        source_img.save(location_path, self.PNG)
+                        img_comment = "[type:{};x:{};y:{};z-order:{};pivot_x:{};pivot_y:{};]".format(location.get(self.TYPE), location.get(self.X_POS), location.get(self.Y_POS), location.get(self.Z_ORDER), location.get(self.X_PIVOT), location.get(self.Y_PIVOT))
+                        self.insert_text_chunk_to_png(location_path, img_comment)
+                    pass
+                else:
+                    raise Exception("{} is not a valid type for composite config file data.".format(type))
+        else:
+            composite_img = "head.png"
 
-        # TODO: redo composites to take from source values
-        angry_comment = '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-        happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
-        normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img))
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img))
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_large_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img))
 
-        self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img), angry_comment)
-        self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img), happy_comment)
-        self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img), normal_comment)
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img))
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img))
+            image_dict.get(self.COMPOSITE_LARGE_KEY).save(composite_small_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img))
 
-        self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img), angry_comment)
-        self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img), happy_comment)
-        self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img), normal_comment)
+            # TODO: redo composites to take from source values
+            angry_comment = '[type:angry;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+            happy_comment = '[type:happy;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+            normal_comment = '[type:norm;x:-25;y:-75;z-order:0;pivot_x:0.5000;pivot_y:0.5000;]'
+
+            self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img), angry_comment)
+            self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img), happy_comment)
+            self.insert_text_chunk_to_png(composite_large_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img), normal_comment)
+
+            self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.ANGRY_DIR).joinpath(composite_img), angry_comment)
+            self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.HAPPY_DIR).joinpath(composite_img), happy_comment)
+            self.insert_text_chunk_to_png(composite_small_panel_dir.joinpath(self.NORMAL_DIR).joinpath(composite_img), normal_comment)
 
         for subdir_dict in self.SUBDIR_DICTS:
             subdir = subdir_dict.get('dir')
@@ -459,6 +512,13 @@ class ArtTool:
     def insert_text_chunk_to_png(self, src, message):
         # src = r'E:\temp\png\register_05.png'
         self.insert_text_chunk(src, message)
+
+
+    def read_composites_config(self, composites_config_path):
+        with open(composites_config_path,  'r') as composites_config_file:
+            composites_config_data = yaml.safe_load(composites_config_file)
+
+        return composites_config_data
 
 def main():
     source_dir = args.source_dir
