@@ -580,8 +580,8 @@ arts:
     generic_fallback_number: 45
   xu_zhu:
     src_dir: xu_zhu
-    char_dir_name: 3k_main_hero_special_wood_xu_zhu
-    char_file_name: 3k_main_hero_special_wood_xu_zhu
+    char_dir_name: 3k_main_hero_special_wood_xu_chu
+    char_file_name: 3k_main_hero_special_wood_xu_chu
     element: wood
     type: ca_unique
     gender: male
